@@ -1,0 +1,11 @@
+<group name="fortigate,brute_force,">
+  <rule id="150200" level="10" frequency="20" timeframe="60">
+    <if_matched_sid>81606,81614</if_matched_sid>
+    <same_source_ip />
+    <description>Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,brute_force,</group>
+  </rule>
+</group>

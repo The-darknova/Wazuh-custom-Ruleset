@@ -29,6 +29,14 @@ Ce dépôt contient une collection de règles, décodeurs et scripts Wazuh perso
 ### 6. Intégration à la Réponse aux Incidents
 * **DFIR-IRIS :** Règles conçues pour faciliter l'intégration et la création de cas avec la plateforme de réponse aux incidents DFIR-IRIS.
 
+### 7. Détection d'Attaques par Force Brute
+* **Brute_Force :** Règles dédiées à la détection des attaques par force brute contre divers systèmes et applications, organisées par méthode d'authentification :
+    * **Windows :** Détecte les échecs de connexion multiples (Logon Failures).
+    * **Linux :** Surveille les échecs d'authentification SSH et PAM.
+    * **Fortigate :** Identifie les attaques par force brute sur les connexions d'administration et VPN SSL.
+    * **Nginx :** Détecte les tentatives d'authentification web répétées.
+    * **OPNsense :** Surveille l'interface WebGUI pour les échecs d'authentification multiples.
+
 ---
 
 ## Exigences de l'Environnement
@@ -42,7 +50,13 @@ Pour s'assurer que ces règles personnalisées fonctionnent correctement, des co
 | **AD Inventory** | Activer Active Response | Les agents Wazuh sur les terminaux Active Directory doivent avoir Active Response activé pour exécuter le script d'inventaire. | `ad_inventory.ps1` |
 | **Auditd (Linux)** | Installer `auditd` | Le paquet `auditd` doit être installé, en cours d'exécution et configuré avec les règles d'audit appropriées pour surveiller l'activité du système. | Configuration `auditd` sur le terminal. |
 | **OpnSense** | Configurer le transfert Syslog | OPNsense doit être configuré pour transférer ses journaux (y compris les journaux Nginx/WAF) vers l'agent ou le manager Wazuh via Syslog. | `agent.conf` configuré pour le format de journal `syslog` depuis `/var/log/nginx/*.log` ou syslog distant. |
+| **Fortigate** | Configurer le transfert Syslog | Fortigate doit être configuré pour envoyer ses journaux d'événements vers le manager Wazuh ou un agent via Syslog. | `agent.conf` configuré pour accepter les logs Syslog de Fortigate. |
 | **Falco (Conteneurs)** | Installer Falco | Falco doit être installé sur les hôtes Docker/Kubernetes et configuré pour générer des alertes au format JSON. | `200360-docker_falco_rules.xml` attend des décodeurs JSON. |
 
 ## Script d'Installation
 Le dépôt inclut un script bash (`wazuh_socfortress_rules.sh`) pour automatiser la sauvegarde des règles existantes et le déploiement de cet ensemble de règles personnalisées vers un Manager Wazuh. Exécutez-le avec précaution car il remplace les règles personnalisées existantes.
+
+## Suivi des Règles
+Le script Python `generate_table.py` parcourt le dépôt pour générer et mettre à jour automatiquement :
+* `rules_status.md` : Un tableau Markdown résumant l'état et la description de chaque règle.
+* `rules_status.csv` : Un fichier CSV contenant les mêmes informations pour une intégration et une manipulation faciles dans d'autres outils.

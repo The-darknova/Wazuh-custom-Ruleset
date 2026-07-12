@@ -1,0 +1,19 @@
+<group name="opnsense,brute_force,">
+  <!-- Base rule for OPNsense WebGUI login failures -->
+  <rule id="150400" level="5">
+    <match>webGui authentication issue for user|webConfigurator authentication error</match>
+    <description>OPNsense: WebGUI Authentication Failure</description>
+    <group>authentication_failed,</group>
+  </rule>
+
+  <!-- Brute force rule for OPNsense -->
+  <rule id="150401" level="10" frequency="20" timeframe="60">
+    <if_matched_sid>150400</if_matched_sid>
+    <same_source_ip />
+    <description>OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,brute_force,</group>
+  </rule>
+</group>

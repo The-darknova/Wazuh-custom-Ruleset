@@ -1295,3 +1295,9 @@
 | 1291 | 114102 | Sysmon - Event 22: DNS Request by $(win.eventdata.image) | Windows_Sysmon/114001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT22.xml | Pending |
 | 1292 | 114103 | Sysmon - Event 22: DNS Request by $(win.eventdata.image) | Windows_Sysmon/114001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT22.xml | Pending |
 | 1293 | 115101 | Sysmon Rules Reloaded | Windows_Sysmon/115001-sysmon_reload.xml | Pending |
+| 1294 | 150000 | Windows: Multiple Logon Failures (Brute Force) from same source IP | Brute_Force/150000-windows_bruteforce.xml | Pending |
+| 1295 | 150100 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP | Brute_Force/150100-linux_bruteforce.xml | Pending |
+| 1296 | 150200 | Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP | Brute_Force/150200-fortigate_bruteforce.xml | Pending |
+| 1297 | 150300 | Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP | Brute_Force/150300-nginx_bruteforce.xml | Pending |
+| 1298 | 150400 | OPNsense: WebGUI Authentication Failure | Brute_Force/150400-opnsense_bruteforce.xml | Pending |
+| 1299 | 150401 | OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP | Brute_Force/150400-opnsense_bruteforce.xml | Pending |
