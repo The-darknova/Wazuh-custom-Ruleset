@@ -216,9 +216,9 @@
     <if_sid>150100</if_sid>
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM</description>
   </rule>
-  <!-- Many-to-1 Grouped Alarms -->
+  <!-- Many-to-1 Grouped Alarms by Category -->
   <rule id="200054" level="10">
     <if_sid>120141, 120142, 120143, 120184</if_sid>
-    <description>Linux: High Severity Event Detected (Level 10) - ALARM</description>
+    <description>High Severity Event Detected (Level 10): Linux Auditd - ALARM</description>
   </rule>
 </group>

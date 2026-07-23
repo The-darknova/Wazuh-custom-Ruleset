@@ -12,9 +12,9 @@
     <if_sid>150401</if_sid>
     <description>OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP - ALARM</description>
   </rule>
-  <!-- Many-to-1 Grouped Alarms -->
+  <!-- Many-to-1 Grouped Alarms by Category -->
   <rule id="202003" level="10">
     <if_sid>120462</if_sid>
-    <description>Network: High Severity Event Detected (Level 10) - ALARM</description>
+    <description>High Severity Event Detected (Level 10): OPNsense Events - ALARM</description>
   </rule>
 </group>

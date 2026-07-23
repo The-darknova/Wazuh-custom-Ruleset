@@ -1385,79 +1385,84 @@
 | 1381 | 201081 | T1137 - Outlook Macro Security Level Persistence detected via Registry SetValue (Target: $(win.eventdata.targetObject)) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
 | 1382 | 201082 | T1547.012 - Print Processor Registry Key Persistence (TargetObject: $(win.eventdata.targetObject)) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
 | 1383 | 201083 | Windows: Multiple Logon Failures (Brute Force) from same source IP - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1384 | 201084 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1385 | 201085 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1386 | 201086 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1387 | 201087 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1388 | 201088 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1389 | 201089 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1390 | 201090 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1391 | 201091 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1392 | 201092 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1393 | 201093 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1394 | 201094 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1395 | 201095 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1396 | 201096 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1397 | 201097 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1398 | 201098 | Windows: High Severity Event Detected (Level 10) - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
-| 1399 | 200000 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1400 | 200001 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1401 | 200002 | Detects attempts to record audio with arecord utility. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1402 | 200003 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1403 | 200004 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1404 | 200005 | Detects BPFDoor .lock and .pid files access in temporary file storage facility. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1405 | 200006 | All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1406 | 200007 | Detects attempts to discover the files with setuid/setgid capability on them. That would allow adversary to escalate their privileges. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1407 | 200008 | Detect file time attribute change to hide new or changes to existing files. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1408 | 200009 | Detects removing immutable file attribute. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1409 | 200010 | Detects attempts to collect data stored in the clipboard from users with the usage of xclip tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1410 | 200011 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1411 | 200012 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1412 | 200013 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1413 | 200014 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1414 | 200015 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1415 | 200016 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1416 | 200017 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1417 | 200018 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1418 | 200019 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1419 | 200020 | Detects attempts to post the file with the usage of wget utility. The adversary can bypass the permission restriction with the misconfigured sudo permission for wget utility which could allow them to read files like /etc/shadow. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1420 | 200021 | Detects overwriting (effectively wiping/deleting) of a file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1421 | 200022 | Detects access to a raw disk on a host to evade detection by security products. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1422 | 200023 | Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1423 | 200024 | Detects file and folder permission changes. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1424 | 200025 | Detecting attempts to extract passwords with grep. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1425 | 200026 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1426 | 200027 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1427 | 200028 | Detects appending of zip file to image. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1428 | 200029 | Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1429 | 200030 | Detects loading of kernel modules with insmod command. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1430 | 200031 | Detect changes of syslog daemons configuration files. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1431 | 200032 | Masquerading as Linux Crond Process. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1432 | 200033 | Detects enumeration of local or remote network services. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1433 | 200034 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1434 | 200035 | Detects password policy discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1435 | 200036 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1436 | 200037 | Detects a reload or a start of a service. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1437 | 200038 | Detects adversary creating screen capture of a desktop with Import Tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1438 | 200039 | Detects adversary creating screen capture of a desktop with Import Tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1439 | 200040 | Detects adversary creating screen capture of a full with xwd. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1440 | 200041 | Detects adversary creating screen capture of a full with xwd. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1441 | 200042 | Detection use of the command "split" to split files into parts and possible transfer. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1442 | 200043 | Detects embeding of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1443 | 200044 | Detects extraction of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1444 | 200045 | Detects suspicious activities as declared by Florian Roth in its 'Best Practice Auditd Configuration'. This includes the detection of the following commands; wget, curl, base64, nc, netcat, ncat, ssh, socat, wireshark, rawshark, rdesktop, nmap. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1445 | 200046 | Detects relevant commands often related to malware or hacking activity. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1446 | 200047 | Detects program executions in suspicious non-program folders related to malware or hacking activity. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1447 | 200048 | Detects commandline operations on shell history files. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1448 | 200049 | Detects System Information Discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1449 | 200050 | Detects System Information Discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1450 | 200051 | Detects extracting of zip file from image file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1451 | 200052 | Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1452 | 200053 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1453 | 200054 | Linux: High Severity Event Detected (Level 10) - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
-| 1454 | 202000 | Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
-| 1455 | 202001 | Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
-| 1456 | 202002 | OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
-| 1457 | 202003 | Network: High Severity Event Detected (Level 10) - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
-| 1458 | 203000 | Windows Security log was cleared. - ALARM | Alarm/203000-Other-Alarms.xml | Pending |
-| 1459 | 203001 | Potential User Login Via Pass the Hash Detected. - ALARM | Alarm/203000-Other-Alarms.xml | Pending |
+| 1384 | 201084 | High Severity Event Detected (Level 10): Sysmon File Create - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1385 | 201085 | High Severity Event Detected (Level 10): Sysmon Image Loaded - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1386 | 201086 | High Severity Event Detected (Level 10): Sysmon Network Connection - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1387 | 201087 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1388 | 201088 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1389 | 201089 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1390 | 201090 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1391 | 201091 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1392 | 201092 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1393 | 201093 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1394 | 201094 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1395 | 201095 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1396 | 201096 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1397 | 201097 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1398 | 201098 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1399 | 201099 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1400 | 201100 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1401 | 201101 | High Severity Event Detected (Level 10): Sysmon Registry Create/Delete - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1402 | 201102 | High Severity Event Detected (Level 10): Sysmon Registry Rename - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1403 | 201103 | High Severity Event Detected (Level 10): Sysmon Registry Value Set - ALARM | Alarm/201000-Windows-Alarms.xml | Pending |
+| 1404 | 200000 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1405 | 200001 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1406 | 200002 | Detects attempts to record audio with arecord utility. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1407 | 200003 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1408 | 200004 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1409 | 200005 | Detects BPFDoor .lock and .pid files access in temporary file storage facility. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1410 | 200006 | All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1411 | 200007 | Detects attempts to discover the files with setuid/setgid capability on them. That would allow adversary to escalate their privileges. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1412 | 200008 | Detect file time attribute change to hide new or changes to existing files. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1413 | 200009 | Detects removing immutable file attribute. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1414 | 200010 | Detects attempts to collect data stored in the clipboard from users with the usage of xclip tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1415 | 200011 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1416 | 200012 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1417 | 200013 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1418 | 200014 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1419 | 200015 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1420 | 200016 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1421 | 200017 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1422 | 200018 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1423 | 200019 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1424 | 200020 | Detects attempts to post the file with the usage of wget utility. The adversary can bypass the permission restriction with the misconfigured sudo permission for wget utility which could allow them to read files like /etc/shadow. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1425 | 200021 | Detects overwriting (effectively wiping/deleting) of a file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1426 | 200022 | Detects access to a raw disk on a host to evade detection by security products. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1427 | 200023 | Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1428 | 200024 | Detects file and folder permission changes. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1429 | 200025 | Detecting attempts to extract passwords with grep. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1430 | 200026 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1431 | 200027 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1432 | 200028 | Detects appending of zip file to image. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1433 | 200029 | Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1434 | 200030 | Detects loading of kernel modules with insmod command. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1435 | 200031 | Detect changes of syslog daemons configuration files. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1436 | 200032 | Masquerading as Linux Crond Process. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1437 | 200033 | Detects enumeration of local or remote network services. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1438 | 200034 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1439 | 200035 | Detects password policy discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1440 | 200036 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1441 | 200037 | Detects a reload or a start of a service. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1442 | 200038 | Detects adversary creating screen capture of a desktop with Import Tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1443 | 200039 | Detects adversary creating screen capture of a desktop with Import Tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1444 | 200040 | Detects adversary creating screen capture of a full with xwd. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1445 | 200041 | Detects adversary creating screen capture of a full with xwd. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1446 | 200042 | Detection use of the command "split" to split files into parts and possible transfer. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1447 | 200043 | Detects embeding of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1448 | 200044 | Detects extraction of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1449 | 200045 | Detects suspicious activities as declared by Florian Roth in its 'Best Practice Auditd Configuration'. This includes the detection of the following commands; wget, curl, base64, nc, netcat, ncat, ssh, socat, wireshark, rawshark, rdesktop, nmap. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1450 | 200046 | Detects relevant commands often related to malware or hacking activity. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1451 | 200047 | Detects program executions in suspicious non-program folders related to malware or hacking activity. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1452 | 200048 | Detects commandline operations on shell history files. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1453 | 200049 | Detects System Information Discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1454 | 200050 | Detects System Information Discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1455 | 200051 | Detects extracting of zip file from image file. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1456 | 200052 | Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1457 | 200053 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1458 | 200054 | High Severity Event Detected (Level 10): Linux Auditd - ALARM | Alarm/200000-Linux-Alarms.xml | Pending |
+| 1459 | 202000 | Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
+| 1460 | 202001 | Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
+| 1461 | 202002 | OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
+| 1462 | 202003 | High Severity Event Detected (Level 10): OPNsense Events - ALARM | Alarm/202000-Network-Alarms.xml | Pending |
+| 1463 | 203000 | Windows Security log was cleared. - ALARM | Alarm/203000-Other-Alarms.xml | Pending |
+| 1464 | 203001 | Potential User Login Via Pass the Hash Detected. - ALARM | Alarm/203000-Other-Alarms.xml | Pending |
