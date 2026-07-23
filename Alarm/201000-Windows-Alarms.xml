@@ -1,0 +1,400 @@
+<group name="alarm,windows_alarms,">
+  <!-- 1-to-1 Critical Alarms -->
+  <rule id="201000" level="12">
+    <if_sid>117538</if_sid>
+    <description>Powershell Critical EventLog - ALARM</description>
+  </rule>
+  <rule id="201001" level="12">
+    <if_sid>117543</if_sid>
+    <description>Malicious Powershell Command $(win.eventdata.scriptBlockText) Executed - ALARM</description>
+  </rule>
+  <rule id="201002" level="10">
+    <if_sid>117551</if_sid>
+    <description>Powershell script: IEX execution detected - ALARM</description>
+  </rule>
+  <rule id="201003" level="10">
+    <if_sid>117552</if_sid>
+    <description>Powershell script: Invoke-Expression detected - ALARM</description>
+  </rule>
+  <rule id="201004" level="10">
+    <if_sid>117553</if_sid>
+    <description>Powershell script: Invoke-WebRequest detected - ALARM</description>
+  </rule>
+  <rule id="201005" level="10">
+    <if_sid>117554</if_sid>
+    <description>Powershell script: iwr alias detected - ALARM</description>
+  </rule>
+  <rule id="201006" level="10">
+    <if_sid>117555</if_sid>
+    <description>Powershell script: Start-BitsTransfer detected (BITS job abuse) - ALARM</description>
+  </rule>
+  <rule id="201007" level="10">
+    <if_sid>117556</if_sid>
+    <description>Powershell script: Net.WebClient object creation detected - ALARM</description>
+  </rule>
+  <rule id="201008" level="10">
+    <if_sid>117557</if_sid>
+    <description>Powershell script: Download method detected - ALARM</description>
+  </rule>
+  <rule id="201009" level="10">
+    <if_sid>117558</if_sid>
+    <description>Powershell script: FromBase64String detected - ALARM</description>
+  </rule>
+  <rule id="201010" level="10">
+    <if_sid>117559</if_sid>
+    <description>Powershell script: Encoded command flag detected - ALARM</description>
+  </rule>
+  <rule id="201011" level="10">
+    <if_sid>117300</if_sid>
+    <description>Powershell script: Reversed FromBase64String detected (obfuscation) - ALARM</description>
+  </rule>
+  <rule id="201012" level="10">
+    <if_sid>117301</if_sid>
+    <description>Powershell script: ExecutionPolicy Bypass detected - ALARM</description>
+  </rule>
+  <rule id="201013" level="10">
+    <if_sid>117302</if_sid>
+    <description>Powershell script: Mimikatz keyword detected - ALARM</description>
+  </rule>
+  <rule id="201014" level="10">
+    <if_sid>117303</if_sid>
+    <description>Powershell script: SEKURLSA (Mimikatz module) detected - ALARM</description>
+  </rule>
+  <rule id="201015" level="10">
+    <if_sid>117304</if_sid>
+    <description>Powershell script: Kerberos ticket manipulation detected - ALARM</description>
+  </rule>
+  <rule id="201016" level="10">
+    <if_sid>117305</if_sid>
+    <description>Powershell script: Credential dumping cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201017" level="10">
+    <if_sid>117306</if_sid>
+    <description>Powershell script: GPP Password extraction detected - ALARM</description>
+  </rule>
+  <rule id="201018" level="10">
+    <if_sid>117307</if_sid>
+    <description>Powershell script: Code injection cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201019" level="10">
+    <if_sid>117308</if_sid>
+    <description>Powershell script: Credential theft cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201020" level="10">
+    <if_sid>117309</if_sid>
+    <description>Powershell script: UAC bypass cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201021" level="10">
+    <if_sid>117310</if_sid>
+    <description>Powershell script: Lateral movement/recon cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201022" level="10">
+    <if_sid>117311</if_sid>
+    <description>Powershell script: Network attack/C2 cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201023" level="10">
+    <if_sid>117312</if_sid>
+    <description>Powershell script: Post-exploitation cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201024" level="10">
+    <if_sid>117313</if_sid>
+    <description>Powershell script: Offensive framework keyword detected - ALARM</description>
+  </rule>
+  <rule id="201025" level="10">
+    <if_sid>117314</if_sid>
+    <description>Powershell script: AMSI bypass attempt detected - ALARM</description>
+  </rule>
+  <rule id="201026" level="10">
+    <if_sid>117315</if_sid>
+    <description>Powershell script: Browser/input data theft cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201027" level="10">
+    <if_sid>117316</if_sid>
+    <description>Powershell script: Screen capture cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201028" level="10">
+    <if_sid>117317</if_sid>
+    <description>Powershell script: Volume Shadow Copy access detected - ALARM</description>
+  </rule>
+  <rule id="201029" level="10">
+    <if_sid>117318</if_sid>
+    <description>Powershell script: Active Directory enumeration detected - ALARM</description>
+  </rule>
+  <rule id="201030" level="10">
+    <if_sid>117319</if_sid>
+    <description>Powershell script: Local group enumeration detected - ALARM</description>
+  </rule>
+  <rule id="201031" level="10">
+    <if_sid>117320</if_sid>
+    <description>Powershell script: COM CLSID object execution detected - ALARM</description>
+  </rule>
+  <rule id="201032" level="10">
+    <if_sid>117321</if_sid>
+    <description>Powershell script: COM InProcServer32 hijacking detected - ALARM</description>
+  </rule>
+  <rule id="201033" level="10">
+    <if_sid>117322</if_sid>
+    <description>Powershell script: Persistence mechanism cmdlet detected - ALARM</description>
+  </rule>
+  <rule id="201034" level="10">
+    <if_sid>117323</if_sid>
+    <description>Powershell script: Enable-PSRemoting detected - ALARM</description>
+  </rule>
+  <rule id="201035" level="10">
+    <if_sid>117324</if_sid>
+    <description>Powershell script: Invoke-Command (remote execution) detected - ALARM</description>
+  </rule>
+  <rule id="201036" level="10">
+    <if_sid>117325</if_sid>
+    <description>Powershell script: WMI-based remote execution detected - ALARM</description>
+  </rule>
+  <rule id="201037" level="10">
+    <if_sid>117326</if_sid>
+    <description>Powershell script: CIM method/session detected (lateral movement) - ALARM</description>
+  </rule>
+  <rule id="201038" level="10">
+    <if_sid>117327</if_sid>
+    <description>Powershell script: Invoke-WmiExec detected (pass-the-hash) - ALARM</description>
+  </rule>
+  <rule id="201039" level="10">
+    <if_sid>117328</if_sid>
+    <description>Powershell script: TrustedHosts modification detected (DarkGate) - ALARM</description>
+  </rule>
+  <rule id="201040" level="10">
+    <if_sid>117329</if_sid>
+    <description>Powershell script: Compression/decompression detected (payload staging) - ALARM</description>
+  </rule>
+  <rule id="201041" level="10">
+    <if_sid>117330</if_sid>
+    <description>Powershell script: StreamReader usage detected (stream data processing) - ALARM</description>
+  </rule>
+  <rule id="201042" level="10">
+    <if_sid>117331</if_sid>
+    <description>Powershell script: MemoryStream usage detected (in-memory execution) - ALARM</description>
+  </rule>
+  <rule id="201043" level="10">
+    <if_sid>117332</if_sid>
+    <description>Powershell script: .NET Assembly reflection loading detected (Empire/Cobalt Strike) - ALARM</description>
+  </rule>
+  <rule id="201044" level="10">
+    <if_sid>117333</if_sid>
+    <description>Powershell script: Dynamic assembly building detected - ALARM</description>
+  </rule>
+  <rule id="201045" level="10">
+    <if_sid>117334</if_sid>
+    <description>Powershell script: GetProcAddress API call detected (fileless injection) - ALARM</description>
+  </rule>
+  <rule id="201046" level="10">
+    <if_sid>117335</if_sid>
+    <description>Powershell script: Attempt to disable Defender real-time monitoring - ALARM</description>
+  </rule>
+  <rule id="201047" level="10">
+    <if_sid>117336</if_sid>
+    <description>Powershell script: Windows Defender configuration tampering detected - ALARM</description>
+  </rule>
+  <rule id="201048" level="10">
+    <if_sid>117337</if_sid>
+    <description>Powershell script: Windows Defender exclusion being added (AV evasion) - ALARM</description>
+  </rule>
+  <rule id="201049" level="10">
+    <if_sid>117338</if_sid>
+    <description>Powershell script: Attempt to remove Windows Defender directory (WhisperGate) - ALARM</description>
+  </rule>
+  <rule id="201050" level="10">
+    <if_sid>117339</if_sid>
+    <description>Powershell script: Suspicious keyword (shellcode/injection/backdoor) - ALARM</description>
+  </rule>
+  <rule id="201051" level="10">
+    <if_sid>117340</if_sid>
+    <description>Powershell script: Suspicious process/DLL reference detected - ALARM</description>
+  </rule>
+  <rule id="201052" level="10">
+    <if_sid>117341</if_sid>
+    <description>Powershell script: C2/exploitation keyword detected - ALARM</description>
+  </rule>
+  <rule id="201053" level="10">
+    <if_sid>117342</if_sid>
+    <description>Powershell script: Network object creation detected - ALARM</description>
+  </rule>
+  <rule id="201054" level="10">
+    <if_sid>117343</if_sid>
+    <description>Powershell script: SysWOW64 reference detected (32-bit evasion) - ALARM</description>
+  </rule>
+  <rule id="201055" level="10">
+    <if_sid>117344</if_sid>
+    <description>Powershell script: $doit variable detected (exploit scripts) - ALARM</description>
+  </rule>
+  <rule id="201056" level="10">
+    <if_sid>117345</if_sid>
+    <description>Powershell script: SMB1Protocol feature being enabled (ransomware lateral movement) - ALARM</description>
+  </rule>
+  <rule id="201057" level="10">
+    <if_sid>117346</if_sid>
+    <description>Powershell script: Metasploit Meterpreter module detected - ALARM</description>
+  </rule>
+  <rule id="201058" level="10">
+    <if_sid>117347</if_sid>
+    <description>Powershell script: Web download to memory stream (fileless malware staging) - ALARM</description>
+  </rule>
+  <rule id="201059" level="10">
+    <if_sid>117348</if_sid>
+    <description>Powershell script: Service start/stop command detected - ALARM</description>
+  </rule>
+  <rule id="201060" level="10">
+    <if_sid>117349</if_sid>
+    <description>Powershell script: PowerShell downgrade attack detected - ALARM</description>
+  </rule>
+  <rule id="201061" level="15">
+    <if_sid>101103</if_sid>
+    <description>Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM</description>
+  </rule>
+  <rule id="201062" level="15">
+    <if_sid>101104</if_sid>
+    <description>Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM</description>
+  </rule>
+  <rule id="201063" level="15">
+    <if_sid>101715</if_sid>
+    <description>Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM</description>
+  </rule>
+  <rule id="201064" level="10">
+    <if_sid>107118</if_sid>
+    <description>The file $(win.eventdata.targetFilename) has been created. Possible ransomware activity. - ALARM</description>
+  </rule>
+  <rule id="201065" level="10">
+    <if_sid>107119</if_sid>
+    <description>MITRE ATTaCK T1542.001 Pre-OS Boot: System Firmware - wpbbin.exe file created in System32. Possible firmware persistence attempt. - ALARM</description>
+  </rule>
+  <rule id="201066" level="10">
+    <if_sid>107121</if_sid>
+    <description>T1546.013 - PowerShell Profile modified: Potential persistence mechanism detected (Event Triggered Execution) - ALARM</description>
+  </rule>
+  <rule id="201067" level="10">
+    <if_sid>107122</if_sid>
+    <description>T1137 - Outlook VbaProject.OTM Persistence File Created (Target: $(win.eventdata.targetFilename)) - ALARM</description>
+  </rule>
+  <rule id="201068" level="10">
+    <if_sid>108141</if_sid>
+    <description>Hyper-V volume shadow copy requestor service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. - ALARM</description>
+  </rule>
+  <rule id="201069" level="10">
+    <if_sid>108142</if_sid>
+    <description>Volume shadow copy service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. - ALARM</description>
+  </rule>
+  <rule id="201070" level="10">
+    <if_sid>108143</if_sid>
+    <description>Windows defender service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible Ransomware Activity. - ALARM</description>
+  </rule>
+  <rule id="201071" level="10">
+    <if_sid>108144</if_sid>
+    <description>Multiple Registry Keys created in Event Viewer on $(win.system.computer). Possible Ransomware Activity. - ALARM</description>
+  </rule>
+  <rule id="201072" level="13">
+    <if_sid>109141</if_sid>
+    <description>Sysmon - Event 13: RegistryEvent PsExec EulaAccepted Detected - ALARM</description>
+  </rule>
+  <rule id="201073" level="10">
+    <if_sid>109144</if_sid>
+    <description>T1548.002: Bypass UAC via mscfile EventViewer hijack - ALARM</description>
+  </rule>
+  <rule id="201074" level="10">
+    <if_sid>109145</if_sid>
+    <description>T1548.002: Bypass UAC via mscfile EventViewer hijack (test rule) - ALARM</description>
+  </rule>
+  <rule id="201075" level="10">
+    <if_sid>109148</if_sid>
+    <description>Suspicious registry modification detected: Hiding user accounts via Userlist key (T1564.002 - Hidden Users) - ALARM</description>
+  </rule>
+  <rule id="201076" level="10">
+    <if_sid>109149</if_sid>
+    <description>Suspicious registry modification detected: Disabling command line auditing (T1562.003 - Impair Command History Logging) via $(win.eventdata.targetObject) with value $(win.eventdata.details). - ALARM</description>
+  </rule>
+  <rule id="201077" level="10">
+    <if_sid>109150</if_sid>
+    <description>T1574.009 - Path Interception by Unquoted Service Path in Registry (ImagePath points to Program Files without quotes) - ALARM</description>
+  </rule>
+  <rule id="201078" level="10">
+    <if_sid>109152</if_sid>
+    <description>T1574.011 - Hijack Execution Flow: Services Registry Permissions Weakness (Service ImagePath modified by $(win.eventdata.image)) - ALARM</description>
+  </rule>
+  <rule id="201079" level="10">
+    <if_sid>109153</if_sid>
+    <description>T1547 - RDP Addins DLL Injection detected. Registry key: $(win.eventdata.targetObject), DLL: $(win.eventdata.details) - ALARM</description>
+  </rule>
+  <rule id="201080" level="10">
+    <if_sid>109154</if_sid>
+    <description>T1547.014 - Active Setup StubPath persistence detected (Registry modification under Installed Components) - ALARM</description>
+  </rule>
+  <rule id="201081" level="10">
+    <if_sid>109156</if_sid>
+    <description>T1137 - Outlook Macro Security Level Persistence detected via Registry SetValue (Target: $(win.eventdata.targetObject)) - ALARM</description>
+  </rule>
+  <rule id="201082" level="10">
+    <if_sid>109157</if_sid>
+    <description>T1547.012 - Print Processor Registry Key Persistence (TargetObject: $(win.eventdata.targetObject)) - ALARM</description>
+  </rule>
+  <rule id="201083" level="10">
+    <if_sid>150000</if_sid>
+    <description>Windows: Multiple Logon Failures (Brute Force) from same source IP - ALARM</description>
+  </rule>
+  <!-- Many-to-1 Grouped Alarms -->
+  <rule id="201084" level="10">
+    <if_sid>101088, 101089, 101090, 101091, 101092, 101093, 101094, 101095, 101096, 101097, 101098, 101099, 101100, 101101, 101102, 101105, 101156, 101157, 101158, 101159, 101160, 101161, 101162, 101163, 101164, 101165, 101166, 101167, 101168, 101169, 101170, 101171, 101172, 101173, 101174, 101175, 101176, 101177, 101178, 101179, 101180, 101181, 101182, 101183, 101184, 101185, 101186, 101187, 101188, 101189</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201085" level="10">
+    <if_sid>101190, 101191, 101192, 101193, 101194, 101195, 101196, 101197, 101198, 101199, 101200, 101201, 101202, 101203, 101204, 101205, 101206, 101207, 101208, 101209, 101210, 101211, 101212, 101213, 101214, 101215, 101216, 101217, 101218, 101219, 101220, 101221, 101222, 101223, 101224, 101225, 101226, 101227, 101228, 101229, 101230, 101231, 101232, 101233, 101234, 101235, 101236, 101237, 101238, 101239</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201086" level="10">
+    <if_sid>101240, 101241, 101242, 101243, 101244, 101245, 101246, 101247, 101248, 101249, 101250, 101251, 101252, 101253, 101254, 101255, 101256, 101257, 101258, 101259, 101260, 101261, 101262, 101263, 101264, 101265, 101266, 101267, 101268, 101269, 101270, 101271, 101272, 101273, 101274, 101275, 101276, 101277, 101278, 101279, 101280, 101281, 101282, 101283, 101284, 101285, 101286, 101287, 101288, 101289</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201087" level="10">
+    <if_sid>101290, 101291, 101292, 101293, 101294, 101295, 101296, 101297, 101298, 101299, 101300, 101301, 101302, 101303, 101304, 101305, 101306, 101307, 101308, 101309, 101310, 101311, 101312, 101313, 101314, 101315, 101316, 101317, 101318, 101319, 101320, 101321, 101322, 101323, 101324, 101325, 101326, 101327, 101328, 101329, 101330, 101331, 101332, 101333, 101334, 101335, 101336, 101337, 101338, 101339</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201088" level="10">
+    <if_sid>101340, 101341, 101342, 101343, 101344, 101345, 101346, 101347, 101348, 101349, 101350, 101351, 101352, 101353, 101354, 101355, 101356, 101357, 101358, 101359, 101360, 101361, 101362, 101363, 101364, 101365, 101366, 101367, 101368, 101369, 101370, 101371, 101372, 101373, 101374, 101375, 101376, 101377, 101378, 101379, 101380, 101381, 101382, 101383, 101384, 101385, 101386, 101387, 101388, 101389</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201089" level="10">
+    <if_sid>101390, 101391, 101392, 101393, 101394, 101395, 101396, 101397, 101398, 101399, 101400, 101401, 101402, 101403, 101404, 101405, 101406, 101407, 101408, 101409, 101410, 101411, 101412, 101413, 101414, 101415, 101416, 101417, 101418, 101419, 101420, 101421, 101422, 101423, 101424, 101425, 101426, 101427, 101428, 101429, 101430, 101431, 101432, 101433, 101434, 101435, 101436, 101437, 101438, 101439</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201090" level="10">
+    <if_sid>101440, 101441, 101442, 101443, 101444, 101445, 101446, 101447, 101448, 101449, 101450, 101451, 101452, 101453, 101454, 101455, 101456, 101457, 101458, 101459, 101460, 101461, 101462, 101463, 101464, 101465, 101466, 101467, 101468, 101469, 101470, 101471, 101472, 101473, 101474, 101475, 101476, 101477, 101478, 101479, 101480, 101481, 101482, 101483, 101484, 101485, 101486, 101487, 101488, 101489</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201091" level="10">
+    <if_sid>101490, 101491, 101492, 101493, 101494, 101495, 101496, 101497, 101498, 101499, 101500, 101501, 101502, 101503, 101504, 101505, 101506, 101507, 101508, 101512, 101513, 101514, 101515, 101516, 101517, 101519, 101520, 101521, 101522, 101523, 101524, 101525, 101526, 101527, 101528, 101529, 101530, 101531, 101532, 101533, 101534, 101535, 101536, 101537, 101538, 101539, 101540, 101541, 101542, 101543</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201092" level="10">
+    <if_sid>101544, 101545, 101546, 101547, 101548, 101549, 101550, 101552, 101553, 101554, 101555, 101556, 101557, 101558, 101564, 101565, 101566, 101567, 101568, 101569, 101570, 101571, 101572, 101573, 101575, 101576, 101577, 101578, 101579, 101580, 101581, 101582, 101583, 101584, 101585, 101586, 101587, 101588, 101589, 101594, 101595, 101596, 101597, 101598, 101599, 101600, 101601, 101602, 101603, 101604</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201093" level="10">
+    <if_sid>101605, 101606, 101607, 101608, 101609, 101610, 101611, 101612, 101613, 101614, 101615, 101616, 101617, 101618, 101619, 101620, 101621, 101622, 101623, 101624, 101625, 101626, 101627, 101628, 101629, 101630, 101631, 101632, 101633, 101634, 101635, 101636, 101637, 101638, 101639, 101640, 101641, 101642, 101643, 101644, 101645, 101646, 101647, 101648, 101649, 101650, 101651, 101652, 101653, 101654</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201094" level="10">
+    <if_sid>101655, 101656, 101657, 101658, 101659, 101660, 101661, 101662, 101663, 101664, 101665, 101666, 101667, 101668, 101669, 101670, 101671, 101672, 101673, 101674, 101675, 101676, 101677, 101678, 101679, 101680, 101681, 101682, 101683, 101684, 101685, 101686, 101687, 101688, 101689, 101690, 101691, 101692, 101693, 101694, 101695, 101696, 101697, 101698, 101699, 101700, 101701, 101702, 101703, 101705</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201095" level="10">
+    <if_sid>101706, 101707, 101708, 101709, 101710, 101711, 101712, 101713, 101714, 101716, 101717, 101718, 101719, 101720, 101721, 101722, 101723, 101724, 101725, 101726, 101727, 101728, 101729, 101730, 101731, 101732, 101733, 101734, 101735, 101736, 101737, 101738, 101739, 101740, 101741, 101742, 101743, 101744, 101746, 101747, 101748, 101749, 101750, 101751, 101752, 101753, 101754, 101755, 101756, 101757</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201096" level="10">
+    <if_sid>101758, 101759, 101760, 101761, 101762, 101763, 101764, 101765, 101766, 101767, 101768, 101769, 101770, 101771, 101772, 101773, 101774, 101775, 101776, 101777, 101778, 101779, 101780, 101781, 101782, 101783, 101784, 101785, 101786, 101787, 101788, 101789, 101790, 101791, 101792, 101793, 101794, 101795, 101796, 101797, 101798, 101799, 101800, 101801, 101802, 101803, 101804, 101805, 101806, 101807</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201097" level="10">
+    <if_sid>101808, 101809, 101810, 101811, 101812, 101813, 101814, 101816, 101817, 101818, 101819, 101820, 101821, 101822, 101823, 101841, 101842, 101843, 101844, 101845, 101846, 101847, 101848, 101849, 101850, 101851, 101852, 101853, 101854, 101855, 101856, 103503, 104118, 104121, 104122, 104123, 104124, 104125, 104126, 104127, 104128, 104129, 104130, 104131, 107120, 107123, 108145, 108146, 108147, 108148</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+  <rule id="201098" level="10">
+    <if_sid>109146, 109147, 109151, 109155, 109158, 109159, 109160, 109161, 109162, 109163, 109164, 109165, 109166, 109167, 109168, 110141</if_sid>
+    <description>Windows: High Severity Event Detected (Level 10) - ALARM</description>
+  </rule>
+</group>

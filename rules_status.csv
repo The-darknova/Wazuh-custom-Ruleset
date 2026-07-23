@@ -1298,3 +1298,163 @@
 1297,150300,Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP,Brute_Force/150300-nginx_bruteforce.xml,Pending
 1298,150400,OPNsense: WebGUI Authentication Failure,Brute_Force/150400-opnsense_bruteforce.xml,Pending
 1299,150401,OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP,Brute_Force/150400-opnsense_bruteforce.xml,Pending
+1300,201000,Powershell Critical EventLog - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1301,201001,Malicious Powershell Command $(win.eventdata.scriptBlockText) Executed - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1302,201002,Powershell script: IEX execution detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1303,201003,Powershell script: Invoke-Expression detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1304,201004,Powershell script: Invoke-WebRequest detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1305,201005,Powershell script: iwr alias detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1306,201006,Powershell script: Start-BitsTransfer detected (BITS job abuse) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1307,201007,Powershell script: Net.WebClient object creation detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1308,201008,Powershell script: Download method detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1309,201009,Powershell script: FromBase64String detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1310,201010,Powershell script: Encoded command flag detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1311,201011,Powershell script: Reversed FromBase64String detected (obfuscation) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1312,201012,Powershell script: ExecutionPolicy Bypass detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1313,201013,Powershell script: Mimikatz keyword detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1314,201014,Powershell script: SEKURLSA (Mimikatz module) detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1315,201015,Powershell script: Kerberos ticket manipulation detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1316,201016,Powershell script: Credential dumping cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1317,201017,Powershell script: GPP Password extraction detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1318,201018,Powershell script: Code injection cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1319,201019,Powershell script: Credential theft cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1320,201020,Powershell script: UAC bypass cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1321,201021,Powershell script: Lateral movement/recon cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1322,201022,Powershell script: Network attack/C2 cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1323,201023,Powershell script: Post-exploitation cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1324,201024,Powershell script: Offensive framework keyword detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1325,201025,Powershell script: AMSI bypass attempt detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1326,201026,Powershell script: Browser/input data theft cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1327,201027,Powershell script: Screen capture cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1328,201028,Powershell script: Volume Shadow Copy access detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1329,201029,Powershell script: Active Directory enumeration detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1330,201030,Powershell script: Local group enumeration detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1331,201031,Powershell script: COM CLSID object execution detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1332,201032,Powershell script: COM InProcServer32 hijacking detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1333,201033,Powershell script: Persistence mechanism cmdlet detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1334,201034,Powershell script: Enable-PSRemoting detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1335,201035,Powershell script: Invoke-Command (remote execution) detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1336,201036,Powershell script: WMI-based remote execution detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1337,201037,Powershell script: CIM method/session detected (lateral movement) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1338,201038,Powershell script: Invoke-WmiExec detected (pass-the-hash) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1339,201039,Powershell script: TrustedHosts modification detected (DarkGate) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1340,201040,Powershell script: Compression/decompression detected (payload staging) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1341,201041,Powershell script: StreamReader usage detected (stream data processing) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1342,201042,Powershell script: MemoryStream usage detected (in-memory execution) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1343,201043,Powershell script: .NET Assembly reflection loading detected (Empire/Cobalt Strike) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1344,201044,Powershell script: Dynamic assembly building detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1345,201045,Powershell script: GetProcAddress API call detected (fileless injection) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1346,201046,Powershell script: Attempt to disable Defender real-time monitoring - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1347,201047,Powershell script: Windows Defender configuration tampering detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1348,201048,Powershell script: Windows Defender exclusion being added (AV evasion) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1349,201049,Powershell script: Attempt to remove Windows Defender directory (WhisperGate) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1350,201050,Powershell script: Suspicious keyword (shellcode/injection/backdoor) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1351,201051,Powershell script: Suspicious process/DLL reference detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1352,201052,Powershell script: C2/exploitation keyword detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1353,201053,Powershell script: Network object creation detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1354,201054,Powershell script: SysWOW64 reference detected (32-bit evasion) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1355,201055,Powershell script: $doit variable detected (exploit scripts) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1356,201056,Powershell script: SMB1Protocol feature being enabled (ransomware lateral movement) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1357,201057,Powershell script: Metasploit Meterpreter module detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1358,201058,Powershell script: Web download to memory stream (fileless malware staging) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1359,201059,Powershell script: Service start/stop command detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1360,201060,Powershell script: PowerShell downgrade attack detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1361,201061,Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1362,201062,Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1363,201063,Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1364,201064,The file $(win.eventdata.targetFilename) has been created. Possible ransomware activity. - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1365,201065,MITRE ATTaCK T1542.001 Pre-OS Boot: System Firmware - wpbbin.exe file created in System32. Possible firmware persistence attempt. - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1366,201066,T1546.013 - PowerShell Profile modified: Potential persistence mechanism detected (Event Triggered Execution) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1367,201067,T1137 - Outlook VbaProject.OTM Persistence File Created (Target: $(win.eventdata.targetFilename)) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1368,201068,Hyper-V volume shadow copy requestor service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1369,201069,Volume shadow copy service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1370,201070,Windows defender service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible Ransomware Activity. - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1371,201071,Multiple Registry Keys created in Event Viewer on $(win.system.computer). Possible Ransomware Activity. - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1372,201072,Sysmon - Event 13: RegistryEvent PsExec EulaAccepted Detected - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1373,201073,T1548.002: Bypass UAC via mscfile EventViewer hijack - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1374,201074,T1548.002: Bypass UAC via mscfile EventViewer hijack (test rule) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1375,201075,Suspicious registry modification detected: Hiding user accounts via Userlist key (T1564.002 - Hidden Users) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1376,201076,Suspicious registry modification detected: Disabling command line auditing (T1562.003 - Impair Command History Logging) via $(win.eventdata.targetObject) with value $(win.eventdata.details). - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1377,201077,T1574.009 - Path Interception by Unquoted Service Path in Registry (ImagePath points to Program Files without quotes) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1378,201078,T1574.011 - Hijack Execution Flow: Services Registry Permissions Weakness (Service ImagePath modified by $(win.eventdata.image)) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1379,201079,"T1547 - RDP Addins DLL Injection detected. Registry key: $(win.eventdata.targetObject), DLL: $(win.eventdata.details) - ALARM",Alarm/201000-Windows-Alarms.xml,Pending
+1380,201080,T1547.014 - Active Setup StubPath persistence detected (Registry modification under Installed Components) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1381,201081,T1137 - Outlook Macro Security Level Persistence detected via Registry SetValue (Target: $(win.eventdata.targetObject)) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1382,201082,T1547.012 - Print Processor Registry Key Persistence (TargetObject: $(win.eventdata.targetObject)) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1383,201083,Windows: Multiple Logon Failures (Brute Force) from same source IP - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1384,201084,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1385,201085,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1386,201086,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1387,201087,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1388,201088,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1389,201089,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1390,201090,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1391,201091,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1392,201092,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1393,201093,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1394,201094,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1395,201095,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1396,201096,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1397,201097,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1398,201098,Windows: High Severity Event Detected (Level 10) - ALARM,Alarm/201000-Windows-Alarms.xml,Pending
+1399,200000,Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1400,200001,Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1401,200002,Detects attempts to record audio with arecord utility. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1402,200003,Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1403,200004,Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1404,200005,Detects BPFDoor .lock and .pid files access in temporary file storage facility. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1405,200006,All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1406,200007,Detects attempts to discover the files with setuid/setgid capability on them. That would allow adversary to escalate their privileges. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1407,200008,Detect file time attribute change to hide new or changes to existing files. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1408,200009,Detects removing immutable file attribute. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1409,200010,Detects attempts to collect data stored in the clipboard from users with the usage of xclip tool. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1410,200011,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1411,200012,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1412,200013,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1413,200014,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1414,200015,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1415,200016,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1416,200017,Detects command line parameter very often used with coin miners. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1417,200018,Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1418,200019,Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1419,200020,Detects attempts to post the file with the usage of wget utility. The adversary can bypass the permission restriction with the misconfigured sudo permission for wget utility which could allow them to read files like /etc/shadow. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1420,200021,Detects overwriting (effectively wiping/deleting) of a file. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1421,200022,Detects access to a raw disk on a host to evade detection by security products. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1422,200023,Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1423,200024,Detects file and folder permission changes. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1424,200025,Detecting attempts to extract passwords with grep. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1425,200026,"Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1426,200027,"Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1427,200028,Detects appending of zip file to image. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1428,200029,Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1429,200030,Detects loading of kernel modules with insmod command. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1430,200031,Detect changes of syslog daemons configuration files. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1431,200032,Masquerading as Linux Crond Process. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1432,200033,Detects enumeration of local or remote network services. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1433,200034,Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1434,200035,Detects password policy discovery commands. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1435,200036,Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1436,200037,Detects a reload or a start of a service. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1437,200038,Detects adversary creating screen capture of a desktop with Import Tool. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1438,200039,Detects adversary creating screen capture of a desktop with Import Tool. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1439,200040,Detects adversary creating screen capture of a full with xwd. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1440,200041,Detects adversary creating screen capture of a full with xwd. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1441,200042,"Detection use of the command ""split"" to split files into parts and possible transfer. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1442,200043,"Detects embeding of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1443,200044,"Detects extraction of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1444,200045,"Detects suspicious activities as declared by Florian Roth in its 'Best Practice Auditd Configuration'. This includes the detection of the following commands; wget, curl, base64, nc, netcat, ncat, ssh, socat, wireshark, rawshark, rdesktop, nmap. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1445,200046,Detects relevant commands often related to malware or hacking activity. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1446,200047,Detects program executions in suspicious non-program folders related to malware or hacking activity. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1447,200048,Detects commandline operations on shell history files. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1448,200049,Detects System Information Discovery commands. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1449,200050,Detects System Information Discovery commands. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1450,200051,Detects extracting of zip file from image file. - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1451,200052,"Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. - ALARM",Alarm/200000-Linux-Alarms.xml,Pending
+1452,200053,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1453,200054,Linux: High Severity Event Detected (Level 10) - ALARM,Alarm/200000-Linux-Alarms.xml,Pending
+1454,202000,Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP - ALARM,Alarm/202000-Network-Alarms.xml,Pending
+1455,202001,Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP - ALARM,Alarm/202000-Network-Alarms.xml,Pending
+1456,202002,OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP - ALARM,Alarm/202000-Network-Alarms.xml,Pending
+1457,202003,Network: High Severity Event Detected (Level 10) - ALARM,Alarm/202000-Network-Alarms.xml,Pending
+1458,203000,Windows Security log was cleared. - ALARM,Alarm/203000-Other-Alarms.xml,Pending
+1459,203001,Potential User Login Via Pass the Hash Detected. - ALARM,Alarm/203000-Other-Alarms.xml,Pending
