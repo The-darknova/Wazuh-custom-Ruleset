@@ -4,6 +4,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Default configuration
 SKIP_CONFIRMATION=false
 DEBUG=false
+BACKUP_DIR="$HOME/wazuh_rules_backup_$(date +%Y%m%d_%H%M%S)"
 
 # Function to print usage information
 usage() {
@@ -72,11 +73,7 @@ detect_package_manager() {
     fi
 }
 
-# Check for required dependencies
-check_dependencies() {
-    # Git is no longer required as we use local rules
-    logger "Dependencies checked. Continuing..."
-}
+
 
 # Check system architecture
 check_architecture() {
@@ -98,7 +95,7 @@ restart_service() {
         service "$service_name" restart ${debug}
     elif [[ -x "/etc/rc.d/init.d/$service_name" ]]; then
         logger "Restarting $service_name using init script..."
-        "/etc/rc.d/init.d/$service_name" start ${debug}
+        "/etc/rc.d/init.d/$service_name" restart ${debug}
     else
         logger -e "${service_name^} could not restart. No service manager found on the system."
         return 1
@@ -117,10 +114,20 @@ restart_service() {
 # Restore backup rules in case of failure
 restore_backup() {
     logger -e "Attempting to restore backed up rules..."
-    \cp -r /tmp/wazuh_rules_backup/* /var/ossec/etc/rules/
-    chown wazuh:wazuh /var/ossec/etc/rules/*
-    chmod 660 /var/ossec/etc/rules/*
-    restart_service "wazuh-manager"
+    if [[ -d "$BACKUP_DIR" ]]; then
+        shopt -s nullglob
+        local files=("$BACKUP_DIR"/*)
+        shopt -u nullglob
+        
+        if [[ ${#files[@]} -gt 0 ]]; then
+            \cp -r "$BACKUP_DIR"/* /var/ossec/etc/rules/
+            chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
+            chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+            restart_service "wazuh-manager"
+            return
+        fi
+    fi
+    logger -e "Backup directory $BACKUP_DIR is empty or does not exist. Cannot restore."
 }
 
 # Perform health check on Wazuh manager
@@ -136,29 +143,24 @@ health_check() {
         logger -e "Wazuh-Manager Service is not healthy. Please check /var/ossec/logs/ossec.log for details."
         return 1
     else
-        logger "Wazuh-Manager Service is healthy. Thanks for checking us out :)"
-        logger "Get started with our free-for-life tier here: https://www.socfortress.co/trial.html Happy Defending!"
+        logger "Wazuh-Manager Service is healthy."
         return 0
     fi
 }
 
 # Move decoder files to appropriate location
 move_decoders() {
-    local decoders=(
-        "decoder-linux-sysmon.xml"
-        "yara_decoders.xml"
-        "auditd_decoders.xml"
-        "naxsi-opnsense_decoders.xml"
-        "maltrail_decoders.xml"
-        "decoder-manager-logs.xml"
-    )
-    
-    for decoder in "${decoders[@]}"; do
-        if [[ -f "/var/ossec/etc/rules/$decoder" ]]; then
+    # Dynamically fetch and move all decoders ending with _decoders.xml
+    shopt -s nullglob
+    for decoder_path in /var/ossec/etc/rules/*_decoders.xml; do
+        if [[ -f "$decoder_path" ]]; then
+            local decoder
+            decoder=$(basename "$decoder_path")
             logger "Moving decoder $decoder to decoders directory"
-            mv "/var/ossec/etc/rules/$decoder" "/var/ossec/etc/decoders/"
+            mv "$decoder_path" "/var/ossec/etc/decoders/"
         fi
     done
+    shopt -u nullglob
 }
 
 # Install local custom rules
@@ -176,15 +178,27 @@ install_rules() {
             ;;
     esac
     
+    # Fallback check
+    if [[ -x "/var/ossec/bin/wazuh-control" ]]; then
+        is_installed=true
+    fi
+    
     if [[ "$is_installed" != "true" ]]; then
         logger -e "Wazuh-Manager software could not be found or is not installed"
         return 1
     fi
     
     # Backup existing rules
-    mkdir -p /tmp/wazuh_rules_backup
-    logger "Backing up current rules into /tmp/wazuh_rules_backup/"
-    \cp -r /var/ossec/etc/rules/* /tmp/wazuh_rules_backup/
+    mkdir -p "$BACKUP_DIR"
+    logger "Backing up current rules into $BACKUP_DIR/"
+    shopt -s nullglob
+    local existing_rules=(/var/ossec/etc/rules/*)
+    shopt -u nullglob
+    if [[ ${#existing_rules[@]} -gt 0 ]]; then
+        \cp -r /var/ossec/etc/rules/* "$BACKUP_DIR"/
+    else
+        logger -w "No existing rules found to backup."
+    fi
     
     # Copy local rules
     local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -194,12 +208,11 @@ install_rules() {
     # Move decoders to appropriate directory
     move_decoders
     
-    # Save version info
-    /var/ossec/bin/wazuh-control info 2>&1 | tee /tmp/version.txt
-    
     # Set permissions
-    chown wazuh:wazuh /var/ossec/etc/rules/*
-    chmod 660 /var/ossec/etc/rules/*
+    chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
+    chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+    chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
+    chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
     
     # Restart service
     logger "Rules copied, attempting to restart the Wazuh-Manager service"
@@ -213,8 +226,6 @@ install_rules() {
 
 # Main function
 main() {
-    clear
-    
     # Check if running as root
     if [[ "$EUID" -ne 0 ]]; then
         logger -e "This script must be run as root."
@@ -239,7 +250,6 @@ main() {
     fi
     
     # Run installation
-    check_dependencies
     check_architecture
     install_rules
     health_check

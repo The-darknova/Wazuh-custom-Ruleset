@@ -1,0 +1,11 @@
+<group name="local,apparmor,docker,">
+  
+  <rule id="100050" level="0">
+    <if_group>syslog|apparmor</if_group>
+    <match>apparmor="AUDIT"</match>
+    <match>operation="change_onexec"</match>
+    <match>name="docker-default"</match>
+    <description>Suppress noisy AppArmor Docker initialization logs.</description>
+  </rule>
+
+</group>

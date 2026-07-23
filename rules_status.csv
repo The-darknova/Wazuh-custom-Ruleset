@@ -1463,3 +1463,4 @@
 1462,202003,High Severity Event Detected (Level 10): OPNsense Events - ALARM,Alarm/202000-Network-Alarms.xml,Pending
 1463,203000,Windows Security log was cleared. - ALARM,Alarm/203000-Other-Alarms.xml,Pending
 1464,203001,Potential User Login Via Pass the Hash Detected. - ALARM,Alarm/203000-Other-Alarms.xml,Pending
+1465,100050,Suppress noisy AppArmor Docker initialization logs.,AppArmor/100050-apparmor_rules.xml,Pending
