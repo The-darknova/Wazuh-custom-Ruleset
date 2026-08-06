@@ -1,7 +1,7 @@
 <group name="alarm,network_alarms,">
   <!-- 1-to-1 Critical Alarms -->
   <rule id="202000" level="10">
-    <if_sid>150200</if_sid>
+    <if_sid>150200, 150201</if_sid>
     <description>Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP - ALARM</description>
   </rule>
   <rule id="202001" level="10">

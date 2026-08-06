@@ -115,14 +115,46 @@ restart_service() {
 restore_backup() {
     logger -e "Attempting to restore backed up rules..."
     if [[ -d "$BACKUP_DIR" ]]; then
-        shopt -s nullglob
-        local files=("$BACKUP_DIR"/*)
-        shopt -u nullglob
+        local restored=false
         
-        if [[ ${#files[@]} -gt 0 ]]; then
-            \cp -r "$BACKUP_DIR"/* /var/ossec/etc/rules/
-            chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
-            chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+        # Restore rules
+        if [[ -d "$BACKUP_DIR/rules" ]]; then
+            shopt -s nullglob
+            local rule_files=("$BACKUP_DIR/rules"/*)
+            shopt -u nullglob
+            if [[ ${#rule_files[@]} -gt 0 ]]; then
+                \cp -r "$BACKUP_DIR/rules"/* /var/ossec/etc/rules/
+                chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
+                chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+                restored=true
+            fi
+        else
+            # Fallback for old backup format
+            shopt -s nullglob
+            local old_files=("$BACKUP_DIR"/*)
+            shopt -u nullglob
+            if [[ ${#old_files[@]} -gt 0 ]]; then
+                \cp -r "$BACKUP_DIR"/* /var/ossec/etc/rules/
+                chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
+                chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+                restored=true
+            fi
+        fi
+
+        # Restore decoders
+        if [[ -d "$BACKUP_DIR/decoders" ]]; then
+            shopt -s nullglob
+            local decoder_files=("$BACKUP_DIR/decoders"/*)
+            shopt -u nullglob
+            if [[ ${#decoder_files[@]} -gt 0 ]]; then
+                \cp -r "$BACKUP_DIR/decoders"/* /var/ossec/etc/decoders/
+                chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
+                chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
+                restored=true
+            fi
+        fi
+        
+        if [[ "$restored" == "true" ]]; then
             restart_service "wazuh-manager"
             return
         fi
@@ -188,17 +220,31 @@ install_rules() {
         return 1
     fi
     
-    # Backup existing rules
-    mkdir -p "$BACKUP_DIR"
-    logger "Backing up current rules into $BACKUP_DIR/"
+    # Backup existing rules and decoders
+    mkdir -p "$BACKUP_DIR/rules"
+    mkdir -p "$BACKUP_DIR/decoders"
+    logger "Backing up current rules and decoders into $BACKUP_DIR/"
     shopt -s nullglob
     local existing_rules=(/var/ossec/etc/rules/*)
+    local existing_decoders=(/var/ossec/etc/decoders/*)
     shopt -u nullglob
+    
     if [[ ${#existing_rules[@]} -gt 0 ]]; then
-        \cp -r /var/ossec/etc/rules/* "$BACKUP_DIR"/
+        \cp -r /var/ossec/etc/rules/* "$BACKUP_DIR/rules/"
     else
         logger -w "No existing rules found to backup."
     fi
+    
+    if [[ ${#existing_decoders[@]} -gt 0 ]]; then
+        \cp -r /var/ossec/etc/decoders/* "$BACKUP_DIR/decoders/"
+    else
+        logger -w "No existing decoders found to backup."
+    fi
+    
+    # Remove existing rules and decoders
+    logger "Removing existing rules and decoders..."
+    rm -f /var/ossec/etc/rules/* 2>/dev/null || true
+    rm -f /var/ossec/etc/decoders/* 2>/dev/null || true
     
     # Copy local rules
     local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -208,9 +254,26 @@ install_rules() {
     # Move decoders to appropriate directory
     move_decoders
     
+    # Provision CDB lists and update ossec.conf
+    logger "Provisioning CDB lists"
+    mkdir -p /var/ossec/etc/lists
+    touch /var/ossec/etc/lists/malicious-powershell /var/ossec/etc/lists/bash_profile
+    if [[ -f /var/ossec/etc/ossec.conf ]]; then
+        if ! grep -q "<list>etc/lists/malicious-powershell</list>" /var/ossec/etc/ossec.conf; then
+            sed -i '/<ruleset>/a \ \ \ \ <list>etc/lists/malicious-powershell</list>' /var/ossec/etc/ossec.conf
+        fi
+        if ! grep -q "<list>etc/lists/bash_profile</list>" /var/ossec/etc/ossec.conf; then
+            sed -i '/<ruleset>/a \ \ \ \ <list>etc/lists/bash_profile</list>' /var/ossec/etc/ossec.conf
+        fi
+    else
+        logger -w "ossec.conf not found. CDB lists could not be added to configuration."
+    fi
+    
     # Set permissions
     chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+    chown -R wazuh:wazuh /var/ossec/etc/lists 2>/dev/null || true
+    chmod 660 /var/ossec/etc/lists/* 2>/dev/null || true
     chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
     
