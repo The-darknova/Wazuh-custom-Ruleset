@@ -213,7 +213,7 @@
     <description>Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. - ALARM</description>
   </rule>
   <rule id="200053" level="10">
-    <if_sid>150100</if_sid>
+    <if_sid>150100, 150101, 150102, 150103</if_sid>
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM</description>
   </rule>
   <!-- Many-to-1 Grouped Alarms by Category -->

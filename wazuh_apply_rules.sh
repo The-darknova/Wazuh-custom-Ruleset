@@ -272,8 +272,9 @@ install_rules() {
     # Set permissions
     chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
-    chown -R wazuh:wazuh /var/ossec/etc/lists 2>/dev/null || true
-    chmod 660 /var/ossec/etc/lists/* 2>/dev/null || true
+    chown -R wazuh:wazuh /var/ossec/etc/lists/ 2>/dev/null || true
+    chmod -R 660 /var/ossec/etc/lists/ 2>/dev/null || true
+    chmod 770 /var/ossec/etc/lists/amazon/ /var/ossec/etc/lists/malicious-ioc/ 2>/dev/null || true
     chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
     
