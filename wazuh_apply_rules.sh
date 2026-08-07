@@ -243,8 +243,8 @@ install_rules() {
     
     # Remove existing rules and decoders
     logger "Removing existing rules and decoders..."
-    rm -f /var/ossec/etc/rules/* 2>/dev/null || true
-    rm -f /var/ossec/etc/decoders/* 2>/dev/null || true
+    rm -rf /var/ossec/etc/rules/* 2>/dev/null || true
+    rm -rf /var/ossec/etc/decoders/* 2>/dev/null || true
     
     # Copy local rules
     local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -286,6 +286,14 @@ install_rules() {
     chmod 770 /var/ossec/etc/lists/amazon/ /var/ossec/etc/lists/malicious-ioc/ 2>/dev/null || true
     chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
+    
+    # Compile CDB lists
+    logger "Compiling CDB lists with wazuh-makelists"
+    if [[ -x /var/ossec/bin/wazuh-makelists ]]; then
+        /var/ossec/bin/wazuh-makelists >/dev/null 2>&1
+    else
+        logger -w "wazuh-makelists not found, CDB lists might not compile."
+    fi
     
     # Restart service
     logger "Rules copied, attempting to restart the Wazuh-Manager service"
