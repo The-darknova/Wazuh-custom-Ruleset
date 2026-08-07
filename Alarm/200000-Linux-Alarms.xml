@@ -1,184 +1,320 @@
 <group name="alarm,linux_alarms,">
-  <!-- 1-to-1 Critical Alarms -->
   <rule id="200000" level="12">
     <if_sid>120120</if_sid>
     <description>Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM</description>
+    <mitre>
+      <id>T1546</id>
+    </mitre>
   </rule>
   <rule id="200001" level="12">
     <if_sid>120121</if_sid>
     <description>Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM</description>
+    <mitre>
+      <id>T1546</id>
+    </mitre>
   </rule>
   <rule id="200002" level="12">
     <if_sid>120122</if_sid>
     <description>Detects attempts to record audio with arecord utility. - ALARM</description>
+    <mitre>
+      <id>T1123</id>
+    </mitre>
   </rule>
   <rule id="200003" level="12">
     <if_sid>120123</if_sid>
     <description>Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM</description>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
   </rule>
   <rule id="200004" level="12">
     <if_sid>120124</if_sid>
     <description>Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM</description>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
   </rule>
   <rule id="200005" level="12">
     <if_sid>120125</if_sid>
     <description>Detects BPFDoor .lock and .pid files access in temporary file storage facility. - ALARM</description>
+    <mitre>
+      <id>T1059</id>
+      <id>T1106</id>
+    </mitre>
   </rule>
   <rule id="200006" level="12">
     <if_sid>120127</if_sid>
     <description>All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. - ALARM</description>
+    <mitre>
+      <id>T1562</id>
+    </mitre>
   </rule>
   <rule id="200007" level="12">
     <if_sid>120128</if_sid>
     <description>Detects attempts to discover the files with setuid/setgid capability on them. That would allow adversary to escalate their privileges. - ALARM</description>
+    <mitre>
+      <id>T1123</id>
+      <id>T1548</id>
+    </mitre>
   </rule>
   <rule id="200008" level="12">
     <if_sid>120129</if_sid>
     <description>Detect file time attribute change to hide new or changes to existing files. - ALARM</description>
+    <mitre>
+      <id>T1070</id>
+    </mitre>
   </rule>
   <rule id="200009" level="12">
     <if_sid>120130</if_sid>
     <description>Detects removing immutable file attribute. - ALARM</description>
+    <mitre>
+      <id>T1222</id>
+    </mitre>
   </rule>
   <rule id="200010" level="12">
     <if_sid>120131</if_sid>
     <description>Detects attempts to collect data stored in the clipboard from users with the usage of xclip tool. - ALARM</description>
+    <mitre>
+      <id>T1115</id>
+    </mitre>
   </rule>
   <rule id="200011" level="12">
     <if_sid>120132</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200012" level="12">
     <if_sid>120133</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200013" level="12">
     <if_sid>120134</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200014" level="12">
     <if_sid>120135</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200015" level="12">
     <if_sid>120136</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200016" level="12">
     <if_sid>120137</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200017" level="12">
     <if_sid>120138</if_sid>
     <description>Detects command line parameter very often used with coin miners. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200018" level="12">
     <if_sid>120139</if_sid>
     <description>Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200019" level="12">
     <if_sid>120140</if_sid>
     <description>Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
   </rule>
   <rule id="200020" level="12">
     <if_sid>120144</if_sid>
     <description>Detects attempts to post the file with the usage of wget utility. The adversary can bypass the permission restriction with the misconfigured sudo permission for wget utility which could allow them to read files like /etc/shadow. - ALARM</description>
+    <mitre>
+      <id>T1048</id>
+    </mitre>
   </rule>
   <rule id="200021" level="12">
     <if_sid>120145</if_sid>
     <description>Detects overwriting (effectively wiping/deleting) of a file. - ALARM</description>
+    <mitre>
+      <id>T1485</id>
+    </mitre>
   </rule>
   <rule id="200022" level="12">
     <if_sid>120146</if_sid>
     <description>Detects access to a raw disk on a host to evade detection by security products. - ALARM</description>
+    <mitre>
+      <id>T1006</id>
+    </mitre>
   </rule>
   <rule id="200023" level="12">
     <if_sid>120147</if_sid>
     <description>Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network. - ALARM</description>
+    <mitre>
+      <id>T1562</id>
+    </mitre>
   </rule>
   <rule id="200024" level="12">
     <if_sid>120148</if_sid>
     <description>Detects file and folder permission changes. - ALARM</description>
+    <mitre>
+      <id>T1222</id>
+    </mitre>
   </rule>
   <rule id="200025" level="12">
     <if_sid>120158</if_sid>
     <description>Detecting attempts to extract passwords with grep. - ALARM</description>
+    <mitre>
+      <id>T1552</id>
+    </mitre>
   </rule>
   <rule id="200026" level="12">
     <if_sid>120159</if_sid>
     <description>Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM</description>
+    <mitre>
+      <id>T1564</id>
+    </mitre>
   </rule>
   <rule id="200027" level="12">
     <if_sid>120160</if_sid>
     <description>Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM</description>
+    <mitre>
+      <id>T1564</id>
+    </mitre>
   </rule>
   <rule id="200028" level="12">
     <if_sid>120161</if_sid>
     <description>Detects appending of zip file to image. - ALARM</description>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
   </rule>
   <rule id="200029" level="12">
     <if_sid>120162</if_sid>
     <description>Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes. - ALARM</description>
+    <mitre>
+      <id>T1574</id>
+    </mitre>
   </rule>
   <rule id="200030" level="12">
     <if_sid>120163</if_sid>
     <description>Detects loading of kernel modules with insmod command. - ALARM</description>
+    <mitre>
+      <id>T1547</id>
+    </mitre>
   </rule>
   <rule id="200031" level="12">
     <if_sid>120164</if_sid>
     <description>Detect changes of syslog daemons configuration files. - ALARM</description>
+    <mitre>
+      <id>T1562</id>
+    </mitre>
   </rule>
   <rule id="200032" level="12">
     <if_sid>120165</if_sid>
     <description>Masquerading as Linux Crond Process. - ALARM</description>
+    <mitre>
+      <id>T1036</id>
+    </mitre>
   </rule>
   <rule id="200033" level="12">
     <if_sid>120166</if_sid>
     <description>Detects enumeration of local or remote network services. - ALARM</description>
+    <mitre>
+      <id>T1046</id>
+    </mitre>
   </rule>
   <rule id="200034" level="12">
     <if_sid>120167</if_sid>
     <description>Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM</description>
+    <mitre>
+      <id>T1040</id>
+    </mitre>
   </rule>
   <rule id="200035" level="12">
     <if_sid>120168</if_sid>
     <description>Detects password policy discovery commands. - ALARM</description>
+    <mitre>
+      <id>T1201</id>
+    </mitre>
   </rule>
   <rule id="200036" level="12">
     <if_sid>120169</if_sid>
     <description>Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM</description>
+    <mitre>
+      <id>T1201</id>
+    </mitre>
   </rule>
   <rule id="200037" level="12">
     <if_sid>120170</if_sid>
     <description>Detects a reload or a start of a service. - ALARM</description>
+    <mitre>
+      <id>T1543</id>
+    </mitre>
   </rule>
   <rule id="200038" level="12">
     <if_sid>120171</if_sid>
     <description>Detects adversary creating screen capture of a desktop with Import Tool. - ALARM</description>
+    <mitre>
+      <id>T1113</id>
+    </mitre>
   </rule>
   <rule id="200039" level="12">
     <if_sid>120172</if_sid>
     <description>Detects adversary creating screen capture of a desktop with Import Tool. - ALARM</description>
+    <mitre>
+      <id>T1113</id>
+    </mitre>
   </rule>
   <rule id="200040" level="12">
     <if_sid>120173</if_sid>
     <description>Detects adversary creating screen capture of a full with xwd. - ALARM</description>
+    <mitre>
+      <id>T1113</id>
+    </mitre>
   </rule>
   <rule id="200041" level="12">
     <if_sid>120174</if_sid>
     <description>Detects adversary creating screen capture of a full with xwd. - ALARM</description>
+    <mitre>
+      <id>T1113</id>
+    </mitre>
   </rule>
   <rule id="200042" level="12">
     <if_sid>120175</if_sid>
     <description>Detection use of the command "split" to split files into parts and possible transfer. - ALARM</description>
+    <mitre>
+      <id>T1030</id>
+    </mitre>
   </rule>
   <rule id="200043" level="12">
     <if_sid>120176</if_sid>
     <description>Detects embeding of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM</description>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
   </rule>
   <rule id="200044" level="12">
     <if_sid>120177</if_sid>
     <description>Detects extraction of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM</description>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
   </rule>
   <rule id="200045" level="12">
     <if_sid>120178</if_sid>
@@ -187,38 +323,66 @@
   <rule id="200046" level="12">
     <if_sid>120179</if_sid>
     <description>Detects relevant commands often related to malware or hacking activity. - ALARM</description>
+    <mitre>
+      <id>T1059</id>
+    </mitre>
   </rule>
   <rule id="200047" level="12">
     <if_sid>120180</if_sid>
     <description>Detects program executions in suspicious non-program folders related to malware or hacking activity. - ALARM</description>
+    <mitre>
+      <id>T1584</id>
+      <id>T1587</id>
+    </mitre>
   </rule>
   <rule id="200048" level="12">
     <if_sid>120181</if_sid>
     <description>Detects commandline operations on shell history files. - ALARM</description>
+    <mitre>
+      <id>T1552</id>
+    </mitre>
   </rule>
   <rule id="200049" level="12">
     <if_sid>120182</if_sid>
     <description>Detects System Information Discovery commands. - ALARM</description>
+    <mitre>
+      <id>T1082</id>
+    </mitre>
   </rule>
   <rule id="200050" level="12">
     <if_sid>120183</if_sid>
     <description>Detects System Information Discovery commands. - ALARM</description>
+    <mitre>
+      <id>T1082</id>
+    </mitre>
   </rule>
   <rule id="200051" level="12">
     <if_sid>120185</if_sid>
     <description>Detects extracting of zip file from image file. - ALARM</description>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
   </rule>
   <rule id="200052" level="12">
     <if_sid>120186</if_sid>
     <description>Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. - ALARM</description>
+    <mitre>
+      <id>T1033</id>
+    </mitre>
   </rule>
   <rule id="200053" level="10">
     <if_sid>150100, 150101, 150102, 150103</if_sid>
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
   </rule>
-  <!-- Many-to-1 Grouped Alarms by Category -->
   <rule id="200054" level="10">
     <if_sid>120141, 120142, 120143, 120184</if_sid>
     <description>High Severity Event Detected (Level 10): Linux Auditd - ALARM</description>
+    <mitre>
+      <id>T1543</id>
+      <id>T1560</id>
+    </mitre>
   </rule>
 </group>

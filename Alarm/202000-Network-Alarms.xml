@@ -1,18 +1,25 @@
 <group name="alarm,network_alarms,">
-  <!-- 1-to-1 Critical Alarms -->
   <rule id="202000" level="10">
     <if_sid>150200, 150201</if_sid>
     <description>Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP - ALARM</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
   </rule>
   <rule id="202001" level="10">
     <if_sid>150300</if_sid>
     <description>Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP - ALARM</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
   </rule>
   <rule id="202002" level="10">
     <if_sid>150401</if_sid>
     <description>OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP - ALARM</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
   </rule>
-  <!-- Many-to-1 Grouped Alarms by Category -->
   <rule id="202003" level="10">
     <if_sid>120462</if_sid>
     <description>High Severity Event Detected (Level 10): OPNsense Events - ALARM</description>

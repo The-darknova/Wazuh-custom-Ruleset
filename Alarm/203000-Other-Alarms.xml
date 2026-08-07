@@ -1,11 +1,17 @@
 <group name="alarm,other_alarms,">
-  <!-- 1-to-1 Critical Alarms -->
   <rule id="203000" level="12">
     <if_sid>116209</if_sid>
     <description>Windows Security log was cleared. - ALARM</description>
+    <mitre>
+      <id>T1070</id>
+      <id>T1107</id>
+    </mitre>
   </rule>
   <rule id="203001" level="12">
     <if_sid>116210</if_sid>
     <description>Potential User Login Via Pass the Hash Detected. - ALARM</description>
+    <mitre>
+      <id>T1078</id>
+    </mitre>
   </rule>
 </group>
