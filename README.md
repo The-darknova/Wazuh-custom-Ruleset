@@ -37,6 +37,9 @@ Ce dépôt contient une collection de règles, décodeurs et scripts Wazuh perso
     * **Nginx :** Détecte les tentatives d'authentification web répétées.
     * **OPNsense :** Surveille l'interface WebGUI pour les échecs d'authentification multiples.
 
+### 8. Alertes & Notifications (Alarms)
+* **Alarm :** Règles de regroupement (wrapper rules) conçues pour capturer les événements critiques à travers différentes catégories (Windows, Linux, Réseau, etc.) et déclencher des alertes consolidées de haute sévérité. Ces règles intègrent également les correspondances tactiques et techniques MITRE ATT&CK issues de leurs règles sous-jacentes.
+
 ---
 
 ## Exigences de l'Environnement
@@ -54,7 +57,7 @@ Pour s'assurer que ces règles personnalisées fonctionnent correctement, des co
 | **Falco (Conteneurs)** | Installer Falco | Falco doit être installé sur les hôtes Docker/Kubernetes et configuré pour générer des alertes au format JSON. | `200360-docker_falco_rules.xml` attend des décodeurs JSON. |
 
 ## Script d'Installation
-Le dépôt inclut un script bash (`wazuh_socfortress_rules.sh`) pour automatiser la sauvegarde des règles existantes et le déploiement de cet ensemble de règles personnalisées vers un Manager Wazuh. Exécutez-le avec précaution car il remplace les règles personnalisées existantes.
+Le dépôt inclut un script bash (`wazuh_apply_rules.sh`) pour automatiser la sauvegarde des règles existantes et le déploiement de cet ensemble de règles personnalisées vers un Manager Wazuh. Exécutez-le avec précaution car il remplace les règles personnalisées existantes. Il compile également automatiquement les listes CDB et applique les autorisations requises.
 
 ## Suivi des Règles
 Le script Python `generate_table.py` parcourt le dépôt pour générer et mettre à jour automatiquement :
