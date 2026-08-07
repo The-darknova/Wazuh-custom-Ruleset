@@ -249,22 +249,31 @@ install_rules() {
     # Copy local rules
     local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     logger "Copying custom rules from ${script_dir}"
-    find "$script_dir" -name '*.xml' -exec cp {} /var/ossec/etc/rules/ \;
+    if git -C "$script_dir" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        git -C "$script_dir" ls-files "*.xml" | while read -r file; do
+            cp "$script_dir/$file" /var/ossec/etc/rules/
+        done
+    else
+        find "$script_dir" -name '*.xml' -exec cp {} /var/ossec/etc/rules/ \;
+    fi
     
     # Move decoders to appropriate directory
     move_decoders
     
     # Provision CDB lists and update ossec.conf
     logger "Provisioning CDB lists"
-    mkdir -p /var/ossec/etc/lists
-    touch /var/ossec/etc/lists/malicious-powershell /var/ossec/etc/lists/bash_profile
+    mkdir -p /var/ossec/etc/lists/amazon
+    mkdir -p /var/ossec/etc/lists/malicious-ioc
+    touch /var/ossec/etc/lists/malicious-powershell /var/ossec/etc/lists/bash_profile /var/ossec/etc/lists/audit-keys /var/ossec/etc/lists/common-ports
+    touch /var/ossec/etc/lists/malicious-ioc/malware-hashes /var/ossec/etc/lists/malicious-ioc/malicious-ip /var/ossec/etc/lists/malicious-ioc/malicious-domains
+    
+    local lists=("malicious-powershell" "bash_profile" "audit-keys" "common-ports" "malicious-ioc/malware-hashes" "malicious-ioc/malicious-ip" "malicious-ioc/malicious-domains")
     if [[ -f /var/ossec/etc/ossec.conf ]]; then
-        if ! grep -q "<list>etc/lists/malicious-powershell</list>" /var/ossec/etc/ossec.conf; then
-            sed -i '/<ruleset>/a \ \ \ \ <list>etc/lists/malicious-powershell</list>' /var/ossec/etc/ossec.conf
-        fi
-        if ! grep -q "<list>etc/lists/bash_profile</list>" /var/ossec/etc/ossec.conf; then
-            sed -i '/<ruleset>/a \ \ \ \ <list>etc/lists/bash_profile</list>' /var/ossec/etc/ossec.conf
-        fi
+        for list in "${lists[@]}"; do
+            if ! grep -q "<list>etc/lists/$list</list>" /var/ossec/etc/ossec.conf; then
+                sed -i "/<ruleset>/a \ \ \ \ <list>etc/lists/$list</list>" /var/ossec/etc/ossec.conf
+            fi
+        done
     else
         logger -w "ossec.conf not found. CDB lists could not be added to configuration."
     fi
