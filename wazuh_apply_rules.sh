@@ -297,7 +297,9 @@ install_rules() {
     chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
     chown -R wazuh:wazuh /var/ossec/etc/lists/ 2>/dev/null || true
-    chmod -R 660 /var/ossec/etc/lists/ 2>/dev/null || true
+    chown -R wazuh:wazuh /var/ossec/etc/lists
+    find /var/ossec/etc/lists -type d -exec chmod 750 {} \;
+    find /var/ossec/etc/lists -type f -exec chmod 640 {} \;
     chmod 770 /var/ossec/etc/lists/amazon/ /var/ossec/etc/lists/malicious-ioc/ 2>/dev/null || true
     chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
     chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
