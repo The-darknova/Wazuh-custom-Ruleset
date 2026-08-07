@@ -17,6 +17,8 @@ with open(output_file, "w") as f, open(csv_output_file, "w", newline='') as csvf
     counter = 1
     # Find all xml files
     for root, dirs, files in os.walk(workspace):
+        dirs.sort()
+        files.sort()
         for file in files:
             if file.endswith(".xml"):
                 filepath = os.path.join(root, file)
