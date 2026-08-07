@@ -278,15 +278,6 @@ install_rules() {
         logger -w "ossec.conf not found. CDB lists could not be added to configuration."
     fi
     
-    # Set permissions
-    chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
-    chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
-    chown -R wazuh:wazuh /var/ossec/etc/lists/ 2>/dev/null || true
-    chmod -R 660 /var/ossec/etc/lists/ 2>/dev/null || true
-    chmod 770 /var/ossec/etc/lists/amazon/ /var/ossec/etc/lists/malicious-ioc/ 2>/dev/null || true
-    chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
-    chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
-    
     # Compile CDB lists
     logger "Compiling CDB lists with wazuh-makelists/ossec-makelists"
     if [[ -x /var/ossec/bin/wazuh-makelists ]]; then
@@ -296,6 +287,15 @@ install_rules() {
     else
         logger -w "makelists binary not found, CDB lists might not compile."
     fi
+    
+    # Set permissions
+    chown wazuh:wazuh /var/ossec/etc/rules/* 2>/dev/null || true
+    chmod 660 /var/ossec/etc/rules/* 2>/dev/null || true
+    chown -R wazuh:wazuh /var/ossec/etc/lists/ 2>/dev/null || true
+    chmod -R 660 /var/ossec/etc/lists/ 2>/dev/null || true
+    chmod 770 /var/ossec/etc/lists/amazon/ /var/ossec/etc/lists/malicious-ioc/ 2>/dev/null || true
+    chown wazuh:wazuh /var/ossec/etc/decoders/* 2>/dev/null || true
+    chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
     
     # Restart service
     logger "Rules copied, attempting to restart the Wazuh-Manager service"
