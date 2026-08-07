@@ -249,11 +249,16 @@ install_rules() {
     # Copy local rules
     local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     logger "Copying custom rules from ${script_dir}"
+    
+    # Configure git to trust the repository directory when running as root
+    git config --global --add safe.directory "$script_dir" 2>/dev/null || true
+    
     if git -C "$script_dir" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
         git -C "$script_dir" ls-files "*.xml" | while read -r file; do
             cp "$script_dir/$file" /var/ossec/etc/rules/
         done
     else
+        logger -w "Git repository not detected or trusted, falling back to find command (may copy uncommitted duplicates)"
         find "$script_dir" -name '*.xml' -exec cp {} /var/ossec/etc/rules/ \;
     fi
     
