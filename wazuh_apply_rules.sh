@@ -288,11 +288,13 @@ install_rules() {
     chmod 660 /var/ossec/etc/decoders/* 2>/dev/null || true
     
     # Compile CDB lists
-    logger "Compiling CDB lists with wazuh-makelists"
+    logger "Compiling CDB lists with wazuh-makelists/ossec-makelists"
     if [[ -x /var/ossec/bin/wazuh-makelists ]]; then
         /var/ossec/bin/wazuh-makelists >/dev/null 2>&1
+    elif [[ -x /var/ossec/bin/ossec-makelists ]]; then
+        /var/ossec/bin/ossec-makelists >/dev/null 2>&1
     else
-        logger -w "wazuh-makelists not found, CDB lists might not compile."
+        logger -w "makelists binary not found, CDB lists might not compile."
     fi
     
     # Restart service
