@@ -1,36 +1,61 @@
-Viewed wazuh_socfortress_rules.sh:222-261
+# How to Revert / Restore Wazuh Rules
 
-Based on an analysis of the [`wazuh_socfortress_rules.sh`](file:///home/danny/allprojects/Wazuh-custom-Ruleset/wazuh_socfortress_rules.sh) script, here is what is added or changed in your environment, and how to remove them:
+If you applied custom rules using [`wazuh_apply_rules.sh`](file:///home/danny/allprojects/Wazuh-custom-Ruleset/wazuh_apply_rules.sh) and wish to restore your previous configuration, follow either the automated or manual procedure below.
 
-### 1. Installed Decoders (to delete)
-The script moves the following decoder files to your Wazuh decoders directory. You should delete them:
-- `/var/ossec/etc/decoders/decoder-linux-sysmon.xml`
-- `/var/ossec/etc/decoders/yara_decoders.xml`
-- `/var/ossec/etc/decoders/auditd_decoders.xml`
-- `/var/ossec/etc/decoders/naxsi-opnsense_decoders.xml`
-- `/var/ossec/etc/decoders/maltrail_decoders.xml`
-- `/var/ossec/etc/decoders/decoder-manager-logs.xml`
+---
 
-### 2. Installed Rules (to delete)
-All `.xml` rule files from the cloned repository [Wazuh-Rules](https://github.com/socfortress/Wazuh-Rules) are copied directly into:
-- `/var/ossec/etc/rules/`
+## Method 1: Automated Restore (Recommended)
 
-*Note: Since the script copies all `.xml` files from the cloned repository, the easiest way to remove them and restore your previous configuration is to restore from the backup folder.*
+[`wazuh_apply_rules.sh`](file:///home/danny/allprojects/Wazuh-custom-Ruleset/wazuh_apply_rules.sh) automatically creates a full atomic backup of `/var/ossec/etc/rules`, `/var/ossec/etc/decoders`, `/var/ossec/etc/lists`, and `/var/ossec/etc/ossec.conf` before making any modifications.
 
-### 3. Restore your previous rules (if backup exists)
-The script creates a backup of your original rules before replacing them:
-* **Backup Directory:** `/tmp/wazuh_rules_backup/`
+To restore your most recent configuration automatically:
+```bash
+sudo ./wazuh_apply_rules.sh --restore latest
+```
 
-To restore your previous environment:
-1. Delete everything in `/var/ossec/etc/rules/` that was copied by the script.
-2. Copy the files from `/tmp/wazuh_rules_backup/` back into `/var/ossec/etc/rules/`.
-3. Set the correct permissions on the restored rules:
+To restore from a specific backup directory:
+```bash
+sudo ./wazuh_apply_rules.sh --restore /var/ossec/backup/rules_backup_YYYYMMDD_HHMMSS
+```
+
+The script will:
+1. Restore previous rules, decoders, lists, and `ossec.conf`.
+2. Reapply correct permissions (`wazuh:wazuh`, `0660`/`0750`).
+3. Recompile CDB lists (`wazuh-makelists`).
+4. Run a pre-flight test with `wazuh-analysisd -t`.
+5. Restart the `wazuh-manager` service safely and verify daemon health.
+
+---
+
+## Method 2: Manual Restore
+
+If you prefer to restore manually from a backup folder (located by default under `/var/ossec/backup/` or `/root/`):
+
+1. **Restore rules and decoders:**
    ```bash
-   chown wazuh:wazuh /var/ossec/etc/rules/*
-   chmod 660 /var/ossec/etc/rules/*
+   cp -a /var/ossec/backup/rules_backup_YYYYMMDD_HHMMSS/rules/* /var/ossec/etc/rules/
+   cp -a /var/ossec/backup/rules_backup_YYYYMMDD_HHMMSS/decoders/* /var/ossec/etc/decoders/
+   cp -a /var/ossec/backup/rules_backup_YYYYMMDD_HHMMSS/lists/* /var/ossec/etc/lists/
+   cp -a /var/ossec/backup/rules_backup_YYYYMMDD_HHMMSS/ossec.conf /var/ossec/etc/ossec.conf
    ```
 
-### 4. Temporary/Artifact files (to delete)
-- `/tmp/wazuh_rules_backup`
-- `/tmp/Wazuh-Rules`
-- `/tmp/version.txt`
+2. **Restore permissions and ownership:**
+   ```bash
+   chown -R wazuh:wazuh /var/ossec/etc/rules /var/ossec/etc/decoders /var/ossec/etc/lists
+   find /var/ossec/etc/rules /var/ossec/etc/decoders /var/ossec/etc/lists -type d -exec chmod 750 {} +
+   find /var/ossec/etc/rules /var/ossec/etc/decoders /var/ossec/etc/lists -type f -exec chmod 660 {} +
+   chown root:wazuh /var/ossec/etc/ossec.conf
+   chmod 640 /var/ossec/etc/ossec.conf
+   ```
+
+3. **Recompile CDB lists:**
+   ```bash
+   /var/ossec/bin/wazuh-makelists
+   ```
+
+4. **Verify configuration and restart:**
+   ```bash
+   /var/ossec/bin/wazuh-analysisd -t
+   systemctl restart wazuh-manager
+   /var/ossec/bin/wazuh-control status
+   ```

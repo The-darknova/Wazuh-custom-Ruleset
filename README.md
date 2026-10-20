@@ -56,8 +56,40 @@ Pour s'assurer que ces règles personnalisées fonctionnent correctement, des co
 | **Fortigate** | Configurer le transfert Syslog | Fortigate doit être configuré pour envoyer ses journaux d'événements vers le manager Wazuh ou un agent via Syslog. | `agent.conf` configuré pour accepter les logs Syslog de Fortigate. |
 | **Falco (Conteneurs)** | Installer Falco | Falco doit être installé sur les hôtes Docker/Kubernetes et configuré pour générer des alertes au format JSON. | `200360-docker_falco_rules.xml` attend des décodeurs JSON. |
 
-## Script d'Installation
-Le dépôt inclut un script bash (`wazuh_apply_rules.sh`) pour automatiser la sauvegarde des règles existantes et le déploiement de cet ensemble de règles personnalisées vers un Manager Wazuh. Exécutez-le avec précaution car il remplace les règles personnalisées existantes. Il compile également automatiquement les listes CDB et applique les autorisations requises.
+## Script de Déploiement et d'Automatisation
+
+Le dépôt inclut le script [`wazuh_apply_rules.sh`](file:///home/danny/allprojects/Wazuh-custom-Ruleset/wazuh_apply_rules.sh) pour automatiser la validation, la sauvegarde atomique et le déploiement sécurisé des règles, décodeurs et listes CDB sur un Manager Wazuh.
+
+### Utilisation :
+* **Déploiement interactif standard :**
+  ```bash
+  sudo ./wazuh_apply_rules.sh
+  ```
+* **Validation sans modification (Dry-run / Test) :**
+  ```bash
+  ./wazuh_apply_rules.sh --dry-run
+  ```
+* **Déploiement automatique non-interactif (CI/CD / Ansible) :**
+  ```bash
+  sudo ./wazuh_apply_rules.sh -y
+  ```
+* **Mode fusion (conserve les règles personnalisées existantes non présentes dans ce dépôt) :**
+  ```bash
+  sudo ./wazuh_apply_rules.sh -m merge
+  ```
+* **Restauration immédiate vers la dernière sauvegarde :**
+  ```bash
+  sudo ./wazuh_apply_rules.sh --restore latest
+  ```
+
+### Fonctionnalités intégrées :
+- **Séparation automatique des règles et décodeurs** par inspection XML et nommage.
+- **Vérification pré-vol de la syntaxe XML** et détection de doublons d'IDs de règles.
+- **Sauvegarde atomique complète** (`rules/`, `decoders/`, `lists/`, `ossec.conf`).
+- **Pré-test de configuration** avec `wazuh-analysisd -t` avant tout redémarrage du service.
+- **Rollback automatique** en cas d'erreur de redémarrage ou de syntaxe.
+- **Gestion stricte des permissions Wazuh** (`wazuh:wazuh`, `0660` / `0750`).
+- **Journalisation détaillée** à la fois dans le terminal et dans `/var/log/wazuh_apply_rules.log`.
 
 ## Suivi des Règles
 Le script Python `generate_table.py` parcourt le dépôt pour générer et mettre à jour automatiquement :
