@@ -385,4 +385,12 @@
       <id>T1560</id>
     </mitre>
   </rule>
+  <rule id="200055" level="10">
+    <if_sid>121000</if_sid>
+    <description>Falco: Container Security Runtime Alert Detected - ALARM</description>
+    <mitre>
+      <id>T1611</id>
+      <id>T1059</id>
+    </mitre>
+  </rule>
 </group>

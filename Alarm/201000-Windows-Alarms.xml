@@ -596,14 +596,9 @@
     <if_sid>104118, 104121, 104122, 104123, 104124, 104125, 104126, 104127, 104128, 104129, 104130, 104131</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Image Loaded - ALARM</description>
     <mitre>
-      <id>T1027.007</id>
-      <id>T1071</id>
-      <id>T1505.004</id>
-      <id>T1546</id>
-      <id>T1547</id>
-      <id>T1547.008</id>
-      <id>T1555.004</id>
       <id>T1574.001</id>
+      <id>T1547</id>
+      <id>T1505.004</id>
     </mitre>
   </rule>
   <rule id="201086" level="10">
@@ -614,118 +609,59 @@
     <if_sid>101088, 101089, 101090, 101091, 101092, 101093, 101094, 101095, 101096, 101097, 101098, 101099, 101100, 101101, 101102, 101105, 101156, 101157, 101158, 101159, 101160, 101161, 101162, 101163, 101164, 101165, 101166, 101167, 101168, 101169, 101170, 101171, 101172, 101173, 101174, 101175, 101176, 101177, 101178, 101179, 101180, 101181, 101182, 101183, 101184, 101185, 101186, 101187, 101188, 101189</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1003</id>
-      <id>T1005</id>
-      <id>T1007</id>
-      <id>T1012</id>
-      <id>T1021</id>
-      <id>T1036</id>
-      <id>T1039</id>
-      <id>T1041</id>
-      <id>T1047</id>
-      <id>T1048</id>
       <id>T1059</id>
-      <id>T1070</id>
-      <id>T1089</id>
-      <id>T1096</id>
-      <id>T1098</id>
-      <id>T1105</id>
-      <id>T1127</id>
-      <id>T1137</id>
-      <id>T1202</id>
-      <id>T1203</id>
-      <id>T1204</id>
-      <id>T1218</id>
       <id>T1548</id>
-      <id>T1550</id>
-      <id>T1555</id>
-      <id>T1569</id>
+      <id>T1218</id>
+      <id>T1048</id>
     </mitre>
   </rule>
   <rule id="201088" level="10">
     <if_sid>101190, 101191, 101192, 101193, 101194, 101195, 101196, 101197, 101198, 101199, 101200, 101201, 101202, 101203, 101204, 101205, 101206, 101207, 101208, 101209, 101210, 101211, 101212, 101213, 101214, 101215, 101216, 101217, 101218, 101219, 101220, 101221, 101222, 101223, 101224, 101225, 101226, 101227, 101228, 101229, 101230, 101231, 101232, 101233, 101234, 101235, 101236, 101237, 101238, 101239</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1030</id>
-      <id>T1036</id>
-      <id>T1048</id>
-      <id>T1055</id>
       <id>T1070</id>
-      <id>T1127</id>
       <id>T1134</id>
-      <id>T1207</id>
       <id>T1218</id>
-      <id>T1553</id>
-      <id>T1562</id>
       <id>T1564</id>
-      <id>T1567</id>
     </mitre>
   </rule>
   <rule id="201089" level="10">
     <if_sid>101240, 101241, 101242, 101243, 101244, 101245, 101246, 101247, 101248, 101249, 101250, 101251, 101252, 101253, 101254, 101255, 101256, 101257, 101258, 101259, 101260, 101261, 101262, 101263, 101264, 101265, 101266, 101267, 101268, 101269, 101270, 101271, 101272, 101273, 101274, 101275, 101276, 101277, 101278, 101279, 101280, 101281, 101282, 101283, 101284, 101285, 101286, 101287, 101288, 101289</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1040</id>
       <id>T1059</id>
-      <id>T1070</id>
-      <id>T1106</id>
-      <id>T1110</id>
-      <id>T1129</id>
-      <id>T1204</id>
-      <id>T1550</id>
-      <id>T1552</id>
       <id>T1555</id>
-      <id>T1558</id>
-      <id>T1559</id>
-      <id>T1622</id>
+      <id>T1040</id>
+      <id>T1110</id>
     </mitre>
   </rule>
   <rule id="201090" level="10">
     <if_sid>101290, 101291, 101292, 101293, 101294, 101295, 101296, 101297, 101298, 101299, 101300, 101301, 101302, 101303, 101304, 101305, 101306, 101307, 101308, 101309, 101310, 101311, 101312, 101313, 101314, 101315, 101316, 101317, 101318, 101319, 101320, 101321, 101322, 101323, 101324, 101325, 101326, 101327, 101328, 101329, 101330, 101331, 101332, 101333, 101334, 101335, 101336, 101337, 101338, 101339</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1016</id>
-      <id>T1056</id>
       <id>T1087</id>
-      <id>T1110</id>
-      <id>T1187</id>
-      <id>T1497</id>
-      <id>T1552</id>
-      <id>T1555</id>
-      <id>T1558</id>
       <id>T1615</id>
-      <id>T1649</id>
-      <id>T1652</id>
+      <id>T1558</id>
+      <id>T1552</id>
     </mitre>
   </rule>
   <rule id="201091" level="10">
     <if_sid>101340, 101341, 101342, 101343, 101344, 101345, 101346, 101347, 101348, 101349, 101350, 101351, 101352, 101353, 101354, 101355, 101356, 101357, 101358, 101359, 101360, 101361, 101362, 101363, 101364, 101365, 101366, 101367, 101368, 101369, 101370, 101371, 101372, 101373, 101374, 101375, 101376, 101377, 101378, 101379, 101380, 101381, 101382, 101383, 101384, 101385, 101386, 101387, 101388, 101389</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1010</id>
-      <id>T1016</id>
-      <id>T1069</id>
       <id>T1082</id>
-      <id>T1120</id>
       <id>T1135</id>
-      <id>T1217</id>
       <id>T1482</id>
-      <id>T1497</id>
     </mitre>
   </rule>
   <rule id="201092" level="10">
     <if_sid>101390, 101391, 101392, 101393, 101394, 101395, 101396, 101397, 101398, 101399, 101400, 101401, 101402, 101403, 101404, 101405, 101406, 101407, 101408, 101409, 101410, 101411, 101412, 101413, 101414, 101415, 101416, 101417, 101418, 101419, 101420, 101421, 101422, 101423, 101424, 101425, 101426, 101427, 101428, 101429, 101430, 101431, 101432, 101433, 101434, 101435, 101436, 101437, 101438, 101439</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1003</id>
-      <id>T1005</id>
-      <id>T1016</id>
       <id>T1021</id>
+      <id>T1016</id>
       <id>T1083</id>
-      <id>T1482</id>
       <id>T1552</id>
-      <id>T1557</id>
-      <id>T1563</id>
     </mitre>
   </rule>
   <rule id="201093" level="10">
@@ -733,154 +669,79 @@
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
       <id>T1003</id>
-      <id>T1056</id>
-      <id>T1110</id>
-      <id>T1552</id>
       <id>T1558</id>
+      <id>T1552</id>
     </mitre>
   </rule>
   <rule id="201094" level="10">
     <if_sid>101490, 101491, 101492, 101493, 101494, 101495, 101496, 101497, 101498, 101499, 101500, 101501, 101502, 101503, 101504, 101505, 101506, 101507, 101508, 101512, 101513, 101514, 101515, 101516, 101517, 101519, 101520, 101521, 101522, 101523, 101524, 101525, 101526, 101527, 101528, 101529, 101530, 101531, 101532, 101533, 101534, 101535, 101536, 101537, 101538, 101539, 101540, 101541, 101542, 101543</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1007</id>
-      <id>T1012</id>
       <id>T1018</id>
-      <id>T1046</id>
-      <id>T1069</id>
-      <id>T1201</id>
       <id>T1518</id>
-      <id>T1614</id>
-      <id>T1654</id>
+      <id>T1012</id>
     </mitre>
   </rule>
   <rule id="201095" level="10">
     <if_sid>101544, 101545, 101546, 101547, 101548, 101549, 101550, 101552, 101553, 101554, 101555, 101556, 101557, 101558, 101564, 101565, 101566, 101567, 101568, 101569, 101570, 101571, 101572, 101573, 101575, 101576, 101577, 101578, 101579, 101580, 101581, 101582, 101583, 101584, 101585, 101586, 101587, 101588, 101589, 101594, 101595, 101596, 101597, 101598, 101599, 101600, 101601, 101602, 101603, 101604</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1020</id>
+      <id>T1490</id>
       <id>T1046</id>
       <id>T1078</id>
-      <id>T1124</id>
-      <id>T1195</id>
-      <id>T1485</id>
-      <id>T1486</id>
-      <id>T1489</id>
-      <id>T1490</id>
-      <id>T1491</id>
-      <id>T1518</id>
-      <id>T1531</id>
     </mitre>
   </rule>
   <rule id="201096" level="10">
     <if_sid>101605, 101606, 101607, 101608, 101609, 101610, 101611, 101612, 101613, 101614, 101615, 101616, 101617, 101618, 101619, 101620, 101621, 101622, 101623, 101624, 101625, 101626, 101627, 101628, 101629, 101630, 101631, 101632, 101633, 101634, 101635, 101636, 101637, 101638, 101639, 101640, 101641, 101642, 101643, 101644, 101645, 101646, 101647, 101648, 101649, 101650, 101651, 101652, 101653, 101654</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1006</id>
-      <id>T1020</id>
-      <id>T1036</id>
-      <id>T1041</id>
-      <id>T1048</id>
-      <id>T1070</id>
-      <id>T1140</id>
-      <id>T1216</id>
       <id>T1218</id>
+      <id>T1048</id>
       <id>T1222</id>
-      <id>T1562</id>
-      <id>T1564</id>
     </mitre>
   </rule>
   <rule id="201097" level="10">
     <if_sid>101655, 101656, 101657, 101658, 101659, 101660, 101661, 101662, 101663, 101664, 101665, 101666, 101667, 101668, 101669, 101670, 101671, 101672, 101673, 101674, 101675, 101676, 101677, 101678, 101679, 101680, 101681, 101682, 101683, 101684, 101685, 101686, 101687, 101688, 101689, 101690, 101691, 101692, 101693, 101694, 101695, 101696, 101697, 101698, 101699, 101700, 101701, 101702, 101703, 101705</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1027</id>
-      <id>T1055</id>
-      <id>T1220</id>
-      <id>T1484</id>
-      <id>T1546</id>
-      <id>T1547</id>
-      <id>T1548</id>
       <id>T1562</id>
-      <id>T1564</id>
       <id>T1574</id>
+      <id>T1564</id>
     </mitre>
   </rule>
   <rule id="201098" level="10">
     <if_sid>101706, 101707, 101708, 101709, 101710, 101711, 101712, 101713, 101714, 101716, 101717, 101718, 101719, 101720, 101721, 101722, 101723, 101724, 101725, 101726, 101727, 101728, 101729, 101730, 101731, 101732, 101733, 101734, 101735, 101736, 101737, 101738, 101739, 101740, 101741, 101742, 101743, 101744, 101746, 101747, 101748, 101749, 101750, 101751, 101752, 101753, 101754, 101755, 101756, 101757</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1001</id>
-      <id>T1037</id>
-      <id>T1071</id>
-      <id>T1090</id>
-      <id>T1095</id>
-      <id>T1098</id>
-      <id>T1113</id>
-      <id>T1132</id>
       <id>T1136</id>
-      <id>T1176</id>
-      <id>T1219</id>
-      <id>T1505</id>
-      <id>T1546</id>
+      <id>T1098</id>
       <id>T1547</id>
-      <id>T1560</id>
-      <id>T1572</id>
-      <id>T1574</id>
     </mitre>
   </rule>
   <rule id="201099" level="10">
     <if_sid>101758, 101759, 101760, 101761, 101762, 101763, 101764, 101765, 101766, 101767, 101768, 101769, 101770, 101771, 101772, 101773, 101774, 101775, 101776, 101777, 101778, 101779, 101780, 101781, 101782, 101783, 101784, 101785, 101786, 101787, 101788, 101789, 101790, 101791, 101792, 101793, 101794, 101795, 101796, 101797, 101798, 101799, 101800, 101801, 101802, 101803, 101804, 101805, 101806, 101807</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1036</id>
-      <id>T1053.005</id>
-      <id>T1056</id>
-      <id>T1059.001</id>
-      <id>T1059.005</id>
-      <id>T1112</id>
-      <id>T1113</id>
-      <id>T1137.006</id>
-      <id>T1176</id>
-      <id>T1204.002</id>
       <id>T1546</id>
-      <id>T1553</id>
-      <id>T1555</id>
-      <id>T1559</id>
+      <id>T1059.001</id>
+      <id>T1137.006</id>
     </mitre>
   </rule>
   <rule id="201100" level="10">
     <if_sid>101808, 101809, 101810, 101811, 101812, 101813, 101814, 101816, 101817, 101818, 101819, 101820, 101821, 101822, 101823, 101841, 101842, 101843, 101844, 101845, 101846, 101847, 101848, 101849, 101850, 101851, 101852, 101853, 101854, 101855, 101856</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM</description>
     <mitre>
-      <id>T1025</id>
-      <id>T1039</id>
-      <id>T1070.001</id>
-      <id>T1072</id>
-      <id>T1074</id>
-      <id>T1090</id>
-      <id>T1095</id>
-      <id>T1110</id>
       <id>T1112</id>
-      <id>T1114</id>
-      <id>T1505</id>
-      <id>T1539</id>
-      <id>T1555</id>
-      <id>T1560</id>
-      <id>T1570</id>
-      <id>T1592.001</id>
-      <id>T1595.003</id>
-      <id>T1620</id>
+      <id>T1095</id>
+      <id>T1072</id>
     </mitre>
   </rule>
   <rule id="201101" level="10">
     <if_sid>108145, 108146, 108147, 108148</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Registry Create/Delete - ALARM</description>
     <mitre>
-      <id>T1036</id>
-      <id>T1133</id>
-      <id>T1546</id>
       <id>T1546.001</id>
+      <id>T1133</id>
     </mitre>
   </rule>
   <rule id="201102" level="10">
@@ -894,13 +755,100 @@
     <if_sid>109146, 109147, 109151, 109155, 109158, 109159, 109160, 109161, 109162, 109163, 109164, 109165, 109166, 109167, 109168</if_sid>
     <description>High Severity Event Detected (Level 10): Sysmon Registry Value Set - ALARM</description>
     <mitre>
-      <id>T1036</id>
-      <id>T1090</id>
-      <id>T1543.003</id>
-      <id>T1546</id>
-      <id>T1546.010</id>
-      <id>T1547</id>
       <id>T1556.002</id>
+      <id>T1546</id>
+      <id>T1547</id>
+    </mitre>
+  </rule>
+  <rule id="201104" level="10">
+    <if_sid>116203, 116204, 116205</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon WMI Event Subscription Persistence - ALARM</description>
+    <mitre>
+      <id>T1546.003</id>
+    </mitre>
+  </rule>
+  <rule id="201105" level="10">
+    <if_sid>116206</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Suspicious File Deletion - ALARM</description>
+    <mitre>
+      <id>T1485</id>
+      <id>T1070.004</id>
+    </mitre>
+  </rule>
+  <rule id="201106" level="10">
+    <if_sid>116207</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Clipboard Data Collection - ALARM</description>
+    <mitre>
+      <id>T1115</id>
+    </mitre>
+  </rule>
+  <rule id="201107" level="10">
+    <if_sid>116208</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Process Tampering / Hollowing - ALARM</description>
+    <mitre>
+      <id>T1055.012</id>
+    </mitre>
+  </rule>
+  <rule id="201108" level="10">
+    <if_sid>116211</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Kernel Driver Loaded - ALARM</description>
+    <mitre>
+      <id>T1068</id>
+      <id>T1543.003</id>
+    </mitre>
+  </rule>
+  <rule id="201109" level="10">
+    <if_sid>112101, 112102, 112103, 112104, 112105, 112106, 113101, 113102, 113103, 113104, 113105, 113106, 61646, 61647</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Suspicious Named Pipe Activity - ALARM</description>
+    <mitre>
+      <id>T1021.002</id>
+      <id>T1570</id>
+    </mitre>
+  </rule>
+  <rule id="201110" level="10">
+    <if_sid>111101, 111102</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Alternate Data Stream Created - ALARM</description>
+    <mitre>
+      <id>T1564.004</id>
+    </mitre>
+  </rule>
+  <rule id="201111" level="10">
+    <if_sid>114101, 61644</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Suspicious DNS Query - ALARM</description>
+    <mitre>
+      <id>T1071.004</id>
+    </mitre>
+  </rule>
+  <rule id="201112" level="10">
+    <if_sid>110112, 110113, 110114, 110115, 110116, 110117, 110118, 110119, 110120, 110121, 110122, 110123, 110124, 110125, 110126, 110127, 110128, 110129, 110130, 110131, 110132, 110133, 110134, 110135, 110136, 110137, 110138, 110139, 110140</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Registry Rename Evasion - ALARM</description>
+    <mitre>
+      <id>T1112</id>
+      <id>T1562.001</id>
+    </mitre>
+  </rule>
+  <rule id="201113" level="10">
+    <if_sid>117541, 117537</if_sid>
+    <description>High Severity Event Detected (Level 10): PowerShell Malicious Script Block Execution - ALARM</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+  </rule>
+  <rule id="201114" level="10">
+    <if_sid>101509, 101510, 101511, 101518, 101551, 101559, 101560, 101561, 101562, 101563, 101574</if_sid>
+    <description>High Severity Event Detected (Level 10): Sysmon Target Reconnaissance and Account Deletion - ALARM</description>
+    <mitre>
+      <id>T1614</id>
+      <id>T1046</id>
+      <id>T1531</id>
+    </mitre>
+  </rule>
+  <rule id="201115" level="10">
+    <if_sid>100600, 100501</if_sid>
+    <description>High Severity Event Detected (Level 10): Active Directory and Rogue Logon Session Anomaly - ALARM</description>
+    <mitre>
+      <id>T1078</id>
+      <id>T1087.002</id>
     </mitre>
   </rule>
 </group>

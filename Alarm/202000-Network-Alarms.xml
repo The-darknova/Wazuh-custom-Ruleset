@@ -24,4 +24,12 @@
     <if_sid>120462</if_sid>
     <description>High Severity Event Detected (Level 10): OPNsense Events - ALARM</description>
   </rule>
+  <rule id="202004" level="10">
+    <if_sid>120461</if_sid>
+    <description>OPNsense NAXSI WAF: Web Attack Blocked (SQLi / XSS / RCE / Traversal) - ALARM</description>
+    <mitre>
+      <id>T1190</id>
+      <id>T1059</id>
+    </mitre>
+  </rule>
 </group>

@@ -14,4 +14,12 @@
       <id>T1078</id>
     </mitre>
   </rule>
+  <rule id="203002" level="10">
+    <if_sid>100100</if_sid>
+    <description>Wazuh Infrastructure Security: Duplicate Agent Key or Rogue Registration Detected - ALARM</description>
+    <mitre>
+      <id>T1078</id>
+      <id>T1556</id>
+    </mitre>
+  </rule>
 </group>
