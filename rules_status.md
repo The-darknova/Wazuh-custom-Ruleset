@@ -1,0 +1,1489 @@
+# Wazuh Rules Status
+
+| # | Rule ID | Description | File | State | Alarm ID |
+|---|---------|-------------|------|-------|----------|
+| 1 | 100500 | AD Inventory Collection Results | AD_Inventory/100500-ad_inventory.xml | Pending | - |
+| 2 | 100501 | AD Inventory Integration Results | AD_Inventory/100500-ad_inventory.xml | Covered | 201115 |
+| 3 | 200000 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 4 | 200001 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 5 | 200002 | Detects attempts to record audio with arecord utility. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 6 | 200003 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 7 | 200004 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 8 | 200005 | Detects BPFDoor .lock and .pid files access in temporary file storage facility. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 9 | 200006 | All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 10 | 200007 | Detects attempts to discover the files with setuid/setgid capability on them. That would allow adversary to escalate their privileges. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 11 | 200008 | Detect file time attribute change to hide new or changes to existing files. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 12 | 200009 | Detects removing immutable file attribute. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 13 | 200010 | Detects attempts to collect data stored in the clipboard from users with the usage of xclip tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 14 | 200011 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 15 | 200012 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 16 | 200013 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 17 | 200014 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 18 | 200015 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 19 | 200016 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 20 | 200017 | Detects command line parameter very often used with coin miners. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 21 | 200018 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 22 | 200019 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 23 | 200020 | Detects attempts to post the file with the usage of wget utility. The adversary can bypass the permission restriction with the misconfigured sudo permission for wget utility which could allow them to read files like /etc/shadow. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 24 | 200021 | Detects overwriting (effectively wiping/deleting) of a file. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 25 | 200022 | Detects access to a raw disk on a host to evade detection by security products. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 26 | 200023 | Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 27 | 200024 | Detects file and folder permission changes. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 28 | 200025 | Detecting attempts to extract passwords with grep. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 29 | 200026 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 30 | 200027 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 31 | 200028 | Detects appending of zip file to image. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 32 | 200029 | Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 33 | 200030 | Detects loading of kernel modules with insmod command. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 34 | 200031 | Detect changes of syslog daemons configuration files. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 35 | 200032 | Masquerading as Linux Crond Process. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 36 | 200033 | Detects enumeration of local or remote network services. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 37 | 200034 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 38 | 200035 | Detects password policy discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 39 | 200036 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 40 | 200037 | Detects a reload or a start of a service. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 41 | 200038 | Detects adversary creating screen capture of a desktop with Import Tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 42 | 200039 | Detects adversary creating screen capture of a desktop with Import Tool. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 43 | 200040 | Detects adversary creating screen capture of a full with xwd. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 44 | 200041 | Detects adversary creating screen capture of a full with xwd. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 45 | 200042 | Detection use of the command "split" to split files into parts and possible transfer. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 46 | 200043 | Detects embeding of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 47 | 200044 | Detects extraction of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 48 | 200045 | Detects suspicious activities as declared by Florian Roth in its 'Best Practice Auditd Configuration'. This includes the detection of the following commands; wget, curl, base64, nc, netcat, ncat, ssh, socat, wireshark, rawshark, rdesktop, nmap. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 49 | 200046 | Detects relevant commands often related to malware or hacking activity. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 50 | 200047 | Detects program executions in suspicious non-program folders related to malware or hacking activity. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 51 | 200048 | Detects commandline operations on shell history files. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 52 | 200049 | Detects System Information Discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 53 | 200050 | Detects System Information Discovery commands. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 54 | 200051 | Detects extracting of zip file from image file. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 55 | 200052 | Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 56 | 200053 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 57 | 200054 | High Severity Event Detected (Level 10): Linux Auditd - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 58 | 200055 | Falco: Container Security Runtime Alert Detected - ALARM | Alarm/200000-Linux-Alarms.xml | Alarm | - |
+| 59 | 201000 | Powershell Critical EventLog - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 60 | 201001 | Malicious Powershell Command $(win.eventdata.scriptBlockText) Executed - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 61 | 201002 | Powershell script: IEX execution detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 62 | 201003 | Powershell script: Invoke-Expression detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 63 | 201004 | Powershell script: Invoke-WebRequest detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 64 | 201005 | Powershell script: iwr alias detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 65 | 201006 | Powershell script: Start-BitsTransfer detected (BITS job abuse) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 66 | 201007 | Powershell script: Net.WebClient object creation detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 67 | 201008 | Powershell script: Download method detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 68 | 201009 | Powershell script: FromBase64String detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 69 | 201010 | Powershell script: Encoded command flag detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 70 | 201011 | Powershell script: Reversed FromBase64String detected (obfuscation) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 71 | 201012 | Powershell script: ExecutionPolicy Bypass detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 72 | 201013 | Powershell script: Mimikatz keyword detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 73 | 201014 | Powershell script: SEKURLSA (Mimikatz module) detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 74 | 201015 | Powershell script: Kerberos ticket manipulation detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 75 | 201016 | Powershell script: Credential dumping cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 76 | 201017 | Powershell script: GPP Password extraction detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 77 | 201018 | Powershell script: Code injection cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 78 | 201019 | Powershell script: Credential theft cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 79 | 201020 | Powershell script: UAC bypass cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 80 | 201021 | Powershell script: Lateral movement/recon cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 81 | 201022 | Powershell script: Network attack/C2 cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 82 | 201023 | Powershell script: Post-exploitation cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 83 | 201024 | Powershell script: Offensive framework keyword detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 84 | 201025 | Powershell script: AMSI bypass attempt detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 85 | 201026 | Powershell script: Browser/input data theft cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 86 | 201027 | Powershell script: Screen capture cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 87 | 201028 | Powershell script: Volume Shadow Copy access detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 88 | 201029 | Powershell script: Active Directory enumeration detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 89 | 201030 | Powershell script: Local group enumeration detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 90 | 201031 | Powershell script: COM CLSID object execution detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 91 | 201032 | Powershell script: COM InProcServer32 hijacking detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 92 | 201033 | Powershell script: Persistence mechanism cmdlet detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 93 | 201034 | Powershell script: Enable-PSRemoting detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 94 | 201035 | Powershell script: Invoke-Command (remote execution) detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 95 | 201036 | Powershell script: WMI-based remote execution detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 96 | 201037 | Powershell script: CIM method/session detected (lateral movement) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 97 | 201038 | Powershell script: Invoke-WmiExec detected (pass-the-hash) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 98 | 201039 | Powershell script: TrustedHosts modification detected (DarkGate) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 99 | 201040 | Powershell script: Compression/decompression detected (payload staging) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 100 | 201041 | Powershell script: StreamReader usage detected (stream data processing) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 101 | 201042 | Powershell script: MemoryStream usage detected (in-memory execution) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 102 | 201043 | Powershell script: .NET Assembly reflection loading detected (Empire/Cobalt Strike) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 103 | 201044 | Powershell script: Dynamic assembly building detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 104 | 201045 | Powershell script: GetProcAddress API call detected (fileless injection) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 105 | 201046 | Powershell script: Attempt to disable Defender real-time monitoring - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 106 | 201047 | Powershell script: Windows Defender configuration tampering detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 107 | 201048 | Powershell script: Windows Defender exclusion being added (AV evasion) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 108 | 201049 | Powershell script: Attempt to remove Windows Defender directory (WhisperGate) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 109 | 201050 | Powershell script: Suspicious keyword (shellcode/injection/backdoor) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 110 | 201051 | Powershell script: Suspicious process/DLL reference detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 111 | 201052 | Powershell script: C2/exploitation keyword detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 112 | 201053 | Powershell script: Network object creation detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 113 | 201054 | Powershell script: SysWOW64 reference detected (32-bit evasion) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 114 | 201055 | Powershell script: $doit variable detected (exploit scripts) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 115 | 201056 | Powershell script: SMB1Protocol feature being enabled (ransomware lateral movement) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 116 | 201057 | Powershell script: Metasploit Meterpreter module detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 117 | 201058 | Powershell script: Web download to memory stream (fileless malware staging) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 118 | 201059 | Powershell script: Service start/stop command detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 119 | 201060 | Powershell script: PowerShell downgrade attack detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 120 | 201061 | Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 121 | 201062 | Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 122 | 201063 | Sysmon - Event 1: Process creation $(win.eventdata.description) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 123 | 201064 | The file $(win.eventdata.targetFilename) has been created. Possible ransomware activity. - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 124 | 201065 | MITRE ATTaCK T1542.001 Pre-OS Boot: System Firmware - wpbbin.exe file created in System32. Possible firmware persistence attempt. - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 125 | 201066 | T1546.013 - PowerShell Profile modified: Potential persistence mechanism detected (Event Triggered Execution) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 126 | 201067 | T1137 - Outlook VbaProject.OTM Persistence File Created (Target: $(win.eventdata.targetFilename)) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 127 | 201068 | Hyper-V volume shadow copy requestor service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 128 | 201069 | Volume shadow copy service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 129 | 201070 | Windows defender service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible Ransomware Activity. - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 130 | 201071 | Multiple Registry Keys created in Event Viewer on $(win.system.computer). Possible Ransomware Activity. - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 131 | 201072 | Sysmon - Event 13: RegistryEvent PsExec EulaAccepted Detected - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 132 | 201073 | T1548.002: Bypass UAC via mscfile EventViewer hijack - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 133 | 201074 | T1548.002: Bypass UAC via mscfile EventViewer hijack (test rule) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 134 | 201075 | Suspicious registry modification detected: Hiding user accounts via Userlist key (T1564.002 - Hidden Users) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 135 | 201076 | Suspicious registry modification detected: Disabling command line auditing (T1562.003 - Impair Command History Logging) via $(win.eventdata.targetObject) with value $(win.eventdata.details). - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 136 | 201077 | T1574.009 - Path Interception by Unquoted Service Path in Registry (ImagePath points to Program Files without quotes) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 137 | 201078 | T1574.011 - Hijack Execution Flow: Services Registry Permissions Weakness (Service ImagePath modified by $(win.eventdata.image)) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 138 | 201079 | T1547 - RDP Addins DLL Injection detected. Registry key: $(win.eventdata.targetObject), DLL: $(win.eventdata.details) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 139 | 201080 | T1547.014 - Active Setup StubPath persistence detected (Registry modification under Installed Components) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 140 | 201081 | T1137 - Outlook Macro Security Level Persistence detected via Registry SetValue (Target: $(win.eventdata.targetObject)) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 141 | 201082 | T1547.012 - Print Processor Registry Key Persistence (TargetObject: $(win.eventdata.targetObject)) - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 142 | 201083 | Windows: Multiple Logon Failures (Brute Force) from same source IP - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 143 | 201084 | High Severity Event Detected (Level 10): Sysmon File Create - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 144 | 201085 | High Severity Event Detected (Level 10): Sysmon Image Loaded - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 145 | 201086 | High Severity Event Detected (Level 10): Sysmon Network Connection - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 146 | 201087 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 147 | 201088 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 148 | 201089 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 149 | 201090 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 150 | 201091 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 151 | 201092 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 152 | 201093 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 153 | 201094 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 154 | 201095 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 155 | 201096 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 156 | 201097 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 157 | 201098 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 158 | 201099 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 159 | 201100 | High Severity Event Detected (Level 10): Sysmon Process Creation - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 160 | 201101 | High Severity Event Detected (Level 10): Sysmon Registry Create/Delete - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 161 | 201102 | High Severity Event Detected (Level 10): Sysmon Registry Rename - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 162 | 201103 | High Severity Event Detected (Level 10): Sysmon Registry Value Set - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 163 | 201104 | High Severity Event Detected (Level 10): Sysmon WMI Event Subscription Persistence - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 164 | 201105 | High Severity Event Detected (Level 10): Sysmon Suspicious File Deletion - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 165 | 201106 | High Severity Event Detected (Level 10): Sysmon Clipboard Data Collection - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 166 | 201107 | High Severity Event Detected (Level 10): Sysmon Process Tampering / Hollowing - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 167 | 201108 | High Severity Event Detected (Level 10): Sysmon Kernel Driver Loaded - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 168 | 201109 | High Severity Event Detected (Level 10): Sysmon Suspicious Named Pipe Activity - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 169 | 201110 | High Severity Event Detected (Level 10): Sysmon Alternate Data Stream Created - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 170 | 201111 | High Severity Event Detected (Level 10): Sysmon Suspicious DNS Query - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 171 | 201112 | High Severity Event Detected (Level 10): Sysmon Registry Rename Evasion - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 172 | 201113 | High Severity Event Detected (Level 10): PowerShell Malicious Script Block Execution - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 173 | 201114 | High Severity Event Detected (Level 10): Sysmon Target Reconnaissance and Account Deletion - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 174 | 201115 | High Severity Event Detected (Level 10): Active Directory and Rogue Logon Session Anomaly - ALARM | Alarm/201000-Windows-Alarms.xml | Alarm | - |
+| 175 | 202000 | Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Alarm | - |
+| 176 | 202001 | Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Alarm | - |
+| 177 | 202002 | OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP - ALARM | Alarm/202000-Network-Alarms.xml | Alarm | - |
+| 178 | 202003 | High Severity Event Detected (Level 10): OPNsense Events - ALARM | Alarm/202000-Network-Alarms.xml | Alarm | - |
+| 179 | 202004 | OPNsense NAXSI WAF: Web Attack Blocked (SQLi / XSS / RCE / Traversal) - ALARM | Alarm/202000-Network-Alarms.xml | Alarm | - |
+| 180 | 203000 | Windows Security log was cleared. - ALARM | Alarm/203000-Other-Alarms.xml | Alarm | - |
+| 181 | 203001 | Potential User Login Via Pass the Hash Detected. - ALARM | Alarm/203000-Other-Alarms.xml | Alarm | - |
+| 182 | 203002 | Wazuh Infrastructure Security: Duplicate Agent Key or Rogue Registration Detected - ALARM | Alarm/203000-Other-Alarms.xml | Alarm | - |
+| 183 | 100050 | Suppress noisy AppArmor Docker initialization logs. | AppArmor/100050-apparmor_rules.xml | Pending | - |
+| 184 | 120110 | Audit: SYSCALL Messages grouped. | Auditd/120100-auditd.xml | Pending | - |
+| 185 | 120111 | Audit: EXECVE Messages grouped. | Auditd/120100-auditd.xml | Pending | - |
+| 186 | 120112 | Audit: PATH Messages grouped. | Auditd/120100-auditd.xml | Pending | - |
+| 187 | 120113 | Detect changes in auditd configuration files. | Auditd/120100-auditd.xml | Pending | - |
+| 188 | 120114 | Audit: USER_AND_CRED Messages grouped. | Auditd/120100-auditd.xml | Pending | - |
+| 189 | 120120 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. | Auditd/120100-auditd.xml | Covered | 200000 |
+| 190 | 120121 | Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell. | Auditd/120100-auditd.xml | Covered | 200001 |
+| 191 | 120122 | Detects attempts to record audio with arecord utility. | Auditd/120100-auditd.xml | Covered | 200002 |
+| 192 | 120123 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. | Auditd/120100-auditd.xml | Covered | 200003 |
+| 193 | 120124 | Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file. | Auditd/120100-auditd.xml | Covered | 200004 |
+| 194 | 120125 | Detects BPFDoor .lock and .pid files access in temporary file storage facility. | Auditd/120100-auditd.xml | Covered | 200005 |
+| 195 | 120126 | All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. | Auditd/120100-auditd.xml | Pending | - |
+| 196 | 120127 | All TCP traffic on particular port from attacker is routed to different port. ex. '/sbin/iptables -t nat -D PREROUTING -p tcp -s 192.168.1.1 --dport 22 -j REDIRECT --to-ports 42392'. | Auditd/120100-auditd.xml | Covered | 200006 |
+| 197 | 120128 | Detects attempts to discover the files with setuid/setgid capability on them. That would allow adversary to escalate their privileges. | Auditd/120100-auditd.xml | Covered | 200007 |
+| 198 | 120129 | Detect file time attribute change to hide new or changes to existing files. | Auditd/120100-auditd.xml | Covered | 200008 |
+| 199 | 120130 | Detects removing immutable file attribute. | Auditd/120100-auditd.xml | Covered | 200009 |
+| 200 | 120131 | Detects attempts to collect data stored in the clipboard from users with the usage of xclip tool. | Auditd/120100-auditd.xml | Covered | 200010 |
+| 201 | 120132 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200011 |
+| 202 | 120133 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200012 |
+| 203 | 120134 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200013 |
+| 204 | 120135 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200014 |
+| 205 | 120136 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200015 |
+| 206 | 120137 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200016 |
+| 207 | 120138 | Detects command line parameter very often used with coin miners. | Auditd/120100-auditd.xml | Covered | 200017 |
+| 208 | 120139 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. | Auditd/120100-auditd.xml | Covered | 200018 |
+| 209 | 120140 | Detects exploitation attempt of vulnerability described in CVE-2021-3156. | Auditd/120100-auditd.xml | Covered | 200019 |
+| 210 | 120141 | An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration in order to make it portable and minimize the amount of data sent over the network. | Auditd/120100-auditd.xml | Covered | 200054 |
+| 211 | 120142 | An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration in order to make it portable and minimize the amount of data sent over the network. | Auditd/120100-auditd.xml | Covered | 200054 |
+| 212 | 120143 | An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration in order to make it portable and minimize the amount of data sent over the network. | Auditd/120100-auditd.xml | Covered | 200054 |
+| 213 | 120144 | Detects attempts to post the file with the usage of wget utility. The adversary can bypass the permission restriction with the misconfigured sudo permission for wget utility which could allow them to read files like /etc/shadow. | Auditd/120100-auditd.xml | Covered | 200020 |
+| 214 | 120145 | Detects overwriting (effectively wiping/deleting) of a file. | Auditd/120100-auditd.xml | Covered | 200021 |
+| 215 | 120146 | Detects access to a raw disk on a host to evade detection by security products. | Auditd/120100-auditd.xml | Covered | 200022 |
+| 216 | 120147 | Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network. | Auditd/120100-auditd.xml | Covered | 200023 |
+| 217 | 120148 | Detects file and folder permission changes. | Auditd/120100-auditd.xml | Covered | 200024 |
+| 218 | 120149 | Detecting attempts to extract passwords with grep. | Auditd/120100-auditd.xml | Pending | - |
+| 219 | 120158 | Detecting attempts to extract passwords with grep. | Auditd/120100-auditd.xml | Covered | 200025 |
+| 220 | 120159 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. | Auditd/120100-auditd.xml | Covered | 200026 |
+| 221 | 120160 | Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character. | Auditd/120100-auditd.xml | Covered | 200027 |
+| 222 | 120161 | Detects appending of zip file to image. | Auditd/120100-auditd.xml | Covered | 200028 |
+| 223 | 120162 | Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes. | Auditd/120100-auditd.xml | Covered | 200029 |
+| 224 | 120163 | Detects loading of kernel modules with insmod command. | Auditd/120100-auditd.xml | Covered | 200030 |
+| 225 | 120164 | Detect changes of syslog daemons configuration files. | Auditd/120100-auditd.xml | Covered | 200031 |
+| 226 | 120165 | Masquerading as Linux Crond Process. | Auditd/120100-auditd.xml | Covered | 200032 |
+| 227 | 120166 | Detects enumeration of local or remote network services. | Auditd/120100-auditd.xml | Covered | 200033 |
+| 228 | 120167 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. | Auditd/120100-auditd.xml | Covered | 200034 |
+| 229 | 120168 | Detects password policy discovery commands. | Auditd/120100-auditd.xml | Covered | 200035 |
+| 230 | 120169 | Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. | Auditd/120100-auditd.xml | Covered | 200036 |
+| 231 | 120170 | Detects a reload or a start of a service. | Auditd/120100-auditd.xml | Covered | 200037 |
+| 232 | 120171 | Detects adversary creating screen capture of a desktop with Import Tool. | Auditd/120100-auditd.xml | Covered | 200038 |
+| 233 | 120172 | Detects adversary creating screen capture of a desktop with Import Tool. | Auditd/120100-auditd.xml | Covered | 200039 |
+| 234 | 120173 | Detects adversary creating screen capture of a full with xwd. | Auditd/120100-auditd.xml | Covered | 200040 |
+| 235 | 120174 | Detects adversary creating screen capture of a full with xwd. | Auditd/120100-auditd.xml | Covered | 200041 |
+| 236 | 120175 | Detection use of the command "split" to split files into parts and possible transfer. | Auditd/120100-auditd.xml | Covered | 200042 |
+| 237 | 120176 | Detects embeding of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. | Auditd/120100-auditd.xml | Covered | 200043 |
+| 238 | 120177 | Detects extraction of files with usage of steghide binary, the adversaries may use this technique to prevent the detection of hidden information. | Auditd/120100-auditd.xml | Covered | 200044 |
+| 239 | 120178 | Detects suspicious activities as declared by Florian Roth in its 'Best Practice Auditd Configuration'. This includes the detection of the following commands; wget, curl, base64, nc, netcat, ncat, ssh, socat, wireshark, rawshark, rdesktop, nmap. | Auditd/120100-auditd.xml | Covered | 200045 |
+| 240 | 120179 | Detects relevant commands often related to malware or hacking activity. | Auditd/120100-auditd.xml | Covered | 200046 |
+| 241 | 120180 | Detects program executions in suspicious non-program folders related to malware or hacking activity. | Auditd/120100-auditd.xml | Covered | 200047 |
+| 242 | 120181 | Detects commandline operations on shell history files. | Auditd/120100-auditd.xml | Covered | 200048 |
+| 243 | 120182 | Detects System Information Discovery commands. | Auditd/120100-auditd.xml | Covered | 200049 |
+| 244 | 120183 | Detects System Information Discovery commands. | Auditd/120100-auditd.xml | Covered | 200050 |
+| 245 | 120184 | Detects a creation of systemd services which could be used by adversaries to execute malicious code. | Auditd/120100-auditd.xml | Covered | 200054 |
+| 246 | 120185 | Detects extracting of zip file from image file. | Auditd/120100-auditd.xml | Covered | 200051 |
+| 247 | 120186 | Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. | Auditd/120100-auditd.xml | Covered | 200052 |
+| 248 | 150000 | Windows: Failed Authentication. | Brute_Force/150000-windows_bruteforce.xml | Covered | 201083 |
+| 249 | 150100 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP | Brute_Force/150100-linux_bruteforce.xml | Covered | 200053 |
+| 250 | 150101 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP | Brute_Force/150100-linux_bruteforce.xml | Covered | 200053 |
+| 251 | 150102 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP | Brute_Force/150100-linux_bruteforce.xml | Covered | 200053 |
+| 252 | 150103 | Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP | Brute_Force/150100-linux_bruteforce.xml | Covered | 200053 |
+| 253 | 150200 | Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP | Brute_Force/150200-fortigate_bruteforce.xml | Covered | 202000 |
+| 254 | 150201 | Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP | Brute_Force/150200-fortigate_bruteforce.xml | Covered | 202000 |
+| 255 | 150300 | Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP | Brute_Force/150300-nginx_bruteforce.xml | Covered | 202001 |
+| 256 | 150400 | OPNsense: WebGUI Authentication Failure | Brute_Force/150400-opnsense_bruteforce.xml | Pending | - |
+| 257 | 150401 | OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP | Brute_Force/150400-opnsense_bruteforce.xml | Covered | 202002 |
+| 258 | 200100 | DFIR IRIS Case Collection | DFIR-IRIS/200000-dfir_iris.xml | Pending | - |
+| 259 | 121000 | Falco Event: $(rule) | Falco/121000-docker_falco_rules.xml | Covered | 200055 |
+| 260 | 100100 | Wazuh Auth Duplicate Agent | Manager/100100-manager_logs.xml | Covered | 203002 |
+| 261 | 120460 | OPNsense NAXSI events grouped. | OpnSense/120500-opensense.xml | Pending | - |
+| 262 | 120461 | OPNsense NAXSI - event blocked by WAF | OpnSense/120500-opensense.xml | Covered | 202004 |
+| 263 | 120462 | OPNsense NAXSI - event passed by WAF in $(mode) mode | OpnSense/120500-opensense.xml | Covered | 202003 |
+| 264 | 100200 | Wazuh SCA Collection | SCA/100200-wazuh_sca.xml | Pending | - |
+| 265 | 100300 | Wazuh Software Scan Results | Software/100300-software.xml | Pending | - |
+| 266 | 61646 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201109 |
+| 267 | 61647 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201109 |
+| 268 | 61644 | Sysmon - Event 22: DNS Request by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201111 |
+| 269 | 116203 | Sysmon - Event 19:  WmiEvent (WmiEventFilter activity detected) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201104 |
+| 270 | 116204 | Sysmon - Event 20:  WmiEvent (WmiEventConsumer activity detected) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201104 |
+| 271 | 116205 | Sysmon - Event 21: WmiEvent (WmiEventConsumerToFilter activity detected) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201104 |
+| 272 | 116206 | Sysmon - Event 23: FileDelete (A file delete was detected) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201105 |
+| 273 | 116207 | Sysmon - Event 24: ClipboardChange (New content in the clipboard) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201106 |
+| 274 | 116208 | Sysmon - Event 25: ProcessTampering (Process image change) by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201107 |
+| 275 | 116209 | Windows Security log was cleared. | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 203000 |
+| 276 | 116210 | Potential User Login Via Pass the Hash Detected. | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 203001 |
+| 277 | 116211 | Sysmon - Event 6: Driver Loaded by $(win.eventdata.image) | Sysmon New Events/116001-win_sysmon_new_events.xml | Covered | 201108 |
+| 278 | 100400 | Wazuh Inventory Collection | Wazuh Inventory/100400-wazuh_inventory.xml | Pending | - |
+| 279 | 100600 | Windows Logon Sessions - Snapshot | Windows Logon Sessions/100600-win_logonsessions_rules.xml | Covered | 201115 |
+| 280 | 117534 | Powershell Information EventLog | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 281 | 117535 | Powershell Information EventLog | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 282 | 117536 | Powershell Warning EventLog | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 283 | 117537 | Powershell Error EventLog | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201113 |
+| 284 | 117538 | Powershell Critical EventLog | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201000 |
+| 285 | 117541 | Powershell script $(win.eventdata.scriptBlockText) Executed | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201113 |
+| 286 | 117542 | Disregard Powershell Text | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 287 | 117543 | Malicious Powershell Command $(win.eventdata.scriptBlockText) Executed | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201001 |
+| 288 | 117544 | Disregard Powershell Prompt Text | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 289 | 117545 | Disregard Powershell Prompt Text | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 290 | 117550 | Powershell Information EventLog | Windows Powershell/117001-win_powershell_rules.xml | Pending | - |
+| 291 | 117551 | Powershell script: IEX execution detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201002 |
+| 292 | 117552 | Powershell script: Invoke-Expression detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201003 |
+| 293 | 117553 | Powershell script: Invoke-WebRequest detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201004 |
+| 294 | 117554 | Powershell script: iwr alias detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201005 |
+| 295 | 117555 | Powershell script: Start-BitsTransfer detected (BITS job abuse) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201006 |
+| 296 | 117556 | Powershell script: Net.WebClient object creation detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201007 |
+| 297 | 117557 | Powershell script: Download method detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201008 |
+| 298 | 117558 | Powershell script: FromBase64String detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201009 |
+| 299 | 117559 | Powershell script: Encoded command flag detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201010 |
+| 300 | 117300 | Powershell script: Reversed FromBase64String detected (obfuscation) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201011 |
+| 301 | 117301 | Powershell script: ExecutionPolicy Bypass detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201012 |
+| 302 | 117302 | Powershell script: Mimikatz keyword detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201013 |
+| 303 | 117303 | Powershell script: SEKURLSA (Mimikatz module) detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201014 |
+| 304 | 117304 | Powershell script: Kerberos ticket manipulation detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201015 |
+| 305 | 117305 | Powershell script: Credential dumping cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201016 |
+| 306 | 117306 | Powershell script: GPP Password extraction detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201017 |
+| 307 | 117307 | Powershell script: Code injection cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201018 |
+| 308 | 117308 | Powershell script: Credential theft cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201019 |
+| 309 | 117309 | Powershell script: UAC bypass cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201020 |
+| 310 | 117310 | Powershell script: Lateral movement/recon cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201021 |
+| 311 | 117311 | Powershell script: Network attack/C2 cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201022 |
+| 312 | 117312 | Powershell script: Post-exploitation cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201023 |
+| 313 | 117313 | Powershell script: Offensive framework keyword detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201024 |
+| 314 | 117314 | Powershell script: AMSI bypass attempt detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201025 |
+| 315 | 117315 | Powershell script: Browser/input data theft cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201026 |
+| 316 | 117316 | Powershell script: Screen capture cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201027 |
+| 317 | 117317 | Powershell script: Volume Shadow Copy access detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201028 |
+| 318 | 117318 | Powershell script: Active Directory enumeration detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201029 |
+| 319 | 117319 | Powershell script: Local group enumeration detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201030 |
+| 320 | 117320 | Powershell script: COM CLSID object execution detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201031 |
+| 321 | 117321 | Powershell script: COM InProcServer32 hijacking detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201032 |
+| 322 | 117322 | Powershell script: Persistence mechanism cmdlet detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201033 |
+| 323 | 117323 | Powershell script: Enable-PSRemoting detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201034 |
+| 324 | 117324 | Powershell script: Invoke-Command (remote execution) detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201035 |
+| 325 | 117325 | Powershell script: WMI-based remote execution detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201036 |
+| 326 | 117326 | Powershell script: CIM method/session detected (lateral movement) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201037 |
+| 327 | 117327 | Powershell script: Invoke-WmiExec detected (pass-the-hash) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201038 |
+| 328 | 117328 | Powershell script: TrustedHosts modification detected (DarkGate) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201039 |
+| 329 | 117329 | Powershell script: Compression/decompression detected (payload staging) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201040 |
+| 330 | 117330 | Powershell script: StreamReader usage detected (stream data processing) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201041 |
+| 331 | 117331 | Powershell script: MemoryStream usage detected (in-memory execution) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201042 |
+| 332 | 117332 | Powershell script: .NET Assembly reflection loading detected (Empire/Cobalt Strike) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201043 |
+| 333 | 117333 | Powershell script: Dynamic assembly building detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201044 |
+| 334 | 117334 | Powershell script: GetProcAddress API call detected (fileless injection) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201045 |
+| 335 | 117335 | Powershell script: Attempt to disable Defender real-time monitoring | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201046 |
+| 336 | 117336 | Powershell script: Windows Defender configuration tampering detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201047 |
+| 337 | 117337 | Powershell script: Windows Defender exclusion being added (AV evasion) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201048 |
+| 338 | 117338 | Powershell script: Attempt to remove Windows Defender directory (WhisperGate) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201049 |
+| 339 | 117339 | Powershell script: Suspicious keyword (shellcode/injection/backdoor) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201050 |
+| 340 | 117340 | Powershell script: Suspicious process/DLL reference detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201051 |
+| 341 | 117341 | Powershell script: C2/exploitation keyword detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201052 |
+| 342 | 117342 | Powershell script: Network object creation detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201053 |
+| 343 | 117343 | Powershell script: SysWOW64 reference detected (32-bit evasion) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201054 |
+| 344 | 117344 | Powershell script: $doit variable detected (exploit scripts) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201055 |
+| 345 | 117345 | Powershell script: SMB1Protocol feature being enabled (ransomware lateral movement) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201056 |
+| 346 | 117346 | Powershell script: Metasploit Meterpreter module detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201057 |
+| 347 | 117347 | Powershell script: Web download to memory stream (fileless malware staging) | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201058 |
+| 348 | 117348 | Powershell script: Service start/stop command detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201059 |
+| 349 | 117349 | Powershell script: PowerShell downgrade attack detected | Windows Powershell/117001-win_powershell_rules.xml | Covered | 201060 |
+| 350 | 101000 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 351 | 101001 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 352 | 101002 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 353 | 101003 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 354 | 101004 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 355 | 101005 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 356 | 101006 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 357 | 101007 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 358 | 101008 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 359 | 101009 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 360 | 101010 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 361 | 101011 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 362 | 101012 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 363 | 101013 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 364 | 101014 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 365 | 101015 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 366 | 101016 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 367 | 101017 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 368 | 101018 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 369 | 101019 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 370 | 101020 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 371 | 101021 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 372 | 101022 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 373 | 101023 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 374 | 101024 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 375 | 101025 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 376 | 101026 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 377 | 101027 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 378 | 101028 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 379 | 101029 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 380 | 101030 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 381 | 101031 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 382 | 101032 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 383 | 101033 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 384 | 101034 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 385 | 101035 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 386 | 101036 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 387 | 101037 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 388 | 101038 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 389 | 101039 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 390 | 101040 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 391 | 101041 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 392 | 101042 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 393 | 101043 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 394 | 101044 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 395 | 101045 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 396 | 101046 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 397 | 101047 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 398 | 101048 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 399 | 101049 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 400 | 101050 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 401 | 101051 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 402 | 101052 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 403 | 101053 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 404 | 101054 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 405 | 101055 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 406 | 101056 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 407 | 101057 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 408 | 101058 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 409 | 101059 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 410 | 101060 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 411 | 101061 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 412 | 101062 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 413 | 101063 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 414 | 101064 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 415 | 101065 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 416 | 101066 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 417 | 101067 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 418 | 101068 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 419 | 101069 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 420 | 101070 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 421 | 101071 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 422 | 101072 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 423 | 101073 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 424 | 101074 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 425 | 101075 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 426 | 101076 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 427 | 101077 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 428 | 101078 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 429 | 101079 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 430 | 101080 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 431 | 101081 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 432 | 101082 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 433 | 101083 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 434 | 101084 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 435 | 101085 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 436 | 101086 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 437 | 101087 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 438 | 101088 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 439 | 101089 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 440 | 101090 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 441 | 101091 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 442 | 101092 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 443 | 101093 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 444 | 101094 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 445 | 101095 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 446 | 101096 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 447 | 101097 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 448 | 101098 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 449 | 101099 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 450 | 101100 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 451 | 101101 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 452 | 101102 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 453 | 101103 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201061 |
+| 454 | 101104 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201062 |
+| 455 | 101105 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 456 | 101106 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 457 | 101107 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 458 | 101108 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 459 | 101109 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 460 | 101110 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 461 | 101111 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 462 | 101112 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 463 | 101113 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 464 | 101114 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 465 | 101115 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 466 | 101116 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 467 | 101117 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 468 | 101118 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 469 | 101119 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 470 | 101120 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 471 | 101121 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 472 | 101122 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 473 | 101123 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 474 | 101124 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 475 | 101125 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 476 | 101126 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 477 | 101127 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 478 | 101128 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 479 | 101129 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 480 | 101130 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 481 | 101131 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 482 | 101132 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 483 | 101133 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 484 | 101134 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 485 | 101135 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 486 | 101136 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 487 | 101137 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 488 | 101138 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 489 | 101139 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 490 | 101140 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 491 | 101141 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 492 | 101142 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 493 | 101143 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 494 | 101144 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 495 | 101145 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 496 | 101146 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 497 | 101147 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 498 | 101148 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 499 | 101149 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 500 | 101150 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 501 | 101151 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 502 | 101152 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 503 | 101153 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 504 | 101154 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 505 | 101155 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 506 | 101156 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 507 | 101157 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 508 | 101158 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 509 | 101159 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 510 | 101160 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 511 | 101161 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 512 | 101162 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 513 | 101163 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 514 | 101164 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 515 | 101165 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 516 | 101166 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 517 | 101167 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 518 | 101168 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 519 | 101169 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 520 | 101170 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 521 | 101171 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 522 | 101172 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 523 | 101173 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 524 | 101174 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 525 | 101175 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 526 | 101176 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 527 | 101177 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 528 | 101178 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 529 | 101179 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 530 | 101180 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 531 | 101181 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 532 | 101182 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 533 | 101183 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 534 | 101184 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 535 | 101185 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 536 | 101186 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 537 | 101187 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 538 | 101188 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 539 | 101189 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201087 |
+| 540 | 101190 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 541 | 101191 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 542 | 101192 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 543 | 101193 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 544 | 101194 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 545 | 101195 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 546 | 101196 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 547 | 101197 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 548 | 101198 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 549 | 101199 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 550 | 101200 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 551 | 101201 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 552 | 101202 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 553 | 101203 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 554 | 101204 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 555 | 101205 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 556 | 101206 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 557 | 101207 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 558 | 101208 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 559 | 101209 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 560 | 101210 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 561 | 101211 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 562 | 101212 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 563 | 101213 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 564 | 101214 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 565 | 101215 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 566 | 101216 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 567 | 101217 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 568 | 101218 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 569 | 101219 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 570 | 101220 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 571 | 101221 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 572 | 101222 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 573 | 101223 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 574 | 101224 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 575 | 101225 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 576 | 101226 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 577 | 101227 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 578 | 101228 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 579 | 101229 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 580 | 101230 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 581 | 101231 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 582 | 101232 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 583 | 101233 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 584 | 101234 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 585 | 101235 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 586 | 101236 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 587 | 101237 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 588 | 101238 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 589 | 101239 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201088 |
+| 590 | 101240 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 591 | 101241 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 592 | 101242 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 593 | 101243 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 594 | 101244 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 595 | 101245 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 596 | 101246 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 597 | 101247 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 598 | 101248 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 599 | 101249 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 600 | 101250 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 601 | 101251 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 602 | 101252 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 603 | 101253 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 604 | 101254 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 605 | 101255 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 606 | 101256 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 607 | 101257 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 608 | 101258 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 609 | 101259 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 610 | 101260 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 611 | 101261 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 612 | 101262 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 613 | 101263 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 614 | 101264 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 615 | 101265 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 616 | 101266 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 617 | 101267 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 618 | 101268 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 619 | 101269 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 620 | 101270 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 621 | 101271 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 622 | 101272 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 623 | 101273 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 624 | 101274 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 625 | 101275 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 626 | 101276 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 627 | 101277 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 628 | 101278 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 629 | 101279 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 630 | 101280 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 631 | 101281 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 632 | 101282 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 633 | 101283 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 634 | 101284 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 635 | 101285 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 636 | 101286 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 637 | 101287 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 638 | 101288 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 639 | 101289 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201089 |
+| 640 | 101290 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 641 | 101291 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 642 | 101292 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 643 | 101293 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 644 | 101294 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 645 | 101295 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 646 | 101296 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 647 | 101297 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 648 | 101298 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 649 | 101299 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 650 | 101300 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 651 | 101301 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 652 | 101302 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 653 | 101303 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 654 | 101304 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 655 | 101305 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 656 | 101306 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 657 | 101307 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 658 | 101308 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 659 | 101309 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 660 | 101310 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 661 | 101311 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 662 | 101312 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 663 | 101313 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 664 | 101314 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 665 | 101315 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 666 | 101316 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 667 | 101317 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 668 | 101318 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 669 | 101319 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 670 | 101320 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 671 | 101321 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 672 | 101322 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 673 | 101323 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 674 | 101324 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 675 | 101325 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 676 | 101326 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 677 | 101327 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 678 | 101328 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 679 | 101329 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 680 | 101330 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 681 | 101331 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 682 | 101332 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 683 | 101333 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 684 | 101334 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 685 | 101335 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 686 | 101336 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 687 | 101337 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 688 | 101338 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 689 | 101339 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201090 |
+| 690 | 101340 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 691 | 101341 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 692 | 101342 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 693 | 101343 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 694 | 101344 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 695 | 101345 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 696 | 101346 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 697 | 101347 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 698 | 101348 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 699 | 101349 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 700 | 101350 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 701 | 101351 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 702 | 101352 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 703 | 101353 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 704 | 101354 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 705 | 101355 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 706 | 101356 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 707 | 101357 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 708 | 101358 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 709 | 101359 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 710 | 101360 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 711 | 101361 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 712 | 101362 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 713 | 101363 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 714 | 101364 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 715 | 101365 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 716 | 101366 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 717 | 101367 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 718 | 101368 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 719 | 101369 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 720 | 101370 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 721 | 101371 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 722 | 101372 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 723 | 101373 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 724 | 101374 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 725 | 101375 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 726 | 101376 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 727 | 101377 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 728 | 101378 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 729 | 101379 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 730 | 101380 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 731 | 101381 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 732 | 101382 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 733 | 101383 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 734 | 101384 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 735 | 101385 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 736 | 101386 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 737 | 101387 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 738 | 101388 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 739 | 101389 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201091 |
+| 740 | 101390 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 741 | 101391 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 742 | 101392 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 743 | 101393 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 744 | 101394 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 745 | 101395 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 746 | 101396 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 747 | 101397 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 748 | 101398 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 749 | 101399 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 750 | 101400 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 751 | 101401 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 752 | 101402 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 753 | 101403 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 754 | 101404 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 755 | 101405 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 756 | 101406 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 757 | 101407 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 758 | 101408 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 759 | 101409 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 760 | 101410 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 761 | 101411 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 762 | 101412 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 763 | 101413 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 764 | 101414 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 765 | 101415 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 766 | 101416 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 767 | 101417 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 768 | 101418 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 769 | 101419 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 770 | 101420 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 771 | 101421 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 772 | 101422 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 773 | 101423 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 774 | 101424 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 775 | 101425 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 776 | 101426 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 777 | 101427 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 778 | 101428 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 779 | 101429 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 780 | 101430 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 781 | 101431 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 782 | 101432 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 783 | 101433 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 784 | 101434 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 785 | 101435 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 786 | 101436 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 787 | 101437 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 788 | 101438 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 789 | 101439 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201092 |
+| 790 | 101440 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 791 | 101441 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 792 | 101442 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 793 | 101443 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 794 | 101444 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 795 | 101445 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 796 | 101446 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 797 | 101447 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 798 | 101448 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 799 | 101449 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 800 | 101450 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 801 | 101451 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 802 | 101452 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 803 | 101453 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 804 | 101454 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 805 | 101455 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 806 | 101456 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 807 | 101457 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 808 | 101458 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 809 | 101459 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 810 | 101460 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 811 | 101461 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 812 | 101462 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 813 | 101463 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 814 | 101464 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 815 | 101465 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 816 | 101466 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 817 | 101467 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 818 | 101468 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 819 | 101469 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 820 | 101470 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 821 | 101471 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 822 | 101472 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 823 | 101473 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 824 | 101474 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 825 | 101475 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 826 | 101476 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 827 | 101477 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 828 | 101478 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 829 | 101479 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 830 | 101480 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 831 | 101481 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 832 | 101482 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 833 | 101483 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 834 | 101484 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 835 | 101485 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 836 | 101486 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 837 | 101487 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 838 | 101488 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 839 | 101489 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201093 |
+| 840 | 101490 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 841 | 101491 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 842 | 101492 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 843 | 101493 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 844 | 101494 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 845 | 101495 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 846 | 101496 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 847 | 101497 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 848 | 101498 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 849 | 101499 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 850 | 101500 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 851 | 101501 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 852 | 101502 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 853 | 101503 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 854 | 101504 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 855 | 101505 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 856 | 101506 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 857 | 101507 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 858 | 101508 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 859 | 101509 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 860 | 101510 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 861 | 101511 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 862 | 101512 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 863 | 101513 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 864 | 101514 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 865 | 101515 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 866 | 101516 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 867 | 101517 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 868 | 101518 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 869 | 101519 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 870 | 101520 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 871 | 101521 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 872 | 101522 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 873 | 101523 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 874 | 101524 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 875 | 101525 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 876 | 101526 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 877 | 101527 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 878 | 101528 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 879 | 101529 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 880 | 101530 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 881 | 101531 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 882 | 101532 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 883 | 101533 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 884 | 101534 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 885 | 101535 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 886 | 101536 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 887 | 101537 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 888 | 101538 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 889 | 101539 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 890 | 101540 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 891 | 101541 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 892 | 101542 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 893 | 101543 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201094 |
+| 894 | 101544 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 895 | 101545 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 896 | 101546 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 897 | 101547 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 898 | 101548 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 899 | 101549 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 900 | 101550 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 901 | 101551 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 902 | 101552 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 903 | 101553 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 904 | 101554 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 905 | 101555 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 906 | 101556 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 907 | 101557 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 908 | 101558 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 909 | 101559 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 910 | 101560 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 911 | 101561 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 912 | 101562 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 913 | 101563 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 914 | 101564 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 915 | 101565 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 916 | 101566 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 917 | 101567 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 918 | 101568 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 919 | 101569 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 920 | 101570 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 921 | 101571 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 922 | 101572 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 923 | 101573 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 924 | 101574 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201114 |
+| 925 | 101575 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 926 | 101576 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 927 | 101577 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 928 | 101578 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 929 | 101579 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 930 | 101580 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 931 | 101581 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 932 | 101582 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 933 | 101583 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 934 | 101584 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 935 | 101585 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 936 | 101586 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 937 | 101587 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 938 | 101588 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 939 | 101589 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 940 | 101590 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 941 | 101591 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 942 | 101592 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 943 | 101593 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 944 | 101594 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 945 | 101595 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 946 | 101596 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 947 | 101597 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 948 | 101598 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 949 | 101599 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 950 | 101600 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 951 | 101601 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 952 | 101602 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 953 | 101603 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 954 | 101604 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201095 |
+| 955 | 101605 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 956 | 101606 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 957 | 101607 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 958 | 101608 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 959 | 101609 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 960 | 101610 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 961 | 101611 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 962 | 101612 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 963 | 101613 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 964 | 101614 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 965 | 101615 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 966 | 101616 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 967 | 101617 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 968 | 101618 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 969 | 101619 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 970 | 101620 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 971 | 101621 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 972 | 101622 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 973 | 101623 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 974 | 101624 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 975 | 101625 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 976 | 101626 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 977 | 101627 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 978 | 101628 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 979 | 101629 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 980 | 101630 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 981 | 101631 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 982 | 101632 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 983 | 101633 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 984 | 101634 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 985 | 101635 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 986 | 101636 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 987 | 101637 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 988 | 101638 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 989 | 101639 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 990 | 101640 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 991 | 101641 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 992 | 101642 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 993 | 101643 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 994 | 101644 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 995 | 101645 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 996 | 101646 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 997 | 101647 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 998 | 101648 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 999 | 101649 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 1000 | 101650 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 1001 | 101651 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 1002 | 101652 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 1003 | 101653 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 1004 | 101654 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201096 |
+| 1005 | 101655 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1006 | 101656 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1007 | 101657 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1008 | 101658 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1009 | 101659 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1010 | 101660 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1011 | 101661 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1012 | 101662 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1013 | 101663 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1014 | 101664 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1015 | 101665 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1016 | 101666 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1017 | 101667 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1018 | 101668 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1019 | 101669 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1020 | 101670 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1021 | 101671 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1022 | 101672 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1023 | 101673 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1024 | 101674 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1025 | 101675 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1026 | 101676 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1027 | 101677 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1028 | 101678 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1029 | 101679 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1030 | 101680 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1031 | 101681 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1032 | 101682 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1033 | 101683 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1034 | 101684 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1035 | 101685 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1036 | 101686 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1037 | 101687 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1038 | 101688 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1039 | 101689 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1040 | 101690 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1041 | 101691 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1042 | 101692 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1043 | 101693 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1044 | 101694 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1045 | 101695 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1046 | 101696 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1047 | 101697 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1048 | 101698 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1049 | 101699 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1050 | 101700 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1051 | 101701 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1052 | 101702 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1053 | 101703 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1054 | 101704 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1055 | 101705 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201097 |
+| 1056 | 101706 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1057 | 101707 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1058 | 101708 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1059 | 101709 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1060 | 101710 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1061 | 101711 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1062 | 101712 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1063 | 101713 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1064 | 101714 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1065 | 101715 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201063 |
+| 1066 | 101716 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1067 | 101717 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1068 | 101718 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1069 | 101719 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1070 | 101720 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1071 | 101721 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1072 | 101722 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1073 | 101723 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1074 | 101724 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1075 | 101725 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1076 | 101726 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1077 | 101727 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1078 | 101728 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1079 | 101729 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1080 | 101730 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1081 | 101731 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1082 | 101732 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1083 | 101733 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1084 | 101734 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1085 | 101735 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1086 | 101736 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1087 | 101737 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1088 | 101738 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1089 | 101739 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1090 | 101740 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1091 | 101741 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1092 | 101742 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1093 | 101743 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1094 | 101744 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1095 | 101745 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1096 | 101746 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1097 | 101747 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1098 | 101748 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1099 | 101749 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1100 | 101750 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1101 | 101751 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1102 | 101752 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1103 | 101753 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1104 | 101754 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1105 | 101755 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1106 | 101756 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1107 | 101757 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201098 |
+| 1108 | 101758 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1109 | 101759 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1110 | 101760 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1111 | 101761 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1112 | 101762 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1113 | 101763 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1114 | 101764 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1115 | 101765 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1116 | 101766 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1117 | 101767 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1118 | 101768 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1119 | 101769 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1120 | 101770 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1121 | 101771 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1122 | 101772 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1123 | 101773 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1124 | 101774 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1125 | 101775 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1126 | 101776 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1127 | 101777 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1128 | 101778 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1129 | 101779 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1130 | 101780 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1131 | 101781 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1132 | 101782 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1133 | 101783 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1134 | 101784 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1135 | 101785 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1136 | 101786 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1137 | 101787 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1138 | 101788 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1139 | 101789 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1140 | 101790 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1141 | 101791 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1142 | 101792 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1143 | 101793 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1144 | 101794 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1145 | 101795 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1146 | 101796 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1147 | 101797 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1148 | 101798 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1149 | 101799 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1150 | 101800 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1151 | 101801 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1152 | 101802 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1153 | 101803 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1154 | 101804 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1155 | 101805 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1156 | 101806 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1157 | 101807 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201099 |
+| 1158 | 101808 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1159 | 101809 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1160 | 101810 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1161 | 101811 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1162 | 101812 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1163 | 101813 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1164 | 101814 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1165 | 101815 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1166 | 101816 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1167 | 101817 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1168 | 101818 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1169 | 101819 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1170 | 101820 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1171 | 101821 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1172 | 101822 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1173 | 101823 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1174 | 101824 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1175 | 101825 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1176 | 101826 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1177 | 101827 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1178 | 101828 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1179 | 101829 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1180 | 101830 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1181 | 101831 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1182 | 101832 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1183 | 101833 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1184 | 101834 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1185 | 101835 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1186 | 101836 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1187 | 101837 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1188 | 101838 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1189 | 101839 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1190 | 101840 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Pending | - |
+| 1191 | 101841 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1192 | 101842 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1193 | 101843 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1194 | 101844 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1195 | 101845 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1196 | 101846 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1197 | 101847 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1198 | 101848 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1199 | 101849 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1200 | 101850 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1201 | 101851 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1202 | 101852 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1203 | 101853 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1204 | 101854 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1205 | 101855 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1206 | 101856 | Sysmon - Event 1: Process creation $(win.eventdata.description) | Windows_Sysmon/101000-MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml | Covered | 201100 |
+| 1207 | 102001 | Sysmon - Event 2: A process changed a file creation time by $(win.eventdata.image) | Windows_Sysmon/102001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT2.xml | Pending | - |
+| 1208 | 103101 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1209 | 103102 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1210 | 103103 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1211 | 103104 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1212 | 103105 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1213 | 103106 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1214 | 103107 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1215 | 103108 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1216 | 103109 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1217 | 103110 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1218 | 103111 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1219 | 103112 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1220 | 103113 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1221 | 103114 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1222 | 103115 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1223 | 103116 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1224 | 103117 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1225 | 103118 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1226 | 103119 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1227 | 103120 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1228 | 103121 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1229 | 103122 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1230 | 103123 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1231 | 103124 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1232 | 103125 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1233 | 103126 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1234 | 103127 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1235 | 103128 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1236 | 103129 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1237 | 103130 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1238 | 103131 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1239 | 103132 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1240 | 103133 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1241 | 103134 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1242 | 103135 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1243 | 103136 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1244 | 103137 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1245 | 103138 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1246 | 103139 | Sysmon - Event 3: Network connection by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1247 | 103502 | Multiple Sysmon Level 3 alerts for same destination IP. | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Pending | - |
+| 1248 | 103503 | Sysmon - Event 3: Network connection to Uncommon Port by $(win.eventdata.image) | Windows_Sysmon/103001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT3.xml | Covered | 201086 |
+| 1249 | 104101 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1250 | 104102 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1251 | 104103 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1252 | 104104 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1253 | 104105 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1254 | 104106 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1255 | 104107 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1256 | 104108 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1257 | 104109 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1258 | 104110 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1259 | 104111 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1260 | 104112 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1261 | 104113 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1262 | 104114 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1263 | 104115 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1264 | 104116 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1265 | 104117 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1266 | 104118 | Sysmon - Event 7: Unsigned Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1267 | 104119 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1268 | 104120 | Sysmon - Event 7: Signed Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Pending | - |
+| 1269 | 104121 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1270 | 104122 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1271 | 104123 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1272 | 104124 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1273 | 104125 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1274 | 104126 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1275 | 104127 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1276 | 104128 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1277 | 104129 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1278 | 104130 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1279 | 104131 | Sysmon - Event 7: Image loaded by $(win.eventdata.image) | Windows_Sysmon/104001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT7.xml | Covered | 201085 |
+| 1280 | 105201 | Driver loaded: $(win.eventdata.imageLoaded) | Windows_Sysmon/105001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT6.xml | Pending | - |
+| 1281 | 106101 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1282 | 106102 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1283 | 106103 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1284 | 106104 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1285 | 106105 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1286 | 106106 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1287 | 106107 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1288 | 106108 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1289 | 106109 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1290 | 106110 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1291 | 106111 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1292 | 106112 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1293 | 106113 | Sysmon - Event 10: ProcessAccess by $(win.eventdata.sourceimage) | Windows_Sysmon/106001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT10.xml | Pending | - |
+| 1294 | 107101 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1295 | 107102 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1296 | 107103 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1297 | 107104 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1298 | 107105 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1299 | 107106 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1300 | 107107 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1301 | 107108 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1302 | 107109 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1303 | 107110 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1304 | 107111 | Sysmon - Event 11: FileCreate by $(win.eventdata.image) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Pending | - |
+| 1305 | 107118 | The file $(win.eventdata.targetFilename) has been created. Possible ransomware activity. | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Covered | 201064 |
+| 1306 | 107119 | MITRE ATTaCK T1542.001 Pre-OS Boot: System Firmware - wpbbin.exe file created in System32. Possible firmware persistence attempt. | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Covered | 201065 |
+| 1307 | 107120 | Possible mailbox data manipulation detected (T1070.008 - Email Collection: Mailbox Manipulation) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Covered | 201084 |
+| 1308 | 107121 | T1546.013 - PowerShell Profile modified: Potential persistence mechanism detected (Event Triggered Execution) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Covered | 201066 |
+| 1309 | 107122 | T1137 - Outlook VbaProject.OTM Persistence File Created (Target: $(win.eventdata.targetFilename)) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Covered | 201067 |
+| 1310 | 107123 | T1547.012 - DLL Dropped in Print Processors Directory (TargetFilename: $(win.eventdata.targetFilename)) | Windows_Sysmon/107001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT11.xml | Covered | 201084 |
+| 1311 | 108101 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1312 | 108102 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1313 | 108103 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1314 | 108104 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1315 | 108105 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1316 | 108106 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1317 | 108107 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1318 | 108108 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1319 | 108109 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1320 | 108110 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1321 | 108111 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1322 | 108112 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1323 | 108113 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1324 | 108114 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1325 | 108115 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1326 | 108116 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1327 | 108117 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1328 | 108118 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1329 | 108119 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1330 | 108120 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1331 | 108121 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1332 | 108122 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1333 | 108123 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1334 | 108124 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1335 | 108125 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1336 | 108126 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1337 | 108127 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1338 | 108128 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1339 | 108129 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1340 | 108130 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1341 | 108131 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1342 | 108132 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1343 | 108133 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1344 | 108134 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1345 | 108135 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1346 | 108136 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1347 | 108137 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1348 | 108138 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1349 | 108139 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1350 | 108140 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Pending | - |
+| 1351 | 108141 | Hyper-V volume shadow copy requestor service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201068 |
+| 1352 | 108142 | Volume shadow copy service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible ransomware activity. | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201069 |
+| 1353 | 108143 | Windows defender service $(win.eventdata.user) has been deleted on $(win.system.computer). Possible Ransomware Activity. | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201070 |
+| 1354 | 108144 | Multiple Registry Keys created in Event Viewer on $(win.system.computer). Possible Ransomware Activity. | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201071 |
+| 1355 | 108145 | Change Default File Association via \Explorer\FileExts (T1546.001) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201101 |
+| 1356 | 108146 | T1133 - External Remote Services via Chrome Extensions Registry Key Creation (Detected: $(win.eventdata.targetObject)) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201101 |
+| 1357 | 108147 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201101 |
+| 1358 | 108148 | Sysmon - Event 12: RegistryEvent (Object create and delete) by $(win.eventdata.image) | Windows_Sysmon/108001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT12.xml | Covered | 201101 |
+| 1359 | 109101 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1360 | 109102 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1361 | 109103 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1362 | 109104 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1363 | 109105 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1364 | 109106 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1365 | 109107 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1366 | 109108 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1367 | 109109 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1368 | 109110 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1369 | 109111 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1370 | 109112 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1371 | 109113 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1372 | 109114 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1373 | 109115 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1374 | 109116 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1375 | 109117 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1376 | 109118 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1377 | 109119 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1378 | 109120 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1379 | 109121 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1380 | 109122 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1381 | 109123 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1382 | 109124 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1383 | 109125 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1384 | 109126 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1385 | 109127 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1386 | 109128 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1387 | 109129 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1388 | 109130 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1389 | 109131 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1390 | 109132 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1391 | 109133 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1392 | 109134 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1393 | 109135 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1394 | 109136 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1395 | 109137 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1396 | 109138 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1397 | 109139 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1398 | 109140 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1399 | 109141 | Sysmon - Event 13: RegistryEvent PsExec EulaAccepted Detected | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201072 |
+| 1400 | 109142 | Sysmon - Event 13: RegistryEvent (Value Modified) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1401 | 109143 | Sysmon - Event 13: RegistryEvent by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Pending | - |
+| 1402 | 109144 | T1548.002: Bypass UAC via mscfile EventViewer hijack | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201073 |
+| 1403 | 109145 | T1548.002: Bypass UAC via mscfile EventViewer hijack (test rule) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201074 |
+| 1404 | 109146 | T1556.002 - Password Filter DLL Registration detected: Modification of LSA Notification Packages registry key. | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1405 | 109147 | T1556.002 - Password Filter DLL Registration detected: Modification of LSA Authentication Packages registry key. | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1406 | 109148 | Suspicious registry modification detected: Hiding user accounts via Userlist key (T1564.002 - Hidden Users) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201075 |
+| 1407 | 109149 | Suspicious registry modification detected: Disabling command line auditing (T1562.003 - Impair Command History Logging) via $(win.eventdata.targetObject) with value $(win.eventdata.details). | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201076 |
+| 1408 | 109150 | T1574.009 - Path Interception by Unquoted Service Path in Registry (ImagePath points to Program Files without quotes) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201077 |
+| 1409 | 109151 | T1546.010 - Event Triggered Execution: AppInit DLLs Registry Modification | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1410 | 109152 | T1574.011 - Hijack Execution Flow: Services Registry Permissions Weakness (Service ImagePath modified by $(win.eventdata.image)) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201078 |
+| 1411 | 109153 | T1547 - RDP Addins DLL Injection detected. Registry key: $(win.eventdata.targetObject), DLL: $(win.eventdata.details) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201079 |
+| 1412 | 109154 | T1547.014 - Active Setup StubPath persistence detected (Registry modification under Installed Components) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201080 |
+| 1413 | 109155 | T1543.003 - Windows Service Configuration Modification via Registry (ImagePath, ServiceDll, Type, Start) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1414 | 109156 | T1137 - Outlook Macro Security Level Persistence detected via Registry SetValue (Target: $(win.eventdata.targetObject)) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201081 |
+| 1415 | 109157 | T1547.012 - Print Processor Registry Key Persistence (TargetObject: $(win.eventdata.targetObject)) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201082 |
+| 1416 | 109158 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1417 | 109159 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1418 | 109160 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1419 | 109161 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1420 | 109162 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1421 | 109163 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1422 | 109164 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1423 | 109165 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1424 | 109166 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1425 | 109167 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1426 | 109168 | Sysmon - Event 13: RegistryEvent (Value Set) by $(win.eventdata.image) | Windows_Sysmon/109001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT13.xml | Covered | 201103 |
+| 1427 | 110101 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1428 | 110102 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1429 | 110103 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1430 | 110104 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1431 | 110105 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1432 | 110106 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1433 | 110107 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1434 | 110108 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1435 | 110109 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1436 | 110110 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1437 | 110111 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Pending | - |
+| 1438 | 110112 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1439 | 110113 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1440 | 110114 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1441 | 110115 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1442 | 110116 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1443 | 110117 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1444 | 110118 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1445 | 110119 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1446 | 110120 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1447 | 110121 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1448 | 110122 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1449 | 110123 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1450 | 110124 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1451 | 110125 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1452 | 110126 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1453 | 110127 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1454 | 110128 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1455 | 110129 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1456 | 110130 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1457 | 110131 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1458 | 110132 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1459 | 110133 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1460 | 110134 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1461 | 110135 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1462 | 110136 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1463 | 110137 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1464 | 110138 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1465 | 110139 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1466 | 110140 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201112 |
+| 1467 | 110141 | Sysmon - Event 14: RegistryEvent (Key and Value Rename) by $(win.eventdata.image) | Windows_Sysmon/110001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT14.xml | Covered | 201102 |
+| 1468 | 111101 | Sysmon - Event 15: FileCreateStreamHash by $(win.eventdata.image) | Windows_Sysmon/111001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT15.xml | Covered | 201110 |
+| 1469 | 111102 | Sysmon - Event 15: FileCreateStreamHash by $(win.eventdata.image) | Windows_Sysmon/111001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT15.xml | Covered | 201110 |
+| 1470 | 112101 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Windows_Sysmon/112001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT17.xml | Covered | 201109 |
+| 1471 | 112102 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Windows_Sysmon/112001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT17.xml | Covered | 201109 |
+| 1472 | 112103 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Windows_Sysmon/112001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT17.xml | Covered | 201109 |
+| 1473 | 112104 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Windows_Sysmon/112001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT17.xml | Covered | 201109 |
+| 1474 | 112105 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Windows_Sysmon/112001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT17.xml | Covered | 201109 |
+| 1475 | 112106 | Sysmon - Event 17: PipeEvent (Pipe Created) by $(win.eventdata.image) | Windows_Sysmon/112001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT17.xml | Covered | 201109 |
+| 1476 | 113101 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Windows_Sysmon/113001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT18.xml | Covered | 201109 |
+| 1477 | 113102 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Windows_Sysmon/113001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT18.xml | Covered | 201109 |
+| 1478 | 113103 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Windows_Sysmon/113001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT18.xml | Covered | 201109 |
+| 1479 | 113104 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Windows_Sysmon/113001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT18.xml | Covered | 201109 |
+| 1480 | 113105 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Windows_Sysmon/113001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT18.xml | Covered | 201109 |
+| 1481 | 113106 | Sysmon - Event 18: PipeEvent (Pipe Connected) by $(win.eventdata.image) | Windows_Sysmon/113001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT18.xml | Covered | 201109 |
+| 1482 | 114101 | Sysmon - Event 22: DNS Request by $(win.eventdata.image) | Windows_Sysmon/114001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT22.xml | Covered | 201111 |
+| 1483 | 114102 | Sysmon - Event 22: DNS Request by $(win.eventdata.image) | Windows_Sysmon/114001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT22.xml | Pending | - |
+| 1484 | 114103 | Sysmon - Event 22: DNS Request by $(win.eventdata.image) | Windows_Sysmon/114001-MITRE_TECHNIQUES_FROM_SYSMON_EVENT22.xml | Pending | - |
+| 1485 | 115101 | Sysmon Rules Reloaded | Windows_Sysmon/115001-sysmon_reload.xml | Pending | - |

@@ -91,7 +91,23 @@ Le dépôt inclut le script [`wazuh_apply_rules.sh`](file:///home/danny/allproje
 - **Gestion stricte des permissions Wazuh** (`wazuh:wazuh`, `0660` / `0750`).
 - **Journalisation détaillée** à la fois dans le terminal et dans `/var/log/wazuh_apply_rules.log`.
 
-## Suivi des Règles
-Le script Python `generate_table.py` parcourt le dépôt pour générer et mettre à jour automatiquement :
-* `rules_status.md` : Un tableau Markdown résumant l'état et la description de chaque règle.
-* `rules_status.csv` : Un fichier CSV contenant les mêmes informations pour une intégration et une manipulation faciles dans d'autres outils.
+## Suivi des Règles et Couverture d'Alarmes (DFIR-IRIS)
+Le script Python `generate_table.py` parcourt l'ensemble du dépôt pour inspecter les règles de détection et les règles d'escalade sous `Alarm/` afin de générer un état de couverture précis :
+
+* `rules_status.csv` : Fichier CSV répertoriant chaque règle (`Rule ID`, `Description`, `File`, `State`, `Alarm ID`).
+  * **`Alarm`** : Règle wrapper sous `Alarm/` (groupe `alarm`) envoyée directement à DFIR-IRIS.
+  * **`Covered`** : Règle de détection couverte par un `if_sid` d'une règle d'alarme (avec l'identifiant `Alarm ID` associé).
+  * **`Pending`** : Règle informative ou de détection sans alarme directe configurée.
+
+### Utilisation de `generate_table.py` :
+```bash
+# Mise à jour standard de rules_status.csv avec rapport de couverture
+python3 generate_table.py
+
+# Générer également le tableau Markdown rules_status.md
+python3 generate_table.py --markdown
+
+# Format 5 colonnes classique (sans la colonne Alarm ID)
+python3 generate_table.py --no-alarm-id
+```
+
