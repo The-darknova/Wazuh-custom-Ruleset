@@ -1,0 +1,35 @@
+<group name="linux,auditd,tuning,denoise,">
+
+  <!-- Package manager file modifications -->
+  <rule id="210300" level="3">
+    <if_sid>200008, 120129</if_sid>
+    <field name="audit.exe">(?i)(/usr/bin/dpkg|/usr/bin/apt-get|/usr/bin/apt|/usr/bin/rpm|/usr/bin/yum|/usr/bin/dnf)</field>
+    <description>Linux Maintenance Record: Package manager file modification executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Routine database indexing of system binaries (updatedb / mandb) -->
+  <rule id="210301" level="3">
+    <if_sid>200007, 120128</if_sid>
+    <field name="audit.exe">(?i)(/usr/bin/updatedb|/usr/bin/mandb|/usr/bin/man-db|/usr/bin/makewhatis)</field>
+    <description>Linux Maintenance Record: Routine system database indexing executed (updatedb/mandb)</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Routine environment adjustments by PAM and systemd session cleanup -->
+  <rule id="210302" level="3">
+    <if_sid>200000, 200001, 120120, 120121</if_sid>
+    <field name="audit.exe">(?i)(/usr/lib/systemd/systemd|/lib/systemd/systemd|/usr/sbin/cron|/usr/sbin/crond)</field>
+    <description>Linux System Record: Routine systemd or cron environment session maintenance executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Logrotate truncation and rotation -->
+  <rule id="210303" level="3">
+    <if_sid>200003, 200004, 120123, 120124</if_sid>
+    <field name="audit.exe">(?i)/usr/sbin/logrotate$</field>
+    <description>Linux Maintenance Record: Routine logrotate log truncation and rotation executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+</group>

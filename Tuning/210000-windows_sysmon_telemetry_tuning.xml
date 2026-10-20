@@ -1,0 +1,101 @@
+<group name="windows,tuning,denoise,">
+
+  <!-- Windows Compatibility Appraiser Telemetry -->
+  <rule id="210000" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)CompatTelRunner\.exe$</field>
+    <description>Windows Telemetry Record: Microsoft Compatibility Appraiser task executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Device Census Telemetry -->
+  <rule id="210001" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)DeviceCensus\.exe$</field>
+    <description>Windows Telemetry Record: Windows Device Census task executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Update Servicing (TiWorker / TrustedInstaller) -->
+  <rule id="210002" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(TiWorker|TrustedInstaller)\.exe$</field>
+    <description>Windows Servicing Record: Windows Modules Installer / CBS worker executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Update Session Orchestrator (USOClient / MoUsoCoreWorker) -->
+  <rule id="210003" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(USOClient|MoUsoCoreWorker)\.exe$</field>
+    <description>Windows Servicing Record: Update Session Orchestrator task executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Disk Cleanup and Maintenance -->
+  <rule id="210004" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(cleanmgr|dfrgui|defrag)\.exe$</field>
+    <description>Windows Maintenance Record: Scheduled disk cleanup or defragmentation executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Error Reporting (WerFault / wermgr) -->
+  <rule id="210005" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(WerFault|wermgr)\.exe$</field>
+    <description>Windows Diagnostics Record: Windows Error Reporting process executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Background Task Hosts -->
+  <rule id="210006" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(backgroundTaskHost|taskhostw)\.exe$</field>
+    <field name="win.eventdata.parentImage">(?i)svchost\.exe$</field>
+    <description>Windows Task Host Record: Standard background task host executed under svchost</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Software Protection Platform (License Validation) -->
+  <rule id="210007" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)sppsvc\.exe$</field>
+    <description>Windows Licensing Record: Software Protection Platform service executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Browser Auto-Update Tasks -->
+  <rule id="210008" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(GoogleUpdate|MicrosoftEdgeUpdate)\.exe$</field>
+    <description>Software Maintenance Record: Scheduled browser updater task executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Remediation Service -->
+  <rule id="210009" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(sedlauncher|remsh|WaaSMedicAgent)\.exe$</field>
+    <description>Windows Servicing Record: Windows Remediation Service / Update Medic task executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Search Indexer Helper Processes -->
+  <rule id="210010" level="3">
+    <if_sid>201087, 201088, 201089, 201090, 201091, 201092, 201093, 201094, 201095, 201096, 201097, 201098, 201099, 201100, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)(SearchIndexer|SearchProtocolHost|SearchFilterHost)\.exe$</field>
+    <description>Windows Search Record: Search Indexer background query helper executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Benign svchost LocalServiceNetworkRestricted Execution -->
+  <rule id="210011" level="3">
+    <if_sid>201061, 101103</if_sid>
+    <field name="win.eventdata.image">(?i)svchost\.exe$</field>
+    <field name="win.eventdata.user">(?i)(NT AUTHORITY\\SYSTEM|NT AUTHORITY\\LOCAL SERVICE|NT AUTHORITY\\NETWORK SERVICE)</field>
+    <description>Windows Service Record: Standard svchost LocalServiceNetworkRestricted service execution</description>
+    <options>no_full_log</options>
+  </rule>
+
+</group>

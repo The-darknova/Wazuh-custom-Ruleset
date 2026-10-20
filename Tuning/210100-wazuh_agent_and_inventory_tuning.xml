@@ -1,0 +1,53 @@
+<group name="wazuh,tuning,denoise,">
+
+  <!-- Wazuh Agent spawning PowerShell for internal inventory scripts (ad_inventory, logonsessions, SCA) -->
+  <rule id="210100" level="3">
+    <if_sid>201087, 101089</if_sid>
+    <field name="win.eventdata.parentImage">(?i)wazuh-agent\.exe$</field>
+    <field name="win.eventdata.image">(?i)(powershell|pwsh)\.exe$</field>
+    <description>Wazuh Agent Execution: Internal PowerShell invoked for agent modules / wodles</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Wazuh Agent spawning cmd.exe for internal commands -->
+  <rule id="210101" level="3">
+    <if_sid>201087, 101089</if_sid>
+    <field name="win.eventdata.parentImage">(?i)wazuh-agent\.exe$</field>
+    <field name="win.eventdata.image">(?i)cmd\.exe$</field>
+    <description>Wazuh Agent Execution: Internal cmd.exe invoked for routine agent inspection</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Routine Active Directory and Logon Session Discovery (demoted from Alarm 201115) -->
+  <rule id="210102" level="3">
+    <if_sid>201115</if_sid>
+    <field name="win.system.severityValue">^INFORMATION$|^INFO$</field>
+    <description>Wazuh Inventory Record: Scheduled Active Directory or Logon Session inventory collected</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Routine inventory collection (demoted from Alarm 201115) -->
+  <rule id="210103" level="3">
+    <if_sid>201115</if_sid>
+    <description>Wazuh Inventory Record: Routine Active Directory and Logon Session inventory collected</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Wazuh Active Response binary execution -->
+  <rule id="210104" level="3">
+    <if_sid>201087, 201088, 101000</if_sid>
+    <field name="win.eventdata.parentImage">(?i)wazuh-agent\.exe$</field>
+    <field name="win.eventdata.image">(?i)(ar\.exe|netsh\.exe|route\.exe)$</field>
+    <description>Wazuh Active Response Record: Automated containment action executed by agent</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Wazuh Syscheck / FIM inspection activity -->
+  <rule id="210105" level="3">
+    <if_sid>201087, 101000</if_sid>
+    <field name="win.eventdata.image">(?i)wazuh-agent\.exe$</field>
+    <description>Wazuh Syscheck Record: File integrity monitoring inspection executed by agent</description>
+    <options>no_full_log</options>
+  </rule>
+
+</group>

@@ -1,0 +1,76 @@
+<group name="windows,powershell,tuning,denoise,">
+
+  <!-- Console code page check (chcp) -->
+  <rule id="210200" level="3">
+    <if_sid>201114, 101510</if_sid>
+    <field name="win.eventdata.image">(?i)chcp\.(com|exe)$</field>
+    <description>Windows Administration Record: Routine console code page check (chcp)</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Get-Date PowerShell System Time check -->
+  <rule id="210201" level="3">
+    <if_sid>201114, 101561</if_sid>
+    <field name="win.eventdata.commandLine">(?i)Get-Date</field>
+    <description>PowerShell Telemetry Record: Routine Get-Date cmdlet executed in script</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Routine w32tm Timezone/Time query and synchronization -->
+  <rule id="210202" level="3">
+    <if_sid>201114, 101562</if_sid>
+    <field name="win.eventdata.image">(?i)w32tm\.exe$</field>
+    <description>Windows Time Service Record: Routine w32tm time query or synchronization check</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Routine net time domain query -->
+  <rule id="210203" level="3">
+    <if_sid>201114, 101563</if_sid>
+    <field name="win.eventdata.image">(?i)net(1)?\.exe$</field>
+    <field name="win.eventdata.commandLine">(?i)time</field>
+    <description>Windows Time Service Record: Routine net time domain verification</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- DISM international language info check during Windows Servicing -->
+  <rule id="210204" level="3">
+    <if_sid>201114, 101509</if_sid>
+    <field name="win.eventdata.image">(?i)dism\.exe$</field>
+    <description>Windows Servicing Record: Routine DISM international settings inspection</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- PowerShell PSReadLine console history management -->
+  <rule id="210205" level="3">
+    <if_sid>201087, 117541, 117543</if_sid>
+    <field name="win.eventdata.scriptBlockText">(?i)ConsoleHost_history\.txt|PSReadLine</field>
+    <description>PowerShell Telemetry Record: PSReadLine console history management executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Microsoft Intune Management Extension agent tasks -->
+  <rule id="210206" level="3">
+    <if_sid>201087, 201113, 101089, 117541, 117543</if_sid>
+    <field name="win.eventdata.parentImage">(?i)Microsoft\.Management\.Services\.IntuneWindowsAgent\.exe$</field>
+    <description>Endpoint Management Record: Microsoft Intune Management Extension agent script executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Windows Defender Update and MpCmdRun tasks -->
+  <rule id="210207" level="3">
+    <if_sid>201087, 201004, 201009, 117553, 117558</if_sid>
+    <field name="win.eventdata.image">(?i)(MpCmdRun|MpSigStub)\.exe$</field>
+    <description>Endpoint Security Record: Windows Defender signature update or scan task executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- Microsoft System Center Configuration Manager (SCCM / ConfigMgr) -->
+  <rule id="210208" level="3">
+    <if_sid>201087, 101089, 117541</if_sid>
+    <field name="win.eventdata.parentImage">(?i)CcmExec\.exe$</field>
+    <description>Endpoint Management Record: SCCM CcmExec client deployment script executed</description>
+    <options>no_full_log</options>
+  </rule>
+
+</group>

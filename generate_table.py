@@ -39,6 +39,12 @@ def parse_arguments():
         help="Subdirectory containing Alarm rules relative to workspace (default: Alarm)",
     )
     parser.add_argument(
+        "-t",
+        "--tuning-dir",
+        default="Tuning",
+        help="Subdirectory containing Tuning/Denoise rules relative to workspace (default: Tuning)",
+    )
+    parser.add_argument(
         "-m",
         "--markdown",
         action="store_true",
@@ -133,7 +139,7 @@ def main():
             md_file.write("|---|---------|-------------|------|-------|\n")
 
     counter = 1
-    stats = {"Alarm": 0, "Covered": 0, "Pending": 0}
+    stats = {"Alarm": 0, "Covered": 0, "Pending": 0, "Tuned": 0}
     total_xml_files = 0
 
     with open(csv_output_file, "w", newline="", encoding="utf-8") as csvfile:
@@ -168,12 +174,19 @@ def main():
                             )
 
                             # Determine state and covering Alarm ID
+                            is_tuning = (
+                                rel_path.startswith(f"{args.tuning_dir}/")
+                                or rel_path.startswith(f"{args.tuning_dir}\\")
+                            )
                             if (
                                 rule_id in alarm_rule_ids
                                 or rel_path.startswith(f"{args.alarm_dir}/")
                                 or rel_path.startswith(f"{args.alarm_dir}\\")
                             ):
                                 state = "Alarm"
+                                alarm_id_str = "-"
+                            elif is_tuning:
+                                state = "Tuned"
                                 alarm_id_str = "-"
                             elif rule_id in sid_to_alarms:
                                 state = "Covered"
@@ -225,6 +238,7 @@ def main():
     print(f"  XML Files Scanned:      {total_xml_files}")
     print(f"  Total Rules:            {total_rules}")
     print(f"  Alarm Rules (DFIR-IRIS):{stats['Alarm']:>5}")
+    print(f"  Tuned/Denoised Rules:   {stats['Tuned']:>5}")
     print(f"  Covered Detection Rules:{stats['Covered']:>5} ({coverage_pct:.1f}% coverage)")
     print(f"  Pending Detection Rules:{stats['Pending']:>5}")
     print("=" * 50)

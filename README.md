@@ -40,6 +40,13 @@ Ce dépôt contient une collection de règles, décodeurs et scripts Wazuh perso
 ### 8. Alertes & Notifications (Alarms)
 * **Alarm :** Règles de regroupement (wrapper rules) conçues pour capturer les événements critiques à travers différentes catégories (Windows, Linux, Réseau, etc.) et déclencher des alertes consolidées de haute sévérité. Ces règles intègrent également les correspondances tactiques et techniques MITRE ATT&CK issues de leurs règles sous-jacentes.
 
+### 9. Réduction du Bruit & Dénuisance (Tuning)
+* **Tuning :** Règles de filtrage et de rétrogradation au niveau informatif (`level="3"`) conçues pour conserver la trace télémétrique dans Wazuh tout en neutralisant l'escalade vers les alarmes de haute sévérité sur l'interface DFIR (DFIR-IRIS). Ce dossier regroupe :
+    * **Windows Telemetry :** Dénuisance des tâches de télémétrie et de maintenance système d'arrière-plan (`CompatTelRunner`, `DeviceCensus`, `TiWorker`, `cleanmgr`, `taskhostw`, `WerFault`, etc.).
+    * **Wazuh Agent & Inventaire :** Enregistrement au niveau informatif des activités internes de l'agent Wazuh (exécutions de scripts PowerShell/CMD pour l'inventaire AD et les sessions de connexion, éliminant les faux positifs d'alarme 201115).
+    * **Outils d'Administration & PowerShell :** Filtrage des commandes de découverte bénignes (`chcp`, `w32tm`, `Get-Date`) et scripts d'infrastructure (Intune, SCCM, Windows Defender).
+    * **Auditd Linux :** Rétrogradation des modifications et tâches de maintenance automatisées (`apt`, `dnf`, `updatedb`, `mandb`, `logrotate`).
+
 ---
 
 ## Exigences de l'Environnement
@@ -96,6 +103,7 @@ Le script Python `generate_table.py` parcourt l'ensemble du dépôt pour inspect
 
 * `rules_status.csv` : Fichier CSV répertoriant chaque règle (`Rule ID`, `Description`, `File`, `State`, `Alarm ID`).
   * **`Alarm`** : Règle wrapper sous `Alarm/` (groupe `alarm`) envoyée directement à DFIR-IRIS.
+  * **`Tuned`** : Règle de dénuisance sous `Tuning/` (niveau `3`) conservant le journal de télémétrie tout en bloquant l'envoi d'alarmes au DFIR.
   * **`Covered`** : Règle de détection couverte par un `if_sid` d'une règle d'alarme (avec l'identifiant `Alarm ID` associé).
   * **`Pending`** : Règle informative ou de détection sans alarme directe configurée.
 
