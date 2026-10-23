@@ -371,7 +371,7 @@
     </mitre>
   </rule>
   <rule id="200053" level="10">
-    <if_sid>150100, 150101, 150102, 150103</if_sid>
+    <if_sid>150500, 150501, 150502, 150503</if_sid>
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP - ALARM</description>
     <mitre>
       <id>T1110</id>

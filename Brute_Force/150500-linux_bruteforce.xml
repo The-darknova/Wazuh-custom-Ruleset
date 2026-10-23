@@ -1,5 +1,5 @@
 <group name="linux,brute_force,">
-  <rule id="150100" level="10" frequency="10" timeframe="120">
+  <rule id="150500" level="10" frequency="10" timeframe="120">
     <if_matched_sid>5710</if_matched_sid>
     <same_source_ip />
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP</description>
@@ -8,7 +8,7 @@
     </mitre>
     <group>authentication_failures,brute_force,</group>
   </rule>
-  <rule id="150101" level="10" frequency="10" timeframe="120">
+  <rule id="150501" level="10" frequency="10" timeframe="120">
     <if_matched_sid>5716</if_matched_sid>
     <same_source_ip />
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP</description>
@@ -17,7 +17,7 @@
     </mitre>
     <group>authentication_failures,brute_force,</group>
   </rule>
-  <rule id="150102" level="10" frequency="10" timeframe="120">
+  <rule id="150502" level="10" frequency="10" timeframe="120">
     <if_matched_sid>5503</if_matched_sid>
     <same_source_ip />
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP</description>
@@ -26,7 +26,7 @@
     </mitre>
     <group>authentication_failures,brute_force,</group>
   </rule>
-  <rule id="150103" level="10" frequency="10" timeframe="120">
+  <rule id="150503" level="10" frequency="10" timeframe="120">
     <if_matched_sid>5504</if_matched_sid>
     <same_source_ip />
     <description>Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP</description>

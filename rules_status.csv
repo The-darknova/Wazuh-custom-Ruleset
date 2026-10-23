@@ -247,15 +247,15 @@
 246,120185,Detects extracting of zip file from image file.,Auditd/120100-auditd.xml,Covered,200051
 247,120186,"Adversaries may use the information from System Owner/User Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.",Auditd/120100-auditd.xml,Covered,200052
 248,150000,Windows: Failed Authentication.,Brute_Force/150000-windows_bruteforce.xml,Covered,201083
-249,150100,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150100-linux_bruteforce.xml,Covered,200053
-250,150101,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150100-linux_bruteforce.xml,Covered,200053
-251,150102,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150100-linux_bruteforce.xml,Covered,200053
-252,150103,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150100-linux_bruteforce.xml,Covered,200053
-253,150200,Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP,Brute_Force/150200-fortigate_bruteforce.xml,Covered,202000
-254,150201,Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP,Brute_Force/150200-fortigate_bruteforce.xml,Covered,202000
-255,150300,Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP,Brute_Force/150300-nginx_bruteforce.xml,Covered,202001
-256,150400,OPNsense: WebGUI Authentication Failure,Brute_Force/150400-opnsense_bruteforce.xml,Pending,-
-257,150401,OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP,Brute_Force/150400-opnsense_bruteforce.xml,Covered,202002
+249,150200,Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP,Brute_Force/150200-fortigate_bruteforce.xml,Covered,202000
+250,150201,Fortigate: Multiple Firewall/VPN Authentication Failures (Brute Force) from same source IP,Brute_Force/150200-fortigate_bruteforce.xml,Covered,202000
+251,150300,Nginx: Multiple Web Authentication Failures (Brute Force) from same source IP,Brute_Force/150300-nginx_bruteforce.xml,Covered,202001
+252,150400,OPNsense: WebGUI Authentication Failure,Brute_Force/150400-opnsense_bruteforce.xml,Pending,-
+253,150401,OPNsense: Multiple WebGUI Authentication Failures (Brute Force) from same source IP,Brute_Force/150400-opnsense_bruteforce.xml,Covered,202002
+254,150500,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150500-linux_bruteforce.xml,Covered,200053
+255,150501,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150500-linux_bruteforce.xml,Covered,200053
+256,150502,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150500-linux_bruteforce.xml,Covered,200053
+257,150503,Linux: Multiple SSH/PAM Authentication Failures (Brute Force) from same source IP,Brute_Force/150500-linux_bruteforce.xml,Covered,200053
 258,200100,DFIR IRIS Case Collection,DFIR-IRIS/200000-dfir_iris.xml,Pending,-
 259,121000,Falco Event: $(rule),Falco/121000-docker_falco_rules.xml,Covered,200055
 260,100100,Wazuh Auth Duplicate Agent,Manager/100100-manager_logs.xml,Covered,203002

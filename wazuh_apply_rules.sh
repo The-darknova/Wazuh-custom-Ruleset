@@ -360,11 +360,12 @@ validate_xml_files() {
     # Pre-validate XML syntax using python3 if present
     if command -v python3 >/dev/null 2>&1; then
         local py_result
-        py_result="$(python3 - "$SCRIPT_DIR" << 'PYEOF' 2>&1
+        py_result="$(python3 - "$SCRIPT_DIR" "$WAZUH_HOME" << 'PYEOF' 2>&1
 import os, sys, re, xml.etree.ElementTree as ET
 from collections import defaultdict
 
 script_dir = sys.argv[1] if len(sys.argv) > 1 else "."
+wazuh_home = sys.argv[2] if len(sys.argv) > 2 else "/var/ossec"
 errors = []
 rule_ids = defaultdict(list)
 
@@ -379,7 +380,18 @@ for root, dirs, files in os.walk(script_dir):
                 with open(path, "r", encoding="utf-8", errors="replace") as fp:
                     content = fp.read()
                 # Rulesets often have multiple top-level <group> or <decoder> nodes; wrap in virtual root
-                ET.fromstring(f"<root>{content}</root>")
+                root_elem = ET.fromstring(f"<root>{content}</root>")
+
+                # Validate regex engine compatibility in <field> tags
+                for rule_elem in root_elem.iter("rule"):
+                    rid = rule_elem.get("id", "unknown")
+                    for field_elem in rule_elem.findall("field"):
+                        type_attr = field_elem.get("type", "")
+                        val = (field_elem.text or "").strip()
+                        fname = field_elem.get("name", "")
+                        if type_attr != "pcre2":
+                            if "(?i)" in val or re.search(r"\([^)]*\|[^)]*\)", val):
+                                errors.append(f"PCRE SYNTAX ERROR in {relpath} (Rule {rid}): <field name=\"{fname}\"> uses PCRE pattern '{val}' without type=\"pcre2\"")
             except Exception as e:
                 errors.append(f"XML SYNTAX ERROR in {relpath}: {e}")
 
@@ -391,13 +403,42 @@ for root, dirs, files in os.walk(script_dir):
 
 for rid, locations in rule_ids.items():
     if len(locations) > 1:
-        errors.append(f"DUPLICATE RULE ID {rid} found in multiple files: {', '.join(locations)}")
+        loc_str = ", ".join(locations)
+        errors.append(f"DUPLICATE RULE ID {rid} found in multiple files: {loc_str}")
+
+# Check for conflicts with default Wazuh ruleset
+known_builtin = {
+    "150100": "FireEye (0780-fireeye_rules.xml)",
+    "150101": "FireEye (0780-fireeye_rules.xml)",
+    "150102": "FireEye (0780-fireeye_rules.xml)",
+    "150103": "FireEye (0780-fireeye_rules.xml)",
+}
+
+builtin_rules_dir = os.path.join(wazuh_home, "ruleset", "rules")
+if os.path.isdir(builtin_rules_dir):
+    for r_root, _, r_files in os.walk(builtin_rules_dir):
+        for rf in r_files:
+            if rf.endswith(".xml"):
+                try:
+                    with open(os.path.join(r_root, rf), "r", encoding="utf-8", errors="replace") as r_fp:
+                        for m in re.finditer(r'<rule\s+[^>]*id=["\x27](\d+)["\x27]', r_fp.read()):
+                            brid = m.group(1)
+                            if brid in rule_ids:
+                                loc_str = ", ".join(rule_ids[brid])
+                                errors.append(f"BUILT-IN RULE ID CONFLICT: Rule ID {brid} in {loc_str} conflicts with core Wazuh rule in {rf}")
+                except Exception:
+                    pass
+else:
+    for brid, desc in known_builtin.items():
+        if brid in rule_ids:
+            loc_str = ", ".join(rule_ids[brid])
+            errors.append(f"BUILT-IN RULE ID CONFLICT: Rule ID {brid} in {loc_str} conflicts with built-in Wazuh rule ({desc})")
 
 if errors:
     print("\n".join(errors))
     sys.exit(1)
 else:
-    print(f"OK: Verified {len(rule_ids)} unique rule IDs across all files.")
+    print(f"OK: Verified {len(rule_ids)} unique rule IDs across all files with zero PCRE or built-in ID conflicts.")
 PYEOF
 )"
         local py_exit=$?
