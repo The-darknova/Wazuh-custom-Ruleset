@@ -368,6 +368,7 @@ script_dir = sys.argv[1] if len(sys.argv) > 1 else "."
 wazuh_home = sys.argv[2] if len(sys.argv) > 2 else "/var/ossec"
 errors = []
 rule_ids = defaultdict(list)
+overwrite_ids = set()
 
 for root, dirs, files in os.walk(script_dir):
     if "/." in root or "\\." in root:
@@ -382,9 +383,14 @@ for root, dirs, files in os.walk(script_dir):
                 # Rulesets often have multiple top-level <group> or <decoder> nodes; wrap in virtual root
                 root_elem = ET.fromstring(f"<root>{content}</root>")
 
-                # Validate regex engine compatibility in <field> tags
+                # Validate regex engine compatibility in <field> tags and track rule IDs
                 for rule_elem in root_elem.iter("rule"):
-                    rid = rule_elem.get("id", "unknown")
+                    rid = rule_elem.get("id")
+                    if rid:
+                        rule_ids[rid].append(relpath)
+                        if rule_elem.get("overwrite", "").lower() in ("yes", "true", "1"):
+                            overwrite_ids.add(rid)
+
                     for field_elem in rule_elem.findall("field"):
                         type_attr = field_elem.get("type", "")
                         val = (field_elem.text or "").strip()
@@ -394,12 +400,6 @@ for root, dirs, files in os.walk(script_dir):
                                 errors.append(f"PCRE SYNTAX ERROR in {relpath} (Rule {rid}): <field name=\"{fname}\"> uses PCRE pattern '{val}' without type=\"pcre2\"")
             except Exception as e:
                 errors.append(f"XML SYNTAX ERROR in {relpath}: {e}")
-
-            # Check rule IDs for uniqueness
-            matches = re.finditer(r'<rule\s+[^>]*id=["\x27](\d+)["\x27]', content)
-            for m in matches:
-                rid = m.group(1)
-                rule_ids[rid].append(relpath)
 
 for rid, locations in rule_ids.items():
     if len(locations) > 1:
@@ -423,16 +423,17 @@ if os.path.isdir(builtin_rules_dir):
                     with open(os.path.join(r_root, rf), "r", encoding="utf-8", errors="replace") as r_fp:
                         for m in re.finditer(r'<rule\s+[^>]*id=["\x27](\d+)["\x27]', r_fp.read()):
                             brid = m.group(1)
-                            if brid in rule_ids:
+                            # Only flag as conflict if the custom rule is NOT explicitly marked as overwrite="yes"
+                            if brid in rule_ids and brid not in overwrite_ids:
                                 loc_str = ", ".join(rule_ids[brid])
-                                errors.append(f"BUILT-IN RULE ID CONFLICT: Rule ID {brid} in {loc_str} conflicts with core Wazuh rule in {rf}")
+                                errors.append(f"BUILT-IN RULE ID CONFLICT: Rule ID {brid} in {loc_str} conflicts with core Wazuh rule in {rf} (add overwrite=\"yes\" if this is an intentional override)")
                 except Exception:
                     pass
 else:
     for brid, desc in known_builtin.items():
-        if brid in rule_ids:
+        if brid in rule_ids and brid not in overwrite_ids:
             loc_str = ", ".join(rule_ids[brid])
-            errors.append(f"BUILT-IN RULE ID CONFLICT: Rule ID {brid} in {loc_str} conflicts with built-in Wazuh rule ({desc})")
+            errors.append(f"BUILT-IN RULE ID CONFLICT: Rule ID {brid} in {loc_str} conflicts with built-in Wazuh rule ({desc}) (add overwrite=\"yes\" if this is an intentional override)")
 
 if errors:
     print("\n".join(errors))
